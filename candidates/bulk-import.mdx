@@ -1,0 +1,83 @@
+---
+title: "Bulk Importing Candidates, Companies, and Contacts"
+sidebarTitle: "Bulk Import"
+description: "Migrate from another system or load large batches of records using Connekt's CSV import wizard — covers all supported entity types and ZIP attachments."
+---
+
+When you're migrating from another recruitment platform or need to load a large number of records at once, Connekt's CSV import wizard lets you map a spreadsheet directly into your workspace. Rather than creating records one by one, you upload your data, align your column headers to Connekt's fields, and let the importer do the rest. This is separate from the AI resume-upload feature — use bulk import for structured spreadsheet data, and [resume upload](/candidates/adding-a-candidate#resume-upload-with-ai-parsing) when you're starting from CVs.
+
+## When to Use Bulk Import
+
+<CardGroup cols={2}>
+  <Card title="System Migration" icon="database">
+    Moving your existing candidate, company, or contact database from another ATS or CRM into Connekt.
+  </Card>
+  <Card title="Large Batch Adds" icon="layer-group">
+    Adding hundreds or thousands of records you've collected outside Connekt — job board exports, spreadsheet lists, or partner data feeds.
+  </Card>
+</CardGroup>
+
+## Supported Record Types
+
+You can bulk import any of the following entity types in a single run:
+
+- **Candidates**
+- **Companies**
+- **Contacts**
+- **Jobs**
+- **Users**
+
+<Note>
+  Bulk import requires **admin access**. If you don't see Settings → Data Import, ask your workspace admin to run the import on your behalf.
+</Note>
+
+## Running a Bulk Import
+
+<Steps>
+  <Step title="Open the import wizard">
+    Go to **Settings → Data Import**. You can also access the import step during initial workspace setup if you're onboarding a new Connekt workspace.
+  </Step>
+  <Step title="Choose the record type">
+    Select which type of record you're importing — Candidates, Companies, Contacts, Jobs, or Users. Each type has its own field mapping.
+  </Step>
+  <Step title="Upload your CSV (and optional ZIP of attachments)">
+    Upload your CSV file. If you're importing candidates and want to attach resumes or documents, bundle them into a **ZIP file** and upload that alongside your CSV. Connekt matches attachments to the correct rows using the filename — make sure the filename in your ZIP matches the value in the relevant column of your CSV.
+  </Step>
+  <Step title="Map your columns to Connekt fields">
+    The wizard displays your spreadsheet's column headers alongside Connekt's available fields. Drag or select each column to map it to the correct field. Unmapped columns are ignored.
+  </Step>
+  <Step title="Start the import and monitor progress">
+    Click **Start Import**. You can watch the progress bar and see a count of records created, skipped, or errored. Errors are listed so you can fix them and re-import just the problem rows.
+  </Step>
+</Steps>
+
+## Searchability After Import
+
+<Info>
+  Newly imported records are indexed in the background. Candidates, companies, and contacts become fully searchable in Connekt **shortly after** the import completes — you don't need to do anything extra to trigger indexing.
+</Info>
+
+## Tips for a Smooth Import
+
+<Accordion title="Preparing your CSV file">
+  - Use a header row with consistent, descriptive column names — this makes mapping much easier.
+  - Remove any special characters or formatting from cells (merged cells, formulas, emoji) before exporting to CSV.
+  - For phone numbers, use a consistent format such as international E.164 (`+14155550123`) to avoid mismatches.
+  - If you're importing candidates, include an email address wherever possible — it helps Connekt detect potential duplicates before they're created.
+</Accordion>
+
+<Accordion title="Matching attachments with ZIP upload">
+  - Name each file in your ZIP to match a value in your CSV (for example, a candidate's full name or an ID you've assigned).
+  - Make sure the CSV column that contains the filename is mapped to the attachment field during column mapping.
+  - ZIP upload is optional — you can always add attachments to individual records after the import.
+</Accordion>
+
+<Accordion title="Handling import errors">
+  - After the import runs, download the error report to see exactly which rows failed and why.
+  - Fix the flagged rows in your original spreadsheet, export a corrected CSV containing only those rows, and run a second import.
+  - You won't create duplicates of successfully imported rows as long as you only re-import the failed ones.
+</Accordion>
+
+<Warning>
+  Bulk import creates new records — it does **not** automatically merge or update existing ones. If you're re-importing data you've partially added before, review your existing records first to avoid duplicates. Use the [merge tool](/candidates/merging-duplicates) to clean up any duplicates after import.
+</Warning>

@@ -1,0 +1,63 @@
+---
+title: "Adding Fields to a PDF in Connekt E-Sign"
+sidebarTitle: "Add PDF Fields"
+description: "Open the PDF field editor, drag and drop signature, name, text, and date fields onto your document, and assign each field to the right signer by colour."
+---
+
+Before you can send a document for signature, you need to tell Connekt exactly where each person should sign, print their name, enter text, or add a date. The field editor lets you drag fields onto any page of the PDF so signers see clear, unambiguous instructions when they open their signing link.
+
+## Opening the field editor
+
+With your document open, click **Edit Fields**. The PDF renders in the field editor with a drag-and-drop field palette displayed on the side. You can work across all pages of the document without leaving the editor.
+
+## Available field types
+
+Connekt supports four field types that cover the most common signing needs.
+
+<CardGroup cols={2}>
+  <Card title="Signature" icon="pen-nib">
+    Captures a drawn or typed signature from the signer. Use this for the actual signing line on contracts and agreements.
+  </Card>
+  <Card title="Name" icon="user">
+    Captures the signer's printed (full) name as a text value. Useful when you need a printed name alongside a signature.
+  </Card>
+  <Card title="Text" icon="font">
+    A free-form text input the signer can fill with any content — address details, job titles, employee numbers, and so on.
+  </Card>
+  <Card title="Date" icon="calendar">
+    A date value tied to the act of signing. Connekt can auto-populate this with the signing date, or the signer can enter a specific date.
+  </Card>
+</CardGroup>
+
+## Placing and assigning fields
+
+<Steps>
+  <Step title="Drag a field onto the page">
+    Select a field type from the palette and drag it onto the exact location on the PDF page where it needs to appear. Resize or reposition it as needed.
+  </Step>
+  <Step title="Assign the field to a signer">
+    After placing a field, use the **signer dropdown** on the field itself to assign it to the correct signer. Each signer is displayed in a distinct colour throughout the editor, so you can tell at a glance which fields belong to whom.
+  </Step>
+  <Step title="Repeat for all required fields">
+    Work through every page of the document, placing and assigning all required fields for each signer. You don't need to save between pages — fields save automatically as you work.
+  </Step>
+</Steps>
+
+<Note>
+  Fields save automatically as you place and assign them. There is no manual save button in the field editor — your changes are preserved even if you close and reopen the editor.
+</Note>
+
+## Requirements before finalising
+
+Before the **Finalize & Send** button becomes active, two conditions must be met:
+
+1. **At least one signer** has been added to the document.
+2. **At least one field** has been placed on the PDF and assigned to a signer.
+
+<Warning>
+  Unassigned fields — fields placed on the PDF but not linked to a signer — will block sending. Make sure every field has a signer assigned before you attempt to finalise the document.
+</Warning>
+
+<Tip>
+  Do a final colour-check before sending: scan through the pages and confirm that each field's colour matches the intended signer. It's much easier to fix an assignment here than to cancel and restart after sending.
+</Tip>

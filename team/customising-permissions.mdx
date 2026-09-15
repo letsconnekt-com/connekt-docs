@@ -1,0 +1,74 @@
+---
+title: "Customising Role Permissions in Connekt"
+sidebarTitle: "Permissions"
+description: "Access the permission matrix in Settings → Permissions, enable or disable toggles per role, and tailor access for each team role without recreating user accounts."
+---
+
+Connekt's default role permissions cover the most common access patterns for recruitment teams, but every organisation works differently. If the out-of-the-box settings don't quite match how your team operates, you can fine-tune them using the permission matrix — enabling or disabling individual permissions for any role without affecting other roles or requiring users to re-log in.
+
+## Accessing the permission matrix
+
+<Steps>
+  <Step title="Go to Settings → Permissions">
+    Navigate to **Settings → Permissions** in your workspace. You need the `system_administration` permission to access this page — this is available to **Super Administrator** and **Administrator** roles by default.
+  </Step>
+  <Step title="Review the matrix">
+    The permission matrix displays all roles as columns and all permission categories as rows. Each cell contains a toggle showing whether that role currently has the permission enabled.
+  </Step>
+</Steps>
+
+## Permission categories
+
+Permissions are grouped into the following categories, each covering a distinct area of the platform:
+
+| Category | What it covers |
+|---|---|
+| **Dashboard** | Access to workspace-level dashboards and reporting widgets. |
+| **Candidates** | Viewing, creating, editing, and deleting candidate records. |
+| **Companies** | Viewing, creating, editing, and deleting company records, including billing information. |
+| **Contacts** | Viewing, creating, editing, and deleting contact records. |
+| **Jobs** | Viewing, creating, editing, and managing job openings. |
+| **Deals** | Accessing and managing deal records. |
+| **Placements** | Viewing, creating, editing, and managing placement records. |
+| **Operations** | Leave management, operational configuration, and related admin functions. |
+| **E-Sign** | Uploading documents, placing fields, sending for signature, and downloading signed copies. |
+| **System** | User management, billing, workspace settings, and data import. |
+
+## Enabling and disabling permissions
+
+<Steps>
+  <Step title="Find the permission you want to change">
+    Locate the relevant category row and the role column you want to adjust.
+  </Step>
+  <Step title="Click the toggle">
+    Click the toggle in the cell to enable or disable that permission for the selected role. The change saves immediately — there is no confirmation step.
+  </Step>
+</Steps>
+
+<Info>
+  Changes apply immediately to every user currently holding that role. You do not need to re-invite users or ask anyone to log out.
+</Info>
+
+## Common customisations
+
+Here are a few examples of adjustments teams frequently make:
+
+<Accordion title="Allow Recruiters to view all placements across the team">
+  By default, Recruiters may only see their own placements. Enable the relevant **Placements** permission for the Recruiter role to give them visibility across the full team pipeline.
+</Accordion>
+
+<Accordion title="Prevent Researchers from creating or editing placements">
+  If your Researchers should be able to source candidates but not manage placement records, disable the create and edit placement permissions for the Researcher role.
+</Accordion>
+
+<Accordion title="Give Consultants access to company billing information">
+  Billing details on company records are often restricted to senior roles. You can enable the billing permission for the Consultant role while keeping it disabled for Researchers and Users.
+</Accordion>
+
+<Warning>
+  You cannot edit permissions for the **Super Administrator** role. Super Administrator always retains full access to every feature and setting in the workspace — this cannot be changed.
+</Warning>
+
+<Tip>
+  If you need a configuration that no standard role supports out of the box, start with the closest matching role and adjust its permissions from the matrix, rather than trying to work around the role system entirely.
+</Tip>

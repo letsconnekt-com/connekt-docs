@@ -1,0 +1,60 @@
+---
+title: "Setting Up Leave Policies for Your Workspace"
+sidebarTitle: "Leave Policies"
+description: "Create and configure leave policies in Connekt to define entitlements, accrual rules, carryover limits, and pro-rata calculations for your team."
+---
+
+Leave policies control how each leave type works in your workspace — how many days employees receive, how those days accrue over time, what happens to unused days at the end of a period, and any bonus entitlements for long service. Setting these up correctly before assigning them to your team ensures that balances and calculations are accurate from day one.
+
+<Note>
+  Creating leave policies requires the **Time Off** feature to be enabled on your Connekt plan, plus `system_administration` permission.
+</Note>
+
+## Creating a leave policy
+
+<Steps>
+  <Step title="Open Policy Configurations">
+    Go to **Settings → Leave Policies → Policy Configurations**.
+  </Step>
+  <Step title="Start a new policy">
+    Click **Create Policy Configuration**.
+  </Step>
+  <Step title="Select the leave type">
+    Choose the type of leave this policy applies to: **Annual Leave**, **Birthday Leave**, **Personal Day**, or **Public Holiday**.
+  </Step>
+  <Step title="Name the policy">
+    Give the policy a clear, descriptive name — for example, **Annual Leave — Standard** or **Annual Leave — Senior Staff**. This name will appear when assigning the policy to users.
+  </Step>
+  <Step title="Configure the policy options">
+    Set up each of the following options according to your organisation's leave rules:
+
+    | Option | What it controls |
+    |---|---|
+    | **Initial days granted per year** | The total entitlement for a full period (e.g. 20 days). |
+    | **Accrual period** | How the entitlement period is measured: **Anniversary** (based on each employee's start date), **Calendar Year**, or **Fiscal Year**. |
+    | **Carryover** | The maximum number of unused days that roll over to the next period. Set to **0** to prevent any carryover. |
+    | **Expiry** | If carryover is allowed, set when those carried-over days expire (e.g. 3 months into the new period). |
+    | **Pro-rata** | Enable this to automatically calculate a partial entitlement for employees who join part-way through a period. |
+    | **Bonus days** | Grant additional days once an employee reaches a set number of years of service (for example, +2 days after 5 years). |
+  </Step>
+  <Step title="Save the policy">
+    Click **Save Policy**.
+  </Step>
+</Steps>
+
+## Assigning the policy to users
+
+Once your policy is saved, you need to assign it to the relevant team members before their balances are calculated.
+
+1. From the policy, choose how to assign it:
+   - **Target a specific region or country** to apply the policy to users in that location.
+   - Click **Setup All Users** to apply the policy workspace-wide.
+2. Confirm the assignment.
+
+<Warning>
+  Policies take effect immediately on assignment. Existing leave balances are **not** retroactively adjusted — if you need to correct a balance after assigning a policy, you'll need to update it manually.
+</Warning>
+
+<Tip>
+  Create separate policy configurations for different employee groups if your entitlements vary — for example, one policy for standard staff and another for senior employees with additional leave days.
+</Tip>

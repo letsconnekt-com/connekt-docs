@@ -1,0 +1,74 @@
+---
+title: "Deal Splits: How Commission is Calculated"
+sidebarTitle: "Deal Splits"
+description: "Understand how Connekt auto-calculates placement fee splits, how to override them manually, split categories, first-placement rules, and system company handling."
+---
+
+Deal splits determine how the placement fee is divided among the recruiters who contributed to closing the deal. Connekt calculates default splits automatically when a placement is created, but you can override them manually at any time.
+
+## How Auto-Calculation Works
+
+When you create a placement, Connekt looks at three things to determine the default split:
+
+- **Who owns the candidate record** — the recruiter responsible for sourcing or managing the candidate
+- **Who owns the company account** — the recruiter or account manager responsible for the client relationship
+- **The deal maker role** — any deal maker role assigned during the recruitment process
+
+Based on these, Connekt distributes the placement fee across the relevant recruiters. You can review the calculated splits immediately after creating the placement and adjust them if needed.
+
+## How to Override Splits Manually
+
+<Steps>
+  <Step title="Open the Placement record">
+    Navigate to the placement whose splits you want to change.
+  </Step>
+  <Step title="Go to the Splits section">
+    Scroll to the **Splits** section on the placement record, or open the **Commission Drawer** from the pipeline card for the same placement.
+  </Step>
+  <Step title="Click Edit Splits">
+    Click **Edit Splits** to enter edit mode.
+  </Step>
+  <Step title="Enter custom percentages">
+    Update the percentage for each recruiter as needed. You can add or remove split lines to reflect the actual contributions.
+  </Step>
+  <Step title="Save">
+    Click **Save** to apply your changes.
+  </Step>
+</Steps>
+
+<Warning>
+  Connekt doesn't strictly enforce that all split lines add up to 100%. Double-check your percentages total correctly before saving to avoid commission reporting discrepancies.
+</Warning>
+
+## Split Categories
+
+Each individual split line can be tagged with a category to describe the type of contribution. This helps with reporting and makes commission breakdowns easier to understand.
+
+<CardGroup cols={3}>
+  <Card title="Regular" icon="user-tie">
+    The recruiter directly worked the deal — sourced the candidate, managed the client, or drove the process to close.
+  </Card>
+  <Card title="Referral" icon="share-nodes">
+    The recruiter passed a lead but didn't actively work the deal themselves.
+  </Card>
+  <Card title="Researcher" icon="magnifying-glass">
+    The recruiter sourced or screened the candidate but wasn't involved in the client-facing side of the deal.
+  </Card>
+</CardGroup>
+
+## Additional Commission Rules
+
+<Accordion title="First-placement handling">
+  A client's first-ever placement can be treated differently from repeat placements at the same account, depending on how your workspace is configured. If you're not sure whether this applies to you, ask your admin.
+</Accordion>
+
+<Accordion title="System companies">
+  Companies flagged as system accounts in Connekt may have different split rules applied automatically. If you notice unexpected splits on a placement linked to a system company, contact your admin to review the account's configuration.
+</Accordion>
+
+## Where to View Splits
+
+All splits and their calculated fee values are visible in two places:
+
+- The **Commission Drawer** — accessible by clicking any deal card on the pipeline board
+- The **Placement record** itself — in the Splits section

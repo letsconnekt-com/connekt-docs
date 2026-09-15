@@ -1,0 +1,54 @@
+---
+title: "Internal vs External Signers in Connekt E-Sign"
+sidebarTitle: "Signer Types"
+description: "Understand the difference between internal Connekt users and external signers, how signing order works, and how unique links keep each signature secure."
+---
+
+When you send a document for signature in Connekt, you can include two types of signers: internal team members who already have a Connekt account, and external parties — such as candidates, clients, or third-party contractors — who don't need an account at all. You can freely mix both types on the same document.
+
+## Internal signers
+
+Internal signers are team members who already have a Connekt account in your workspace.
+
+- **How to add them** — select the person from the user dropdown in the Signers section when setting up the document.
+- **How they're notified** — when it's their turn to sign, Connekt sends them an email with their unique signing link.
+- **Where they sign** — they can sign directly in the browser via the link or from within their Connekt account.
+
+## External signers
+
+External signers are anyone outside your organisation — candidates, clients, and third-party contractors are the most common examples.
+
+- **How to add them** — type their name and email address manually in the Signers section.
+- **How they're notified** — when it's their turn, they receive an email with their unique signing link.
+- **Where they sign** — directly in their browser via the link. No Connekt account is required at any point.
+
+<Note>
+  External signers never need to create a Connekt account. The entire signing experience happens in their browser through their unique link.
+</Note>
+
+## Signing order
+
+Signers always sign in the order they appear in the Signers list. Connekt does not notify the next signer until the previous one has completed their part.
+
+<Info>
+  This sequential flow is particularly useful when one signature must precede another — for example, when a candidate must sign an offer letter before the hiring manager countersigns it. Simply add signers in the required order.
+</Info>
+
+To set the signing order, arrange signers in the correct sequence when you add them to the document. The order can be adjusted before you click **Finalize & Send**, but not after.
+
+## Security
+
+Connekt protects the integrity of each signature with link-level security controls.
+
+<CardGroup cols={2}>
+  <Card title="Unique links" icon="link">
+    Every signer receives their own unique, one-time signing link tied to their specific email address. No two signers share a link.
+  </Card>
+  <Card title="Non-transferable" icon="lock">
+    A signing link cannot be forwarded to complete someone else's signing obligation. The link is bound to the signer it was issued to.
+  </Card>
+</CardGroup>
+
+<Warning>
+  If a signer reports that their link isn't working, use the **Resend** button on the document detail page to issue them a fresh link. Resending replaces — and invalidates — the previous link.
+</Warning>

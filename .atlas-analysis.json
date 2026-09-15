@@ -1,17 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "Connekt",
+  "projectType": "saas",
+  "projectName": "Connekt",
+  "projectDescription": "Connekt is a cloud-based recruitment CRM for staffing agencies and in-house hiring teams, managing the full hiring lifecycle from candidate sourcing through to placements, commissions, and e-signing.",
   "theme": "almond",
-  "colors": {
-    "primary": "#007aff",
-    "light": "#ffffff",
-    "dark": "#141414"
-  },
-  "logo": {
-    "light": "https://media.brand.dev/95097b39-4280-43c1-a923-28878ce9a401.svg",
-    "dark": "https://media.brand.dev/95097b39-4280-43c1-a923-28878ce9a401.svg"
-  },
-  "favicon": "https://media.brand.dev/24d3bda0-4c35-4c82-8291-ed4f1beb4188.png",
+  "primaryColor": "#007aff",
+  "lightColor": "#ffffff",
+  "darkColor": "#141414",
   "navigation": {
     "groups": [
       {
@@ -153,5 +147,22 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Recruitment pipeline (Kanban board) for tracking candidates through hiring stages",
+    "AI-powered candidate-to-job matching and semantic search",
+    "Placement and commission tracking with configurable deal splits",
+    "Built-in e-signing for offer letters and contracts",
+    "Chrome extension for one-click LinkedIn profile capture",
+    "Gmail and LinkedIn message sync",
+    "Time Off / leave management with approval workflows",
+    "Business Development pipeline for tracking client relationships",
+    "Talent pools and project shortlists with optional client-portal sharing",
+    "Role-based access control with customisable permissions",
+    "Bulk CSV import and AI resume parsing",
+    "Dashboard analytics with personal, team, and company views",
+    "Meeting recording, transcription, and AI summaries via Connekt Notetaker",
+    "Mobile app for iOS and Android"
+  ],
+  "publicApiSurface": []
 }

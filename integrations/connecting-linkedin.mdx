@@ -1,0 +1,59 @@
+---
+title: "Connecting LinkedIn Messages to Connekt"
+sidebarTitle: "LinkedIn Messages"
+description: "Sync your LinkedIn messages with candidate profiles in Connekt so all your conversations are centralised in one activity timeline."
+---
+
+Connecting LinkedIn Messages brings your LinkedIn conversations into Connekt alongside emails and notes, so you have a complete communication history on every candidate profile without manually copying messages across. This is separate from the Connekt Chrome extension, which captures LinkedIn profile data, company pages, and contact information into new or existing records — if that's what you need, see [Capturing LinkedIn Profiles with the Connekt Chrome Extension](./chrome-extension).
+
+<Note>
+  LinkedIn does not provide an official API for message access. Connekt uses cookie-based authentication to sync messages, which means the connection process is slightly different from a standard OAuth flow.
+</Note>
+
+## Connecting your LinkedIn account
+
+<Steps>
+  <Step title="Open Communication Settings">
+    Go to **Settings → Communication**.
+  </Step>
+  <Step title="Start the LinkedIn connection">
+    Under the LinkedIn section, click **Connect**.
+  </Step>
+  <Step title="Paste your session cookies">
+    Follow the on-screen prompts to retrieve and paste your LinkedIn session cookies into Connekt.
+  </Step>
+  <Step title="Confirm the connection">
+    Once the cookies are accepted, the status updates to **Active** and sync begins.
+  </Step>
+</Steps>
+
+## How message sync works
+
+- LinkedIn messages are matched to candidate profiles by **name** and **profile URL** where available.
+- Synced messages appear on the candidate's **activity timeline**, alongside emails and notes.
+
+## Handling LinkedIn security checkpoints
+
+LinkedIn occasionally triggers a security checkpoint — such as a CAPTCHA or identity verification — during sync. When this happens:
+
+1. A **Solve Checkpoint** button appears in the LinkedIn section of **Settings → Communication**.
+2. Click **Solve Checkpoint** and complete the LinkedIn security prompt.
+3. Sync resumes automatically once the checkpoint is resolved.
+
+<Warning>
+  If you see a checkpoint and don't resolve it, LinkedIn message sync will pause until it's completed. Check your Communication settings if messages stop appearing on profiles.
+</Warning>
+
+## Manually triggering a sync
+
+1. Go to **Settings → Communication → LinkedIn**.
+2. Click **Sync** to pull the latest messages on demand.
+
+## Disconnecting LinkedIn
+
+1. Go to **Settings → Communication → LinkedIn**.
+2. Click **Disconnect**.
+
+<Note>
+  LinkedIn sessions expire periodically. If sync stops working unexpectedly, reconnect by repeating the steps above — this is a LinkedIn platform limitation, not a Connekt issue. You may need to refresh your session cookies every few weeks.
+</Note>

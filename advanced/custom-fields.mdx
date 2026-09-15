@@ -1,0 +1,83 @@
+---
+title: "Creating and Configuring Custom Fields in Connekt"
+sidebarTitle: "Custom Fields"
+description: "Add custom fields to any Connekt entity to capture business-specific data not covered by default fields, from text inputs to file uploads."
+---
+
+Custom fields let you extend Connekt's default data model to capture information specific to your business — whether that's a compliance checkbox on placements, a preferred contact method on candidates, or a contract tier on companies. You can add custom fields to any of the core entities in your workspace, and they appear alongside default fields on create forms, edit forms, and record detail pages.
+
+<Note>
+  Creating and configuring custom fields requires `system_administration` permission. This is available to Super Administrator and Administrator roles by default.
+</Note>
+
+## Accessing Field Configuration
+
+1. Go to **Settings → Field Configuration**.
+2. Select the entity you want to configure from the list.
+
+You can add custom fields to: **Candidate**, **Company**, **Job**, **Placement**, **Contact**, or **Submission**.
+
+## Creating a custom field
+
+<Steps>
+  <Step title="Select your entity">
+    In **Settings → Field Configuration**, click the entity you want to add a field to (for example, **Candidate**).
+  </Step>
+  <Step title="Add a new field">
+    Click **Add Field**.
+  </Step>
+  <Step title="Choose a field type">
+    Select the type that best matches the data you want to capture:
+
+    | Field Type | What it stores |
+    |---|---|
+    | **Text** | Single-line text input |
+    | **Number** | Numeric values |
+    | **Date** | A date selected from a date picker |
+    | **Dropdown** | A single selection from a list you define |
+    | **Multi-select** | Multiple selections from a list you define |
+    | **Rich Text** | Formatted text with basic styling options |
+    | **Currency** | A numeric value displayed with a currency symbol |
+    | **File Upload** | A file attachment on the record |
+
+    Additional specialised field types are also available in the selector.
+  </Step>
+  <Step title="Set the field label">
+    Enter a clear, descriptive label for the field — this is what users will see on forms and record pages.
+  </Step>
+  <Step title="Set required or optional">
+    Toggle whether the field is **Required** (users must fill it in when creating or editing the record) or optional.
+  </Step>
+  <Step title="Save the field">
+    Click **Save**. The field is immediately available on the selected entity.
+  </Step>
+</Steps>
+
+## Reordering fields
+
+The order of fields in the Field Configuration screen controls the order they appear on create forms, edit forms, and detail pages.
+
+1. In **Settings → Field Configuration**, select the entity.
+2. Drag fields into your preferred order using the drag handle on each row.
+
+Changes take effect immediately — no save step required.
+
+## Where custom fields appear
+
+Once created, custom fields appear automatically in three places for the relevant entity:
+
+<CardGroup cols={3}>
+  <Card title="Create form" icon="plus">
+    When adding a new record, custom fields appear alongside default fields in the creation form.
+  </Card>
+  <Card title="Edit form" icon="pencil">
+    When editing an existing record, custom fields are available for updating in the same form layout.
+  </Card>
+  <Card title="Detail page" icon="file-lines">
+    On the record's detail page, custom fields display alongside default fields so all data is visible in one place.
+  </Card>
+</CardGroup>
+
+<Tip>
+  If you have a large number of custom fields, consider the order carefully — put the most frequently used fields near the top so they're immediately visible without scrolling.
+</Tip>

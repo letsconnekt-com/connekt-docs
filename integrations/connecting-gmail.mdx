@@ -1,0 +1,54 @@
+---
+title: "Connecting Gmail to Your Connekt Workspace"
+sidebarTitle: "Gmail"
+description: "Link your Gmail account to Connekt so emails with candidates and contacts sync automatically to their profiles and activity timelines."
+---
+
+Connecting Gmail lets Connekt pull your email conversations directly into candidate and contact profiles, giving you a complete communication history without switching between tools. Each team member connects their own Gmail account individually, so every person's sent and received emails sync to the right records based on their own mailbox.
+
+<Steps>
+  <Step title="Open Communication Settings">
+    Go to **Settings → Communication** in the main navigation.
+  </Step>
+  <Step title="Connect your Gmail account">
+    Under the Gmail section, click **Connect**. A Google OAuth window opens in your browser.
+  </Step>
+  <Step title="Authorise access">
+    Sign in with the Gmail account you want to sync and grant the permissions Connekt requests.
+  </Step>
+  <Step title="Confirm the connection">
+    Once authorised, you are returned to Connekt and the connection status updates to **Active**.
+  </Step>
+</Steps>
+
+## How email sync works
+
+Connekt matches emails to records by comparing the email addresses of everyone involved in each conversation.
+
+- Emails are matched against the candidate's or contact's email address stored in Connekt.
+- Matched emails appear on the relevant profile's **activity timeline**, alongside notes, calls, and other interactions.
+- On first connection, Connekt performs a **historical backfill** — it imports your existing mailbox history, not just new messages going forward.
+
+<Note>
+  Historical backfill may take a few minutes to complete depending on the size of your mailbox. New emails sync on a regular scheduled basis after the initial import.
+</Note>
+
+## Manually triggering a sync
+
+If you don't want to wait for the next scheduled pull, you can force an immediate sync at any time.
+
+1. Go to **Settings → Communication**.
+2. Click **Sync Now** under the Gmail section.
+
+## Disconnecting Gmail
+
+1. Go to **Settings → Communication → Gmail**.
+2. Click **Disconnect**.
+
+<Info>
+  Existing synced emails remain on profiles after disconnecting — only new emails stop syncing. Your historical email data in Connekt is not deleted.
+</Info>
+
+<Tip>
+  Each team member connects their own Gmail account separately. Emails sync to profiles based on that individual's sent and received history, so every recruiter sees only the conversations they were part of.
+</Tip>
