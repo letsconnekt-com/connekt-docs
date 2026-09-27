@@ -106,11 +106,21 @@ export function Markdown({ text }: { text: string }) {
   );
 }
 
+// streamed replies render every intermediate prefix, so the cache must be bounded
+const MAX_CACHE_SIZE = 100;
 const cache = new Map<string, Promise<ReactNode>>();
 
 function Renderer({ text }: { text: string }) {
   const result = cache.get(text) ?? processor.process(text);
+  // re-insert to mark as recently used, `Map` keeps insertion order
+  cache.delete(text);
   cache.set(text, result);
+
+  // evict the least recently used entries, recent (possibly pending) promises stay stable for Suspense retries
+  for (const key of cache.keys()) {
+    if (cache.size <= MAX_CACHE_SIZE) break;
+    cache.delete(key);
+  }
 
   return use(result);
 }

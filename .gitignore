@@ -21,6 +21,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # others
+# local env files hold secrets such as OPENROUTER_API_KEY
+.env
 .env*.local
+.env.development
+.env.production
 .vercel
 next-env.d.ts

@@ -2,6 +2,7 @@ import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { convertToModelMessages, createUIMessageStreamResponse, stepCountIs, streamText, tool, toUIMessageStream } from "ai";
 import { z } from "zod";
 import { docsLlms } from "@/lib/llms";
+import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
 import { searchServer } from "@/lib/search";
 import { source } from "@/lib/source";
 import type { ChatUIMessage, SearchTool } from "@/components/ai/search";
@@ -17,6 +18,11 @@ const fallbackModels = ["deepseek/deepseek-v4.1-flash", "google/gemini-3.5-flash
 
 /** only the latest messages are sent to the model, to bound the cost of long chats */
 const MAX_MESSAGES = 20;
+/** upper bound for the serialized messages, rejects oversized prompts */
+const MAX_MESSAGES_SIZE = 50_000;
+
+// the endpoint is public (help centre visitors are anonymous), so limit how often one client can call it
+const rateLimit = createRateLimiter({ limit: 20, windowMs: 10 * 60 * 1000 });
 
 /** System prompt, you can update it to provide more specific information */
 const systemPrompt = docsLlms.index().then((index) =>
@@ -47,8 +53,30 @@ export async function POST(req: Request) {
     return new Response("Ask AI is not configured: missing OPENROUTER_API_KEY", { status: 500 });
   }
 
-  const reqJson = await req.json();
-  const messages: ChatUIMessage[] = (reqJson.messages ?? []).slice(-MAX_MESSAGES);
+  // only accept requests from the docs site itself, not other origins
+  const origin = req.headers.get("origin");
+  const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host");
+  if (!origin || !URL.canParse(origin) || new URL(origin).host !== host) {
+    return new Response("Forbidden", { status: 403 });
+  }
+
+  const limited = rateLimit(getClientIp(req));
+  if (!limited.ok) {
+    return new Response("Too many requests, please try again later.", {
+      status: 429,
+      headers: { "Retry-After": String(limited.retryAfter) },
+    });
+  }
+
+  const reqJson = await req.json().catch(() => null);
+  if (!reqJson || !Array.isArray(reqJson.messages)) {
+    return new Response("Invalid request body", { status: 400 });
+  }
+
+  const messages: ChatUIMessage[] = reqJson.messages.slice(-MAX_MESSAGES);
+  if (JSON.stringify(messages).length > MAX_MESSAGES_SIZE) {
+    return new Response("Conversation is too long, please start a new chat.", { status: 413 });
+  }
 
   const result = streamText({
     model: openrouter.chat(model, { models: [model, ...fallbackModels] }),
