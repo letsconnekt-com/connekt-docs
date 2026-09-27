@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+/* Connekt brand colours (carried over from the Mintlify config) */
+@theme {
+  --color-fd-primary: #007aff;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-ring: #007aff;
+}
+
+.dark {
+  --color-fd-background: #141414;
+  --color-fd-card: #1a1a1a;
+  --color-fd-popover: #1a1a1a;
+  --color-fd-primary: #0a84ff;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-ring: #0a84ff;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
