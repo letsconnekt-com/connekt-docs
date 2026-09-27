@@ -1,50 +1,115 @@
 ---
-title: "Notification Preferences: Email, In-App, and Mobile Alerts"
+title: "Manage your notifications"
 sidebarTitle: "Notifications"
-description: "Learn which events trigger Connekt notifications, how email and in-app alerts work, and how to enable push notifications on mobile."
+description: "Choose which Connekt notifications you get by push and email, and find all your notifications in the bell and on the Notifications page."
 ---
 
-Connekt keeps you informed about the things that matter most to your work by sending notifications whenever key events happen. Notifications arrive by email and in-app so you can stay on top of activity whether you're working in Connekt or away from it. If you use the Connekt mobile app, you can also receive push notifications on your device.
+Connekt notifies you about mentions, tasks, time off, recruiting updates and more. Every notification appears in Connekt itself. You choose which ones also reach you by push notification on your phone or by email.
 
-## Events that trigger notifications
+## Where notifications appear
 
-Connekt sends notifications for the following types of events:
+- **The bell.** Click the bell icon to see your latest notifications. Filter them with the **All**, **Mentions**, **Time Off**, **Finance** and **Docs** tabs, or click **Mark all read**.
+- **The Notifications page.** Click **Notifications** in the sidebar, or click **View all notifications** at the bottom of the bell. Notifications are grouped by **Today**, **Yesterday** and **Older**. Click **Mark all as read** to clear your unread count.
+- **Browser notifications.** While Connekt is open in your browser, new notifications pop up in the app. If you allow browser notifications, they also appear as desktop notifications.
+- **Push notifications.** Push notifications go to the Connekt mobile app. See [Using the mobile app](/mobile/using-the-mobile-app).
+- **Email.** Email notifications go to the email address on your Connekt account.
 
-- **Submission status changes** — when a candidate's submission is updated (for example, moved to interview or rejected).
-- **Job assignments** — when you are assigned to work on a job.
-- **Leave approvals** — when a leave request you submitted is approved or rejected.
-- **Document signing events** — when a document is signed, or when it's your turn to sign a document.
-- **Payment updates** — when payment-related activity occurs on a placement or deal you're involved in.
+<Tip>
+  Press **G** then **B** to jump to the Notifications page.
+</Tip>
 
-## Notification channels
+<Note>
+  Connekt sends each notification as it happens. There's no daily or weekly digest.
+</Note>
 
-<CardGroup cols={2}>
-  <Card title="Email" icon="envelope">
-    Notification emails are sent to the address associated with your Connekt account. They include a summary of the event and a direct link back to the relevant record.
-  </Card>
-  <Card title="In-App" icon="bell">
-    In-app notifications appear in the notification centre within Connekt. You can review them at any time by clicking the bell icon in the top navigation.
-  </Card>
-</CardGroup>
+## Allow browser notifications
 
-## Adjusting your notification settings
+The first time you use Connekt, an **Enable Notifications** prompt appears in the corner of the screen. Click **Allow**, then accept your browser's permission request.
+
+If you clicked **Not now** or blocked notifications, turn them on in your browser's site settings for Connekt.
+
+## Choose how you're notified
+
+<Tabs>
+  <Tab title="Web">
+    <Steps>
+      <Step title="Open your notification settings">
+        Go to **Settings → Notifications**.
+      </Step>
+      <Step title="Turn a notification on or off">
+        Use the switch next to each notification type. Turning a type off stops both push and email for it.
+      </Step>
+      <Step title="Pick the channels">
+        When a type is on, click **See details**. Turn **Push** and **Email** on or off. The summary under the type shows **Push & Email**, **Push only** or **Email only**.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Mobile">
+    <Steps>
+      <Step title="Open your profile">
+        On the **Home** tab, tap your profile picture.
+      </Step>
+      <Step title="Open notification settings">
+        Tap **Notifications**.
+      </Step>
+      <Step title="Allow push on this device">
+        Turn on **Push Notifications** to allow push notifications on your phone.
+      </Step>
+      <Step title="Choose types and channels">
+        Use the switch next to each notification type. Tap **See details** to choose **Push**, **Email** or both.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+Changes save straight away and apply on web and mobile.
 
 <Info>
-  A self-service page for customising which notifications you receive on which channel is not yet available. To adjust your notification preferences — for example, to turn off certain email alerts or change which events you're notified about — contact your workspace admin or reach out to Connekt support.
+  Turning a notification off only stops push and email. It still appears in the bell and on the Notifications page.
 </Info>
 
-## Push notifications on mobile
+## Notification types
 
-The Connekt mobile app supports push notifications, so you can receive alerts even when the app isn't open.
+Push is on by default for every type. Email is on by default only where the table says so.
 
-<Steps>
-  <Step title="Open your device settings">
-    On your phone or tablet, go to **Settings → Apps** (Android) or **Settings → Notifications** (iOS).
-  </Step>
-  <Step title="Find the Connekt app">
-    Locate Connekt in the list of installed apps.
-  </Step>
-  <Step title="Enable notifications">
-    Make sure notifications are set to **Allowed** for the Connekt app. Depending on your device, you may also be able to control which notification types (banners, sounds, badges) are enabled.
-  </Step>
-</Steps>
+| Group | Notification | When you get it | Email by default |
+|---|---|---|---|
+| Matching | **New candidate matches** | A candidate may be a good fit for one of your jobs. | No |
+| Mentions & comments | **Note mentions** | Someone @mentions you in a note. | Yes |
+| Mentions & comments | **Comment mentions** | Someone @mentions you in a note comment. | Yes |
+| Mentions & comments | **New comments** | Someone comments on a note you follow. | Yes |
+| Tasks | **Task assigned** | A task is assigned to you. | Yes |
+| Tasks | **Task reminders** | A task is coming up or overdue. | No |
+| Time off | **Leave requests** | A team member submits a leave request for your approval. | No |
+| Time off | **Leave approved** | Your leave request is approved. | No |
+| Time off | **Leave rejected** | Your leave request is rejected. | No |
+| Recruiting | **Candidate submissions** | Someone else submits a candidate you own. | No |
+| Recruiting | **Ownership changes** | Candidate ownership is transferred to or from you. | No |
+| Finance | **Invoice due** | An invoice is due. | No |
+| Finance | **Payment due** | A payment is due. | No |
+| Finance | **Payment overdue** | A payment becomes overdue. | No |
+| Documents | **Document shared** | A document is shared with you. | Yes |
+| System | **System alerts** | Important system notices, such as leave balance updates. | No |
+
+<Note>
+  Some notifications, such as eSign signing and review updates, aren't listed in notification settings.
+</Note>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I'm not getting push notifications on my phone">
+    In the mobile app, check that **Push Notifications** is on under **Profile → Notifications**. Then check that notifications are allowed for Connekt in your phone's settings. Also check that **Push** is on for the notification type.
+  </Accordion>
+  <Accordion title="I'm not getting desktop notifications">
+    Desktop notifications only appear while Connekt is open in your browser. Check that your browser allows notifications for Connekt.
+  </Accordion>
+  <Accordion title="I'm not getting an email for a notification">
+    Most types don't send email by default. Go to **Settings → Notifications**, click **See details** on the type, and turn on **Email**.
+  </Accordion>
+  <Accordion title="I turned a notification off but still see it in the bell">
+    That's expected. The switch only controls push and email. Every notification still appears in the bell and on the Notifications page.
+  </Accordion>
+</AccordionGroup>
+
+Need more help? See [Getting help](/getting-started/getting-help).

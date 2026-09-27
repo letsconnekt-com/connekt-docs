@@ -1,76 +1,94 @@
 ---
-title: "Creating a Placement in Connekt: Two Methods Explained"
-sidebarTitle: "Create a Placement"
-description: "Two ways to create a Placement in Connekt: convert from a submission (recommended) or create one directly with fee details and recruiter splits."
+title: "Create a placement"
+sidebarTitle: "Create a placement"
+description: "Record a placement from Deals → Add Placement. Choose one of seven placement types, fill in the required fields and set the fee splits."
 ---
 
-A Placement records a confirmed hire, including all fee and invoicing details. In Connekt there are two ways to create one: converting from an existing submission, or creating a placement directly from scratch. Both result in the same record — the difference is how much data Connekt pre-fills for you.
+A placement records a deal you've closed, with the fee, splits, dates and invoicing details. You can convert a submission into a placement, or add a placement directly from the **Deals** page. Both create the same record.
 
-<Tabs>
-  <Tab title="Method 1: Convert from a Submission">
-    Converting from a submission is the **recommended approach** because the candidate, job, and company are pre-filled automatically, reducing the risk of data entry errors.
+<Tip>
+  If the candidate has a submission at **Offer Accepted** or **Hired**, convert it instead. Connekt fills in the candidate, job and company for you. See [Convert a submission to a placement](/submissions/converting-to-placement).
+</Tip>
 
-    If the candidate's submission has reached **Offer Accepted** or **Hired** status, follow the steps in [Converting a Submission to a Placement](/submissions/converting-to-placement).
+## Add a placement
 
-    <Tip>
-      Always use this method when a submission already exists. It keeps the submission and placement linked, so you have a complete history from first contact to placement in one place.
-    </Tip>
-  </Tab>
-  <Tab title="Method 2: Create Directly">
-    Use this method when there is no existing submission record — for example, when a hire happened outside your normal recruitment pipeline.
+You need the **Create Deals** permission.
 
-    <Steps>
-      <Step title="Go to Placements">
-        Click **Placements** in the main navigation.
-      </Step>
-      <Step title="Click Create Placement">
-        Click the **Create Placement** button at the top of the list.
-      </Step>
-      <Step title="Fill in the required fields">
-        Complete the following mandatory fields:
-        - **Candidate** — search for and select the candidate
-        - **Job** — the role they were hired for
-        - **Company** — the hiring business
-        - **Start date** — the candidate's first day in the role
-      </Step>
-      <Step title="Add fee details">
-        These fields are optional but strongly recommended for accurate commission tracking and invoicing:
-        - **Placement fee amount** — the total fee billed to the client
-        - **Currency**
-        - **Billing country** — affects tax and invoicing rules
-      </Step>
-      <Step title="Set the invoice date">
-        Enter the **invoice date** — this can differ from the start date. For example, you might invoice on the start date but set payment due 30 days later.
-      </Step>
-      <Step title="Configure recruiter splits">
-        Assign a percentage to each recruiter who contributed to the deal. See [Deal Splits](/placements/deal-splits) for details on how auto-calculation and manual overrides work.
-      </Step>
-      <Step title="Upload documents">
-        Attach the offer letter, signed contract, or any other relevant files if you have them available.
-      </Step>
-      <Step title="Fill in custom fields">
-        Complete any custom fields your team has configured for your specific workflow.
-      </Step>
-      <Step title="Save">
-        Click **Save** to create the placement.
-      </Step>
-    </Steps>
+<Steps>
+  <Step title="Open the placements list">
+    Click **Deals** in the sidebar, then click the **My Placements** or **All Placements** tab.
+  </Step>
+  <Step title="Click Add Placement">
+    Click **Add Placement**. The **Create New Placement** page opens.
+  </Step>
+  <Step title="Choose the placement type">
+    Pick a **Placement Type**. The type decides whether you need a candidate. See the table below.
+  </Step>
+  <Step title="Choose the candidate, company and job">
+    Select the **Company** and **Job Position**. For types that need a candidate, also pick one in **Select Candidate**.
+  </Step>
+  <Step title="Fill in the placement details and fee">
+    Complete the required fields listed below.
+  </Step>
+  <Step title="Add the splits">
+    In **Splits**, add each person who shares the fee and click **Save Splits**. See [Deal splits](/placements/deal-splits).
+  </Step>
+  <Step title="Attach documents (optional)">
+    Upload files such as the offer letter or signed terms in **Placement Documents**.
+  </Step>
+  <Step title="Create the placement">
+    Click **Create Placement**. Connekt opens the new placement when it's saved.
+  </Step>
+</Steps>
 
-    The placement will appear in the **Placements list** and on the **pipeline board** immediately after saving.
-  </Tab>
-</Tabs>
+<Note>
+  **Create Placement** stays disabled until the required fields are complete and your splits are saved. If you haven't saved your splits, the page shows "Save your split changes first".
+</Note>
 
-## Recruiter Splits
+## Placement types
 
-Recruiter splits define how the placement fee is divided among the people who contributed to closing the deal. You can configure splits during placement creation or edit them at any time afterwards from the Placement record or the Commission Drawer on the pipeline board.
+| Type | What it's for | Candidate |
+|---|---|---|
+| **Candidate** | A regular contingency placement. | Required |
+| **Incentive Fee** | A reward or bonus for achieving specific milestones. | Required |
+| **Success Fee** | A fee paid when a retainer completes. | Required |
+| **Other** | Any placement not covered by the other types. | Required |
+| **Upfront Fee** | A fee paid in advance, before the candidate starts. | Not used |
+| **Cancellation Fee** | A fee charged when a placement is cancelled or ends early. | Not used |
+| **Shortlist Fee** | A fee for providing a shortlist of qualified candidates. | Not used |
 
-See [Deal Splits](/placements/deal-splits) for a full explanation of auto-calculation, manual overrides, and split categories.
+For types that don't use a candidate, the candidate compensation fields are disabled.
 
-## Documents
+## Required fields
 
-You can attach documents to a placement at creation time or add them later by opening the Placement record. Typical documents include:
+| Section | Required fields |
+|---|---|
+| **Placement Type** | **Placement Type** |
+| **Candidate & Job Details** | **Company**, **Job Position**, and **Select Candidate** for types that need one |
+| **Placement Details** | **Position Title**, **Status**, **Contract Type**, **Country** (where the candidate is placed), **Billing Country**, **Billing Currency** |
+| **Compensation & Fees** | **Fee Value** and **Start Date**. For types with a candidate, also **Base Salary** and **Candidate Compensation Currency**. |
+| **Splits** | At least one split, adding up to 100% of the fee |
+| **Fiscal Information** | **Year**, **Quarter** and **Month** for reporting. These default to the current period. |
 
-- Offer letters
-- Signed employment contracts
-- Background check results
-- Client-signed fee agreements
+**Status** defaults to **Starting Soon**. **Contract Type** can be **Permanent**, **Contract**, **Temporary**, **Contingent**, **Project** or **Retained**.
+
+<Note>
+  Your admin can rename sections, hide sections or make more fields required in **Settings → Field Configuration**. See [Custom fields](/advanced/custom-fields).
+</Note>
+
+## Optional fields
+
+- **Process Entry Date:** the date the candidate started interviewing.
+- **Bonus** and **Other Compensation:** extra pay for the candidate.
+- **Fee Terms:** how you calculated the fee, for example "30% of annual salary".
+- **Invoice Date:** when you invoice the client. **Invoice on start date** is on by default. Turn it off to pick another date.
+- **Payment Terms:** 15, 30, 45, 60 or 90 days. Connekt calculates the **Payment Due Date** from the invoice date.
+- **Date of Birth** and **Home Address:** the candidate's details, shown when you've selected a candidate.
+
+## After you create the placement
+
+- The placement appears on the **My Placements** and **All Placements** tabs.
+- If the candidate already had a submission for the job with no placement, Connekt links the two and sets the submission to **Hired**.
+- The job's filled positions update. Its status changes to **Partially Filled** or **Filled** as positions fill.
+
+To make changes later, open the placement and click **Edit**. See [Placement and payment statuses](/placements/placement-statuses).

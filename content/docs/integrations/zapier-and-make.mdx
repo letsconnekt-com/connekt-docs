@@ -1,0 +1,124 @@
+---
+title: "Connect Connekt to Zapier and Make"
+sidebarTitle: "Zapier and Make"
+description: "Use your workspace's Zapier API Token to connect Connekt to Zapier or Make, trigger automations from Connekt events and create records."
+---
+
+Connect Connekt to Zapier or Make to automate work between Connekt and your other tools. Events in Connekt, such as a new candidate or a signed document, can start an automation. Automations can also create candidates, contacts, companies and jobs in Connekt. Both services connect with your workspace's **Zapier API Token**.
+
+<Info>
+  Zapier and Make need the **Team plan or higher**. See [Plans compared](/billing/plans-compared).
+</Info>
+
+## Who can manage the token
+
+Super Administrators and Administrators can turn on, copy and reset the token in **Settings → API Key**. Your workspace has one token, and everyone's automations use it.
+
+<Warning>
+  The token gives access to your workspace's data. Keep it private, and only paste it into Zapier or Make.
+</Warning>
+
+## Get your API token
+
+<Steps>
+  <Step title="Open API Key settings">
+    Go to **Settings → API Key**.
+  </Step>
+  <Step title="Turn on the token">
+    Turn on **Enable API Token**. Connekt creates your token, and the status changes to **API Token Is Enabled**.
+  </Step>
+  <Step title="Copy the token">
+    Click the eye icon to show the token, or click the copy icon to copy it.
+  </Step>
+</Steps>
+
+## Connect in Zapier or Make
+
+<Steps>
+  <Step title="Add Connekt to your automation">
+    In Zapier, create a Zap. In Make, create a scenario. Add Connekt as the app for your trigger or action step.
+  </Step>
+  <Step title="Connect your Connekt account">
+    When asked to connect Connekt, paste your Zapier API Token. Use the same token for both Zapier and Make.
+  </Step>
+  <Step title="Choose a trigger or action">
+    Pick one of the Connekt triggers or actions listed below, then finish setting up the step.
+  </Step>
+  <Step title="Turn on your automation">
+    Test the step, then turn on your Zap or scenario.
+  </Step>
+</Steps>
+
+## Triggers
+
+A trigger starts your automation when something happens in Connekt.
+
+| Record | Trigger events |
+|---|---|
+| Candidates | Created, updated, deleted |
+| Companies | Created, updated, deleted |
+| Contacts | Created, updated, deleted |
+| Jobs | Created, updated, deleted |
+| Submissions | Created, updated, deleted |
+| Placements | Created, updated, deleted, payment status updated |
+| Notes (any record) | Created, updated |
+| Candidate notes | Created, updated, deleted |
+| Company notes | Created, updated, deleted |
+| Contact notes | Created, updated, deleted |
+| Documents (Sign) | Created, sent, signed, completed, cancelled, expired |
+| Time off | Submitted, updated, approved, rejected, cancelled |
+
+## Actions
+
+An action creates a record in Connekt from your automation:
+
+- Create a candidate
+- Create a contact
+- Create a company
+- Create a job
+
+## Reset the token
+
+Reset the token if you think someone else has it, or when you want to cut off every connected app.
+
+<Steps>
+  <Step title="Open API Key settings">
+    Go to **Settings → API Key**.
+  </Step>
+  <Step title="Reset">
+    Click **Reset Token**, then click **Continue** to confirm.
+  </Step>
+  <Step title="Update your connections">
+    Copy the new token. Paste it into every Zapier and Make connection that uses Connekt.
+  </Step>
+</Steps>
+
+<Warning>
+  After a reset, the old token stops working straight away. Every Zap and scenario that uses Connekt loses access until you give it the new token.
+</Warning>
+
+## Turn off the token
+
+To pause all automations, turn off **Enable API Token**. Connected apps can't reach Connekt while the token is off, and existing triggers stop sending events. When you turn the token back on, reconnect or turn your Zaps and scenarios off and on again so their triggers start again.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="I can't see API Key in Settings">
+    Only Super Administrators and Administrators see **Settings → API Key**, and only on the Team plan or higher. Ask an administrator, or see [Plans compared](/billing/plans-compared).
+  </Accordion>
+  <Accordion title="Zapier or Make says &quot;API access requires the Team plan or higher&quot;">
+    Your workspace is on a plan without API access. Upgrade to Team or Business in **Settings → Plan**.
+  </Accordion>
+  <Accordion title="Zapier or Make says &quot;Invalid API key&quot; or &quot;API key required&quot;">
+    The token was reset, turned off or pasted incorrectly. Check that **Enable API Token** is on, copy the current token, and reconnect Connekt in Zapier or Make.
+  </Accordion>
+  <Accordion title="My triggers stopped firing">
+    Resetting or turning off the token stops existing triggers. Reconnect Connekt with the current token, then turn your Zap or scenario off and on again.
+  </Accordion>
+  <Accordion title="I can't copy the token">
+    You can only copy the token while it's turned on. Turn on **Enable API Token**, then try again.
+  </Accordion>
+</AccordionGroup>
+
+Need more help? See [Getting help](/getting-started/getting-help).

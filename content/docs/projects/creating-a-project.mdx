@@ -1,0 +1,199 @@
+---
+title: "Creating and managing projects"
+sidebarTitle: "Create a project"
+description: "Create a project to shortlist candidates for a role, add candidates from anywhere in Connekt, track each candidate's progress and control who has access."
+---
+
+A project is a shortlist of candidates for a specific role or client. Each candidate in a project has their own status, notes and update log, so you can track the search in one place. You can also share a project with your client through a secure link. See [Sharing a project with a client](/projects/sharing-a-project).
+
+## Create a project
+
+<Steps>
+  <Step title="Open Projects">
+    Click **Projects** in the sidebar.
+  </Step>
+  <Step title="Click Create Project">
+    Click **Create Project**. The **Create New Project** dialog opens.
+  </Step>
+  <Step title="Fill in the details">
+    - **Project Name** (required), for example "Senior Backend Engineer - ACME Corp"
+    - **Description**: optional context for your team
+    - **Company**: the client this search is for
+    - **Job Position**: a job at that company. Select a company first.
+  </Step>
+  <Step title="Choose the visibility">
+    Pick **Private**, **Team** or **Specific People**. See [Project visibility](#project-visibility) below.
+  </Step>
+  <Step title="Click Create Project">
+    Connekt creates the project and opens it.
+  </Step>
+</Steps>
+
+<Tip>
+  Link the project to a company when you create it. You can't share a project with a client until it has a company.
+</Tip>
+
+## Project visibility
+
+| Visibility | Who can open the project |
+|---|---|
+| **Private** | Only you. |
+| **Team** | Everyone in your workspace. |
+| **Specific People** | You and the users you choose. |
+
+When you choose **Specific People** in the create dialog, use **Select Users** to pick teammates. They get **Can Edit** access.
+
+<Note>
+  On a **Team** project, everyone can view the project, but only you can make changes. To let specific teammates edit, switch to **Specific People** and give them **Can Edit** access.
+</Note>
+
+## Manage access
+
+You manage a project's details and access from its **Settings** tab. The tab appears for the creator and anyone with **Can Edit** access.
+
+<Steps>
+  <Step title="Open the Settings tab">
+    Open the project and click **Settings**.
+  </Step>
+  <Step title="Update details">
+    Under **Project Details**, edit the **Project Name** or **Description**, then click **Save Changes**.
+  </Step>
+  <Step title="Change visibility">
+    Under **Visibility Settings**, pick a new option, then click **Update Visibility**.
+  </Step>
+  <Step title="Grant access">
+    With **Specific People** selected, pick a user, choose **View Only** or **Can Edit**, then click **Grant Access**.
+  </Step>
+</Steps>
+
+Everyone you've added appears under **Users with Access**. Use the dropdown next to a name to switch between **View Only** and **Can Edit**, or click the bin icon to revoke access.
+
+<Warning>
+  Only the project's creator can grant, change or revoke user access, share the project with a client or delete it.
+</Warning>
+
+| Action | View Only | Can Edit | Creator |
+|---|---|---|---|
+| View candidates and history | Yes | Yes | Yes |
+| Add or remove candidates, change statuses, add notes and updates | No | Yes | Yes |
+| Edit details and visibility, duplicate the project | No | Yes | Yes |
+| Grant access, share with a client, delete the project | No | No | Yes |
+
+## Add candidates
+
+You can add candidates from several places. A candidate can only appear once in a project. If you add someone who's already there, Connekt skips them and tells you how many were already in the project.
+
+<AccordionGroup>
+  <Accordion title="From the project">
+    1. Open the project and click **Add Candidates**.
+    2. Under **Search From**, choose **Search Results** to search your whole database by name, email or title. Choose **Projects** to pick candidates from another project.
+    3. Tick the candidates you want.
+    4. Click **Add Candidate(s)**.
+  </Accordion>
+  <Accordion title="From a candidate record">
+    1. Open the candidate.
+    2. Click **Add to Project** in the header.
+    3. Pick a project, or choose **Create new project** from the dropdown.
+    4. Click **Add to Project**.
+  </Accordion>
+  <Accordion title="From the Candidates list">
+    1. In **Candidates**, tick the candidates you want.
+    2. Click **Action**, then click **Add to Project**.
+    3. Pick a project, or create a new one, and click **Add to Project**.
+  </Accordion>
+  <Accordion title="From Ask AI">
+    On a candidate card in the Ask AI results, open the **⋯** menu and click **Add to Project**. The mobile app's Ask AI has the same option. See [Ask AI](/search/ask-ai).
+  </Accordion>
+  <Accordion title="From the Chrome extension">
+    On a LinkedIn profile that's already in Connekt, open the **Assigned** tab in the extension and click **Assign to Project**. Select one or more projects, or click **+ Create new project**, then click **Save**. Projects the candidate is already in are pre-selected. Deselect a project to remove them from it. See [Chrome extension](/integrations/chrome-extension).
+  </Accordion>
+</AccordionGroup>
+
+## Track candidates in a project
+
+The **Candidates** tab shows each candidate with these columns:
+
+| Column | What it shows |
+|---|---|
+| **Status** | The candidate's stage in this project. Click it to change it. |
+| **Last Update** | The latest entry in the candidate's update log. |
+| **Notes** | Your team's notes on the candidate. |
+| **Client Feedback** | Comments your client left in the client portal. You can read them but not reply. |
+| **Client Status** | Your client's latest decision: **Pending**, **Moved Forward**, **On Hold** or **Process Ended**. |
+| **Actions** | **History** and the option to remove the candidate. |
+
+### Candidate statuses
+
+Each candidate starts as **Added**. You can move them to any of these statuses:
+
+**Added**, **No Reply**, **Not Interested**, **Candidate Declined**, **Interviewing**, **First Interview**, **Second Interview**, **Final Interview**, **Offer Extended**, **Offer Accepted**, **Rejected** and **Withdrawn**.
+
+<Note>
+  Changing a candidate's status resets your client's decision for that candidate to **Pending**. This lets the client decide again at the new stage.
+</Note>
+
+### Last Update
+
+Click the **Last Update** cell to open the candidate's update log. Enter a status note, pick a **Date**, add optional comments and click **Add**. The newest entry shows in the table.
+
+### Notes
+
+Click the **Notes** cell to read or add notes. Type your note and click **Post**.
+
+<Warning>
+  Your client can read these notes if you share the project. They appear in the client portal as **Recruiter Notes**, and the latest note is included in the client's CSV export. Keep internal comments on the candidate's own record instead. See [Attachments and notes](/candidates/attachments-and-notes).
+</Warning>
+
+### History
+
+Click **History** in the **Actions** column to see every status change and client decision for the candidate, newest first. Each entry is labelled **By Recruiter** or **By Client**.
+
+### Remove candidates
+
+Click the bin icon in a candidate's row, then click **Remove**. To remove several at once, tick them and click **Remove**.
+
+## Duplicate a project
+
+Duplicate a project to reuse its setup for a similar search.
+
+<Steps>
+  <Step title="Open the menu">
+    Open the project and click the **⋯** menu in the header.
+  </Step>
+  <Step title="Click Duplicate">
+    Click **Duplicate**. The name defaults to the original name with "(copy)" at the end.
+  </Step>
+  <Step title="Confirm">
+    Edit the **Name** if you like, then click **Duplicate**.
+  </Step>
+</Steps>
+
+The copy keeps the description, company, job, visibility, user access, client visibility settings and candidate list. It starts fresh in every other way. It isn't shared with any client, every candidate is back at **Added**, and notes, updates, client feedback and history aren't copied. You become the creator of the copy.
+
+## Delete a project
+
+Only the project's creator can delete it.
+
+<Steps>
+  <Step title="Open the menu">
+    Open the project and click the **⋯** menu in the header.
+  </Step>
+  <Step title="Delete">
+    Click **Delete** and confirm.
+  </Step>
+</Steps>
+
+<Warning>
+  You can't restore a deleted project in Connekt. If the project is shared with a client, revoke their links under **Active access** before you delete it. See [Manage active links](/projects/sharing-a-project#manage-active-links).
+</Warning>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Share with a client" icon="share-nodes" href="/projects/sharing-a-project">
+    Send your client a secure link to review the shortlist.
+  </Card>
+  <Card title="Email sequences" icon="envelope" href="/outreach/email-sequences">
+    Enroll a project's candidates in an email sequence.
+  </Card>
+</CardGroup>

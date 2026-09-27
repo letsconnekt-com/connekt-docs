@@ -40,7 +40,7 @@ const systemPrompt = docsLlms.index().then((index) =>
     "- Cite sources as standard Markdown links with a readable title and the page URL: [Plans compared](/billing/plans-compared). Search results may include a section anchor, e.g. [Pricing](/billing/plans-compared#pricing).",
     "- Never write bare bracket citations like [/billing/plans-compared] or [-billing/plans-compared#pricing], they don't render as links.",
     "- Link each source once, where it's first relevant or in a short \"Learn more\" line at the end. Don't add a citation after every sentence or bullet.",
-    "- If the documentation doesn't cover the question, say so plainly and don't guess. Suggest contacting Connekt support for account-specific issues.",
+    "- If the documentation doesn't cover the question, say so plainly and don't guess. For account-specific issues, point the user to [Getting help](/getting-started/getting-help) to reach the Connekt team via in-app chat or email.",
     "- The user message may include `[Client Context]` with the page the user is viewing, use it to resolve questions like \"this page\".",
     "",
     "Page index:",

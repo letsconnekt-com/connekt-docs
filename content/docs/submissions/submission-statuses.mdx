@@ -1,82 +1,108 @@
 ---
-title: "Submission Statuses: All 19 Stages Explained in Connekt"
-sidebarTitle: "Statuses"
-description: "A complete reference for all 19 submission statuses in Connekt — from Submitted through to Hired — and how to update a status on any submission record."
+title: "Submission statuses"
+sidebarTitle: "Submission statuses"
+description: "All 19 submission statuses in Connekt, how they're grouped, and how to change a submission's status from the Submissions tab or the Deals page."
 ---
 
-Submissions move through a defined set of stages as a candidate progresses through the hiring process. Connekt provides 19 statuses in total, split between active pipeline stages and paused or closed outcomes. Keeping statuses up to date ensures your pipeline accurately reflects reality and makes reporting meaningful.
+Every submission has a status that shows where the candidate is in the hiring process. Connekt has 19 statuses, grouped into four sets in the status menu: **Initial Stages**, **Interview Stages**, **Final Stages** and **Other**.
 
-## Active Pipeline Stages
+## Initial stages
 
-These statuses represent forward progress through a typical hiring process, generally in the order shown below.
+| Status | What it means |
+|---|---|
+| **Submitted** | You've put the candidate forward. New submissions start here by default. |
+| **Under Review** | The client is reviewing the candidate's profile. |
+| **Shortlisted** | The client has shortlisted the candidate. |
 
-| # | Status | What it means |
-|---|--------|---------------|
-| 1 | **Submitted** | The candidate has been put forward for the role |
-| 2 | **Under Review** | The client or internal team is reviewing the profile |
-| 3 | **Shortlisted** | The candidate has been selected for further consideration |
-| 4 | **Phone Screening** | An initial screening call is scheduled or has been completed |
-| 5 | **Interview 1** | The candidate is at the first formal interview stage |
-| 6 | **Interview 2** | The candidate is at the second interview stage |
-| 7 | **Interview 3** | The candidate is at the third interview stage |
-| 8 | **Final Interview** | The candidate is in the final-round interview |
-| 9 | **Technical Assessment** | A skills test, case study, or take-home task is in progress |
-| 10 | **Presentation** | A presentation or work-sample stage is underway |
-| 11 | **Reference Check** | Background or reference checks are in progress |
-| 12 | **Offer Extended** | An offer has been made to the candidate |
-| 13 | **Offer Accepted** | The candidate has accepted the offer |
-| 14 | **Hired** | The candidate has been confirmed as placed |
+## Interview stages
+
+| Status | What it means |
+|---|---|
+| **Phone Screening** | A screening call is scheduled or done. |
+| **1st Interview** | The candidate is at the first interview. |
+| **2nd Interview** | The candidate is at the second interview. |
+| **3rd Interview** | The candidate is at the third interview. |
+| **Final Interview** | The candidate is in the final round. |
+| **Technical Assessment** | A skills test or take-home task is in progress. |
+| **Presentation** | The candidate is preparing or giving a presentation. |
+
+## Final stages
+
+| Status | What it means |
+|---|---|
+| **Reference Check** | References or background checks are in progress. |
+| **Offer Extended** | The client has made an offer. |
+| **Offer Accepted** | The candidate has accepted the offer. |
+| **Offer Declined** | The candidate turned down the offer. |
+| **Hired** | The candidate is hired. Connekt sets this automatically when you create a placement from the submission. |
 
 <Tip>
-  Once a submission reaches **Offer Accepted** or **Hired**, you can convert it into a formal Placement record to track fees, commission splits, and invoicing. See [Converting a Submission to a Placement](/submissions/converting-to-placement).
+  When a submission reaches **Offer Accepted** or **Hired**, you can create a placement from it. See [Convert a submission to a placement](/submissions/converting-to-placement).
 </Tip>
 
-## Paused and Closed Stages
+## Other
 
-These statuses indicate that a submission is no longer actively progressing, either temporarily or permanently.
+| Status | What it means |
+|---|---|
+| **Rejected** | The client didn't select the candidate. |
+| **Withdrawn** | The candidate withdrew from the process. |
+| **On Hold** | The process is paused. The submission stays active on the **Deals** page. |
+| **Process Ended** | The process closed for any other reason. The submission leaves the **Deals** page. |
 
-<AccordionGroup>
-  <Accordion title="On Hold">
-    The process is paused with no active progression. This is **not** a final status — the submission can resume when circumstances change.
-  </Accordion>
+## Change a submission's status
 
-  <Accordion title="Offer Declined">
-    The candidate received an offer but chose not to accept it.
-  </Accordion>
+You can change the status in three places. In each one, the change saves as soon as you pick a status. There's no **Save** button and no note field.
 
-  <Accordion title="Rejected">
-    The candidate was not selected by the client or hiring team.
-  </Accordion>
+<Tabs>
+  <Tab title="Job Submissions tab">
+    <Steps>
+      <Step title="Open the job">
+        Go to **Jobs**, open the job and click the **Submissions** tab.
+      </Step>
+      <Step title="Click the status">
+        In the **Interview Stage** column, click the candidate's status badge.
+      </Step>
+      <Step title="Pick the new status">
+        Choose a status from the **Update Status** menu.
+      </Step>
+    </Steps>
+    You need the **Edit Jobs** permission. The menu is disabled if the job isn't **Open**, **In Progress** or **Partially Filled**.
+  </Tab>
+  <Tab title="Candidate Submissions tab">
+    <Steps>
+      <Step title="Open the candidate">
+        Go to **Candidates**, open the profile and click the **Submissions** tab.
+      </Step>
+      <Step title="Click the status">
+        In the **Status** column, click the status badge for the job.
+      </Step>
+      <Step title="Pick the new status">
+        Choose a status from the **Update Status** menu.
+      </Step>
+    </Steps>
+    You need the **Edit Candidate Submissions** permission.
+  </Tab>
+  <Tab title="Deals page">
+    <Steps>
+      <Step title="Open Deals">
+        Click **Deals** in the sidebar. The **Pipeline** tab opens.
+      </Step>
+      <Step title="Change the status">
+        In **Table** view, click the badge in the **Status** column and pick a status. In **Kanban** view, drag the card to another column.
+      </Step>
+    </Steps>
+    You need the **Manage Deal Pipeline** permission. If you choose **Process Ended**, Connekt asks you to confirm, because the candidate leaves the active pipeline.
+  </Tab>
+</Tabs>
 
-  <Accordion title="Withdrawn">
-    The candidate withdrew themselves from the process.
-  </Accordion>
-
-  <Accordion title="Process Ended">
-    A catch-all status for any other reason the submission closed without resulting in a hire.
-  </Accordion>
-</AccordionGroup>
-
-## How to Update a Submission Status
-
-<Steps>
-  <Step title="Open the submission record">
-    Navigate to the submission you want to update.
-  </Step>
-  <Step title="Click the status badge">
-    Click the current status badge displayed on the record.
-  </Step>
-  <Step title="Select the new status">
-    Choose the new status from the dropdown that appears.
-  </Step>
-  <Step title="Add a note (optional)">
-    Optionally add a note explaining the reason for the change — for example, interview feedback or a reason for rejection.
-  </Step>
-  <Step title="Save">
-    Click **Save** to apply the new status.
-  </Step>
-</Steps>
+When a status changes to **Offer Accepted** or **Hired**, Connekt shows a message that the submission is ready for placement conversion. On the **Submissions** tabs, that message has a **Create Placement** button.
 
 <Note>
-  Every status change is automatically logged in the submission's activity timeline, including a timestamp and the name of the user who made the change. You always have a full audit trail without any extra effort.
+  Connekt records each status change in the candidate's **History** tab.
 </Note>
+
+## How status affects the Deals page
+
+- The **Deals** page shows the 14 active statuses by default: every Initial and Interview stage, plus **Reference Check**, **Offer Extended**, **Offer Accepted** and **On Hold**.
+- **Offer Declined**, **Rejected**, **Withdrawn**, **Process Ended** and **Hired** don't appear unless you filter by that status.
+- Each deal has a probability that Connekt sets from its status. See [Deals board](/submissions/pipeline-board) for how probability works and how to override it.

@@ -1,0 +1,92 @@
+---
+title: "Offices, reporting currency and exchange rates"
+sidebarTitle: "Offices and currency"
+description: "Set up offices with their own local currency, choose your reporting currency, and decide when exchange rates lock for dashboards, goals and placements."
+---
+
+If your agency works across several locations or currencies, set up **Offices** and **Revenue & FX** in Settings. Offices let you report on each location separately. Revenue & FX sets the single currency Connekt uses for company-wide figures, and when each placement's exchange rate is fixed.
+
+<Note>
+  Both pages need the **System Administration** permission. Super Admins and Admins have it by default.
+</Note>
+
+## Set up offices
+
+Each office has a country, an optional city, and its own local currency. Connekt names the office from its location, such as "London, United Kingdom".
+
+### Create an office
+
+<Steps>
+  <Step title="Open Offices">
+    Go to **Settings → Offices**.
+  </Step>
+  <Step title="Add the office">
+    Click **New office**.
+  </Step>
+  <Step title="Enter the details">
+    Choose the **Country** and **Currency**. Both are required. Add a **City** if you have more than one office in the same country. You can also add a short **Code**, such as "NYC".
+  </Step>
+  <Step title="Save">
+    Click **Create**.
+  </Step>
+</Steps>
+
+### Add people to an office
+
+1. Expand the office.
+2. Click **Add person**.
+3. Choose the **Person** and their **Role**: **Manager** or **Member**.
+
+To change someone's role or remove them, use the options on their row. You can't change your own office membership.
+
+### Edit or deactivate an office
+
+Open the office's menu and click **Edit office** or **Deactivate**.
+
+Deactivated offices move to **Inactive offices**. Their historical data is kept, and you can reactivate them at any time.
+
+## Set your reporting currency
+
+The reporting currency is the single currency Connekt uses for company-wide figures. The dashboard, goals and metric targets convert every placement into this currency.
+
+1. Go to **Settings → Revenue & FX**.
+2. Under **Reporting currency**, choose your **Book currency**.
+3. Click **Save changes**.
+
+If you don't set one, Connekt uses USD.
+
+## Choose when exchange rates lock
+
+A placement's fee is often in a different currency from your reporting currency. Connekt converts it, and then locks the exchange rate at a point you choose. After that, the converted amount stays fixed, so past revenue doesn't move with the market. Until the rate locks, converted amounts are estimates.
+
+Under **When to lock the exchange rate**, pick one option:
+
+| Option | When the rate locks |
+|---|---|
+| **Date the deal is reported** (default) | Uses the placement start date, the same date the dashboard uses for months, quarters and years. |
+| **Date the invoice is sent** | When the payment status changes to **Invoice Sent**, using the invoice date. If the invoice date is empty, Connekt uses the day the status was set. |
+| **Date payment is received** | When the payment date is set or the payment is marked as received. |
+
+Click **Save changes** to apply your choice.
+
+## How offices and currency show up in Connekt
+
+### Dashboards
+
+On the Home dashboard, use the scope selector to view the whole company, a single office, a team or a person. The **Show figures in** menu lets you switch currency:
+
+- **Company currency** shows official company figures in your reporting currency. This is the default.
+- When you've selected an office, an option named after it, such as **London, United Kingdom currency**, shows figures in that office's local currency.
+- **My currency** shows figures in your own preferred currency.
+
+When you view an office, its revenue comes from the placement splits assigned to that office. See [Understanding dashboard metrics](/dashboard/understanding-metrics).
+
+### Placements
+
+When you add recruiter splits to a placement, you can assign each split to an office and team. The office must be one the recruiter belongs to. This decides which office gets credit for that share of the fee. See [Deal splits](/placements/deal-splits).
+
+On a placement's detail page, **Placement Fee** shows the fee converted into your reporting currency, with the rate and FX date. A badge shows **Estimated** until the rate locks, then **Locked**.
+
+### Goals
+
+You can scope goals to specific offices, so each office tracks its own target. See [Goal progress](/dashboard/goal-progress).

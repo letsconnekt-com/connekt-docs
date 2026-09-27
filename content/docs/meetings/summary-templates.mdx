@@ -1,0 +1,85 @@
+---
+title: "Meeting summary templates"
+sidebarTitle: "Summary templates"
+description: "Use Connekt's built-in meeting summary templates or create your own with a custom prompt or question list, mapped to record fields."
+---
+
+A summary template tells Connekt how to summarise a meeting. You pick one when you start a recording, and you can switch templates on any meeting afterwards. Templates with questions also drive the live **Discovery checklist** and the **Question coverage** report.
+
+## Where to find templates
+
+Go to **Settings → Templates**. The list shows every template you can use:
+
+- **Predefined** templates come with Connekt. You can't edit or delete them.
+- Custom templates show **Organization** or **Private**, depending on who can see them.
+
+You can also click **New template** in the template dropdown on any meeting's **AI summary** card.
+
+## Built-in templates
+
+| Template | Type | Good for |
+| --- | --- | --- |
+| **General Notes** | Prompt | A full summary with an overview, action items, topics and important details. This is the default. |
+| **Key Takeaways** | Prompt | A short digest of key outcomes and next steps. |
+| **Technical Discussion** | Prompt | Technical decisions, open questions and action items. |
+| **Questions and Answers** | Questions | The questions asked, the answers given and anything left unanswered. |
+| **Screening Interview** | Questions | Candidate screens: experience, motivation, current and expected compensation, notice period, other interviews and next steps. |
+| **Job Intake Call** | Questions | Taking a new role from a client: title, salary range, number of positions, skills, location and hiring timeline. |
+| **Company Intro Call** | Questions | First calls with a prospective client: what the company does, main contact, hiring needs and process. |
+| **Sales Notes** | Questions | Business need, budget and timeline, stakeholders, objections and next steps. |
+| **Customer Check-in** | Questions | Client status and sentiment, concerns, feedback and follow-ups. |
+
+Some questions in **Screening Interview**, **Job Intake Call** and **Company Intro Call** are mapped to record fields, such as the candidate's current base salary or the job's salary.
+
+## Create a template
+
+<Steps>
+  <Step title="Start a new template">
+    Go to **Settings → Templates** and click **New template**.
+  </Step>
+  <Step title="Name it">
+    Enter a **Name**, for example "Sales Call Recap".
+  </Step>
+  <Step title="Choose the type">
+    Choose **Custom Prompt** or **Custom Questions**. You can't change the type after you create the template.
+  </Step>
+  <Step title="Write the prompt or questions">
+    For **Custom Prompt**, write your instructions in **Prompt**. For **Custom Questions**, type each question and click **Add question** for more.
+  </Step>
+  <Step title="Choose visibility">
+    Under **Visibility**, choose **Organization — visible to your whole team** or **Private — only visible to you**.
+  </Step>
+  <Step title="Save">
+    Click **Create Template**. It's now available in the Connekt Notetaker popup and on every meeting.
+  </Step>
+</Steps>
+
+## Custom Prompt or Custom Questions
+
+| | **Custom Prompt** | **Custom Questions** |
+| --- | --- | --- |
+| What you write | Instructions for the summary, for example "Summarise this call focusing on budget, timeline, and objections raised." | A list of questions you want answered |
+| What you get | A summary written to your instructions | A summary that answers each question |
+| Live checklist | No | Yes, in Stealth mode |
+| Question coverage | No | Yes |
+
+Custom Questions templates work well for interviews and discovery calls, where you want to make sure you cover the same ground every time.
+
+## Map questions to record fields
+
+In a **Custom Questions** template, each question can fill a field on a record. Next to the question, choose the record type from **Fills a field?**, then choose the field from **Which field?**. Leave it as **Doesn't fill a field** if the answer doesn't belong in a field.
+
+| Record type | Fields you can map |
+| --- | --- |
+| **Candidate** | Expected salary (total), Expected base salary, Expected bonus, Expected equity (annualized), Expected allowances, Current salary (total), Current base salary, Current bonus, Current equity (annualized), Current allowances, Current employer, Current title, Years of experience, Date of birth |
+| **Company** | Industries |
+| **Job** | Job title, Salary min, Salary max, Number of positions, Skills |
+| **Contact** | Job title |
+
+When you link the meeting to a matching record, the answers can appear as AI suggestions to fill those fields. Connekt only fills empty fields. See [Linking and AI actions](/meetings/linking-and-ai-actions).
+
+## Edit or delete a template
+
+In **Settings → Templates**, click the pencil icon to edit a template or the bin icon to delete it. Only the person who created a template can edit or delete it.
+
+Deleting a template removes it from the list of templates for future summaries.

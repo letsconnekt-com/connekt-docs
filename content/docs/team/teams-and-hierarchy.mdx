@@ -1,0 +1,82 @@
+---
+title: "Teams and hierarchy"
+sidebarTitle: "Teams & hierarchy"
+description: "Create teams in Settings → Organization, choose managers and members, and see how teams decide leave approvals and what managers see."
+---
+
+Teams group people under one or more managers. Connekt uses teams to decide who approves whose leave and whose figures a manager sees in dashboards and deals. You set them up in **Settings → Organization**.
+
+<Info>
+  Organization needs the **Team** plan or higher. You also need the **System Administration** permission, which Super Administrators and Administrators have by default.
+</Info>
+
+## How teams work
+
+Each person on a team is either a **Manager** or a **Member**.
+
+- A team can have several managers.
+- A person can be on more than one team.
+- A team can belong to an office. See [Offices and currency](/advanced/offices-and-currency).
+
+<Note>
+  A team **Manager** is different from the **Manager** role. The role sets someone's permissions. The team position sets whose work they oversee. See [User roles](/team/user-roles).
+</Note>
+
+The top of the page shows **Active teams**, **Managers**, **On a team** and **Unassigned** counts.
+
+## Create a team
+
+<Steps>
+  <Step title="Start a team">
+    Go to **Settings → Organization** and click **New team**.
+  </Step>
+  <Step title="Name it">
+    Enter a **Name**, for example "APAC Delivery". Optionally choose an **Office (optional)**.
+  </Step>
+  <Step title="Create it">
+    Click **Create**. The team appears in the list, ready for people.
+  </Step>
+</Steps>
+
+## Add managers and members
+
+<Steps>
+  <Step title="Add a person">
+    On the team, click **Add person**.
+  </Step>
+  <Step title="Choose the person and role">
+    Pick the **Person**, then choose **Manager** or **Member** under **Role**.
+  </Step>
+  <Step title="Save">
+    Click **Add person**.
+  </Step>
+</Steps>
+
+To change someone's position, click **⋯** next to them and choose **Make manager** or **Make member**. To take them off the team, choose **Remove from team**.
+
+Only Super Administrators and Administrators can make someone a manager.
+
+<Tip>
+  The **Not on a team** list shows active users who aren't on any team. Add them to a team so their work rolls up to a manager.
+</Tip>
+
+## Rename, move or deactivate a team
+
+Click **⋯** on the team and choose:
+
+- **Rename team**: members keep their positions.
+- **Assign office**: link the team to an office, or choose **No office**.
+- **Deactivate team**: the team moves to **Inactive teams**. It stays on historical deals. Click **Reactivate** to use it again.
+
+## How teams affect leave approvals
+
+Operations and Manager users approve leave for people on teams where they're a manager. Super Administrators and Administrators can approve leave regardless of teams.
+
+For example, to let a Manager approve their team's leave, make them a **Manager** of that team. See [Approving leave requests](/time-off/approving-leave).
+
+## How teams affect dashboards and deals
+
+- Users with the **Manager** role see figures for members of the teams they manage in their dashboard and deal views.
+- Administrators and Operations users see everyone. They can narrow their view to an office, a team or a person.
+
+See [Understanding dashboard metrics](/dashboard/understanding-metrics).

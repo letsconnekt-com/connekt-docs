@@ -1,9 +1,9 @@
 {
   "title": "Integrations",
   "pages": [
-    "connecting-gmail",
-    "connecting-linkedin",
+    "connecting-email",
     "chrome-extension",
+    "zapier-and-make",
     "notification-preferences"
   ]
 }

@@ -1,70 +1,84 @@
 ---
-title: "How to Submit and Track Time Off Requests in Connekt"
-sidebarTitle: "Request Leave"
-description: "Submit a leave request in Connekt, track its approval status, and cancel a request if your plans change — all from the Time Off section."
+title: "Requesting time off"
+sidebarTitle: "Request leave"
+description: "Apply for leave in Connekt, see how many working days it uses, track your request and cancel it if your plans change."
 ---
 
-Submitting a leave request in Connekt takes just a few steps. Once submitted, your request is visible to Managers and Operations users in your workspace who can approve or reject it. You'll receive a notification as soon as your request is reviewed, and you can check the status at any time from your Time Off overview.
+You request leave from **Time Off** in the sidebar. Connekt shows how many working days a request uses before you submit it, and your approver reviews it from their Leave Requests list.
 
-## Submitting a leave request
+<Info>
+  Time Off needs the **Team** plan or higher. If you don't see **Time Off** in the sidebar, ask your admin.
+</Info>
+
+## Apply for leave
 
 <Steps>
-  <Step title="Go to Time Off">
-    Navigate to **Time Off → Overview**.
+  <Step title="Open the form">
+    Go to **Time Off** and click **Apply for Leave**.
   </Step>
-  <Step title="Start your request">
-    Click **Apply for Leave**.
-  </Step>
-  <Step title="Select the leave type">
-    Choose the type of leave you're requesting from the dropdown: **Annual Leave**, **Birthday Leave**, **Personal Day**, or **Public Holiday**.
+  <Step title="Choose a leave policy">
+    Pick a **Leave Policy**. The list shows the policies you've been given, with the days you have left for each.
   </Step>
   <Step title="Choose your dates">
-    Select your start date and end date. Leave requests are recorded as **full days** — partial-day requests are not currently supported.
+    Pick a **Start Date** and **End Date**. You can choose dates from today up to one year ahead.
+  </Step>
+  <Step title="Check the working days">
+    Connekt shows **Working days deducted** and how much you'll have left. Weekends aren't counted. Public holidays in your region are excluded automatically, and the form lists any that fall in your dates.
   </Step>
   <Step title="Add a reason">
-    Enter a reason for your leave. This may be required depending on your organisation's policy, or you can add it optionally for context.
+    Enter a **Reason for Leave** of at least 10 characters.
   </Step>
-  <Step title="Submit the request">
-    Click **Submit**. Your request is immediately visible to your organisation's Managers and Operations users for review.
+  <Step title="Add people (optional)">
+    Use **Calendar Invites (Optional)** to pick team members connected to your leave.
+  </Step>
+  <Step title="Submit">
+    Click **Submit Application**. Your request is **Pending** until someone approves or rejects it.
   </Step>
 </Steps>
 
-## Tracking your request status
+<Warning>
+  You can't submit a request if you don't have enough balance, or if it overlaps another pending or approved request.
+</Warning>
 
-You can check the status of any leave request at any time.
+<Note>
+  If your policy list is empty or shows **No entitlement set up**, your leave hasn't been set up yet. Ask your admin to set up your leave policies.
+</Note>
 
-1. Go to **Time Off → Overview**.
-2. Your requests are listed with their current status.
+## Who approves your request
 
-**What each status means:**
+Your request goes to whoever can approve it under your workspace's team structure. Usually that's a manager of your team in **Settings → Organization**, or an Administrator. See [Approving leave requests](/time-off/approving-leave) for the full rules.
+
+Click **View Hierarchy** on the Time Off page to see which roles can approve which requests.
+
+## Track your requests
+
+Your **Overview** tab shows:
+
+- **Total available days** across all your leave types.
+- Your balance for each leave type: **Granted this year**, **Carried forward**, **Available this period**, **Taken so far** and **Remaining**.
+- **Upcoming leave** with the status of each request.
+- **Public holidays** for your region.
+
+The **Leave History** tab lists all your past requests and holidays.
 
 | Status | What it means |
 |---|---|
-| **Pending** | Your request has been submitted and is awaiting review by a Manager or Operations user. |
-| **Approved** | A Manager or Operations user has approved your request. |
-| **Rejected** | Your request was not approved. You may have received a reason with the notification. |
-| **Cancelled** | You cancelled the request, or it was withdrawn before approval. |
+| **Pending** | Waiting for approval. |
+| **Approved** | Approved. The days have been taken from your balance. |
+| **Rejected** | Not approved. **Leave History** shows the approver's reason next to the request. |
+| **Cancelled** | You cancelled the request. |
 
-<Note>
-  You'll receive a notification when your request is approved or rejected, so you don't need to keep checking manually.
-</Note>
+You get a notification when your request is approved or rejected.
 
-## Cancelling a request
+## Cancel a request
 
-If your plans change, you can cancel a request while it's still **Pending** or has already been **Approved**.
+You can cancel a request that's **Pending** or **Approved**.
 
-<Steps>
-  <Step title="Go to Time Off">
-    Navigate to **Time Off → Overview**.
-  </Step>
-  <Step title="Open the request">
-    Click on the leave request you want to cancel.
-  </Step>
-  <Step title="Cancel the request">
-    Click **Cancel Request** and confirm. The request status updates to **Cancelled** and your leave balance is restored if the request had already been approved.
-  </Step>
-</Steps>
+1. Go to **Time Off → Overview**.
+2. Under **Upcoming leave**, click the cancel icon next to the request.
 
-<Tip>
-  Cancel as early as possible if your plans change — this frees up your balance and removes the approved leave from your manager's visibility, keeping your records accurate.
-</Tip>
+The request is cancelled straight away. There's no confirmation step. If the request was already approved, the days go back into your balance.
+
+## Contractors
+
+If your user profile's employment type is **Contractor**, the form is called **Request Time Off**. Contractor requests are approved automatically.

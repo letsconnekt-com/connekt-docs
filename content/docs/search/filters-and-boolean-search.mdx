@@ -1,0 +1,120 @@
+---
+title: "Filter lists and use Boolean search"
+sidebarTitle: "Filters and Boolean search"
+description: "Search a list with AND, OR and NOT, add field filters, bookmark filtered views from the URL, and choose which columns each table shows."
+---
+
+Every main list in Connekt has its own search box and **Filter** button. Use them to narrow Candidates, Companies, Contacts, Jobs or the placement lists under **Deals** down to exactly the records you need. On Candidates, Companies, Contacts and Jobs, your search and filters are also saved in the page URL, so you can bookmark a view or share it with a teammate.
+
+## Search a list
+
+<Steps>
+  <Step title="Open a list">
+    Go to **Candidates**, **Companies**, **Contacts** or **Jobs**. For placements, go to **Deals** and open **My Placements** or **All Placements**.
+  </Step>
+  <Step title="Click the search box">
+    The box shows a hint such as **Search candidates… (AND, OR, NOT)**.
+  </Step>
+  <Step title="Type your search and run it">
+    Press **Enter** or click **Search**. The list updates to show matching records.
+  </Step>
+</Steps>
+
+To clear the search, click **×** in the search box.
+
+## Use Boolean operators
+
+Combine terms with **AND**, **OR** and **NOT** to build more precise searches.
+
+| Operator | What it does | Example |
+|---|---|---|
+| **AND** | Both terms must match. | `java AND spring` |
+| **OR** | Either term can match. | `react OR angular` |
+| **NOT** | Excludes records that match the next term. | `developer NOT intern` |
+
+Connekt highlights operators as you type, so you can check your query before you run it.
+
+- Put a space on each side of an operator.
+- Text between operators is treated as a phrase. For example, `project manager OR scrum master` searches for "project manager" or "scrum master".
+- Operators are applied from left to right.
+- Operators aren't case-sensitive, but uppercase is easier to read.
+
+<Warning>
+  Connekt won't run a search that starts with **AND** or **OR**, ends with an operator, or has two operators in a row. A message under the box explains what to fix.
+</Warning>
+
+## Add filters
+
+Filters narrow a list by specific fields, such as status, owner, location or dates.
+
+<Steps>
+  <Step title="Click Filter">
+    Click **Filter** next to the search box.
+  </Step>
+  <Step title="Choose a field">
+    Under **Add filter**, pick the field you want to filter on.
+  </Step>
+  <Step title="Set the condition">
+    Choose a condition and enter or select a value. The conditions depend on the field type.
+  </Step>
+  <Step title="Apply it">
+    Click **Apply filter**. The filter appears as a chip, and the **Filter** button shows how many filters are active.
+  </Step>
+</Steps>
+
+Add more filters the same way. To remove one, click **×** on its chip. To remove them all, click **Clear all filters**.
+
+### Conditions by field type
+
+| Field type | Conditions |
+|---|---|
+| Text | contains, does not contain, is, is not, starts with, ends with, is empty, is not empty |
+| Pick lists, such as status or owner | is, is not, is any of, is none of, is empty, is not empty |
+| Numbers, such as salary | equals, greater than, less than, between, in list |
+| Dates | Today, Yesterday, Last 7 days, Last 30 days, This month, Last month, This year, Last year, or a custom date (on, before, after, between) |
+| Yes/no, such as **Off Limits** | is true, is false |
+
+You can filter candidates by fields such as **Status**, **Source**, **Level**, **Skills**, **Industries**, **City**, **Country**, **Languages**, **Owner**, **Researcher** and **Last Note Date**. Each list has its own set of filterable fields.
+
+<Tip>
+  Combine a Boolean search with filters. For example, search `python OR golang`, then filter **Country** is "Singapore" and **Status** is any of your active statuses.
+</Tip>
+
+## Bookmark or share a filtered view
+
+On **Candidates**, **Companies**, **Contacts** and **Jobs**, Connekt saves your search and filters in the page URL as you apply them.
+
+- Bookmark the page in your browser to come back to the same view later.
+- Copy the URL and send it to a teammate. They see the same search and filters, limited to the records they have permission to see.
+
+The **My** / **All** toggle at the top of the list, such as **My Candidates** and **All Candidates**, is saved in the URL too.
+
+<Note>
+  Connekt doesn't have a saved-filters list inside the app. Use browser bookmarks to keep views you use often. Searches and filters on the placement lists under **Deals** aren't saved in the URL.
+</Note>
+
+## Choose which columns you see
+
+You can change the table layout on Candidates, Companies, Contacts, Jobs, Tasks and the placement lists under **Deals**.
+
+Click the arrow next to any column heading to:
+
+- **Sort Ascending** or **Sort Descending**, or **Clear Sort**
+- **Pin Column** to the left or right so it stays visible as you scroll
+- **Add Column to Left** or **Add Column to Right**, including your [custom fields](/advanced/custom-fields)
+- **Hide Column**
+
+You can also drag a column's edge to resize it.
+
+After you change the layout, click **Save Layout** above the table to keep it. Your saved layout is personal and doesn't change what teammates see.
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Global search" icon="magnifying-glass" href="/search/search-history">
+    Find any record from any page with ⌘K / Ctrl+K.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/search/ask-ai">
+    Describe the candidate you need in plain language.
+  </Card>
+</CardGroup>

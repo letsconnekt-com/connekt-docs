@@ -1,83 +1,114 @@
 ---
-title: "Custom Fields: Add and Configure Fields in Connekt"
-sidebarTitle: "Custom Fields"
-description: "Add custom fields to any Connekt entity to capture business-specific data not covered by default fields, from text inputs to file uploads."
+title: "Custom fields and field configuration"
+sidebarTitle: "Custom fields"
+description: "Add custom fields to candidates, companies, contacts, jobs and placements, and hide, require, rename or reorder built-in fields and sections."
 ---
 
-Custom fields let you extend Connekt's default data model to capture information specific to your business — whether that's a compliance checkbox on placements, a preferred contact method on candidates, or a contract tier on companies. You can add custom fields to any of the core entities in your workspace, and they appear alongside default fields on create forms, edit forms, and record detail pages.
+**Settings → Field Configuration** controls the fields on your records. You can add custom fields to capture data that Connekt doesn't track by default, such as visa status or a contract tier. You can also adjust the built-in system fields: hide them, make them required, and rename or reorder their sections.
 
 <Note>
-  Creating and configuring custom fields requires `system_administration` permission. This is available to Super Administrator and Administrator roles by default.
+  Field Configuration needs the **System Administration** permission. Super Admins and Admins have it by default.
 </Note>
 
-## Accessing Field Configuration
+## Choose a record type
 
 1. Go to **Settings → Field Configuration**.
-2. Select the entity you want to configure from the list.
+2. Pick the record type at the top: **Candidates**, **Companies**, **Contacts**, **Jobs** or **Placements**.
 
-You can add custom fields to: **Candidate**, **Company**, **Job**, **Placement**, **Contact**, or **Submission**.
+The page lists the system fields for that record type, grouped by section, plus any custom fields. Use **Search fields…** to find a field quickly.
 
-## Creating a custom field
+## Create a custom field
 
 <Steps>
-  <Step title="Select your entity">
-    In **Settings → Field Configuration**, click the entity you want to add a field to (for example, **Candidate**).
+  <Step title="Open the form">
+    Click **New custom field**.
   </Step>
-  <Step title="Add a new field">
-    Click **Add Field**.
+  <Step title="Enter a label">
+    Type the name people will see on forms, up to 100 characters. For example, "Visa status".
   </Step>
-  <Step title="Choose a field type">
-    Select the type that best matches the data you want to capture:
-
-    | Field Type | What it stores |
-    |---|---|
-    | **Text** | Single-line text input |
-    | **Number** | Numeric values |
-    | **Date** | A date selected from a date picker |
-    | **Dropdown** | A single selection from a list you define |
-    | **Multi-select** | Multiple selections from a list you define |
-    | **Rich Text** | Formatted text with basic styling options |
-    | **Currency** | A numeric value displayed with a currency symbol |
-    | **File Upload** | A file attachment on the record |
-
-    Additional specialised field types are also available in the selector.
+  <Step title="Pick a field type">
+    Choose one of the 15 field types listed below.
   </Step>
-  <Step title="Set the field label">
-    Enter a clear, descriptive label for the field — this is what users will see on forms and record pages.
+  <Step title="Choose a section">
+    Select the section the field appears in, or create a new section.
   </Step>
-  <Step title="Set required or optional">
-    Toggle whether the field is **Required** (users must fill it in when creating or editing the record) or optional.
+  <Step title="Add type-specific details">
+    Depending on the type, add a placeholder, the options for a dropdown or multi-select, or the target module for a relation. You can also set a default value.
   </Step>
-  <Step title="Save the field">
-    Click **Save**. The field is immediately available on the selected entity.
+  <Step title="Set the options">
+    Turn on **Required field** if people must fill it in before saving the record. Leave **Show this field to AI search & chat** on if Ask AI should be able to use this field.
+  </Step>
+  <Step title="Save">
+    Click **Create field**. The field is available on the record type straight away.
   </Step>
 </Steps>
 
-## Reordering fields
+### Field types
 
-The order of fields in the Field Configuration screen controls the order they appear on create forms, edit forms, and detail pages.
+| Type | Use it for |
+|---|---|
+| **Text** | A short, single-line value |
+| **Text area** | Longer plain text |
+| **Rich text** | Formatted text |
+| **Number** | Numeric values |
+| **Currency** | Money amounts |
+| **URL** | A web link |
+| **Email** | An email address |
+| **Phone** | A phone number |
+| **Date** | A date |
+| **Date & Time** | A date with a time |
+| **Dropdown** | One choice from a list you define |
+| **Multi-select** | Several choices from a list you define |
+| **Toggle** | A yes/no value |
+| **File** | A file attachment |
+| **Relation** | A link to a record in another module: **Candidates**, **Companies**, **Contacts**, **Jobs**, **Placements**, **Users** or **Team Members** |
 
-1. In **Settings → Field Configuration**, select the entity.
-2. Drag fields into your preferred order using the drag handle on each row.
+<Warning>
+  Your workspace can have up to 50 active custom fields in total, across all record types. When you reach the limit, **New custom field** is disabled. Delete a custom field you no longer need to free up a slot. Hidden fields still count toward the limit.
+</Warning>
 
-Changes take effect immediately — no save step required.
+If your workspace moves to a plan with a lower limit, your existing custom fields keep working. You can't create new ones until you're back under the limit.
+
+## Manage custom fields
+
+Open the **⋯** menu on a custom field to:
+
+- **Edit field**
+- **Mark required** or **Mark optional**
+- **Hide from forms** or **Show in forms**
+- **Hide from extension** or **Show in extension**, to control whether the field appears in the Connekt Chrome extension
+- **Delete field**
+
+Drag rows to change the order fields appear on forms.
+
+When you delete a custom field, existing values are kept, but the field no longer appears on forms.
 
 ## Where custom fields appear
 
-Once created, custom fields appear automatically in three places for the relevant entity:
+Custom fields appear on the create and edit forms and on the record's detail page. On Candidates, Companies, Contacts and Jobs, you can also add them as table columns. See [Choose which columns you see](/search/filters-and-boolean-search#choose-which-columns-you-see).
 
-<CardGroup cols={3}>
-  <Card title="Create form" icon="plus">
-    When adding a new record, custom fields appear alongside default fields in the creation form.
-  </Card>
-  <Card title="Edit form" icon="pencil">
-    When editing an existing record, custom fields are available for updating in the same form layout.
-  </Card>
-  <Card title="Detail page" icon="file-lines">
-    On the record's detail page, custom fields display alongside default fields so all data is visible in one place.
-  </Card>
-</CardGroup>
+If you turn on **Show in extension**, the field also appears in the [Chrome extension](/integrations/chrome-extension).
 
-<Tip>
-  If you have a large number of custom fields, consider the order carefully — put the most frequently used fields near the top so they're immediately visible without scrolling.
-</Tip>
+## Configure system fields
+
+System fields are the built-in fields, such as **Work Email**, **Current Title** or **Source**. You can't delete them, but you can change how they behave.
+
+- **Make a field required:** turn on the **Required** switch on the field's row.
+- **Hide a field:** click the eye icon to hide it from create and edit forms.
+- **Show or hide it in the extension:** use the extension icon on the row.
+
+Some fields, such as a candidate's **First Name** and **Last Name** or a job's **Posting Title**, show **Required by the system**. You can't hide or change these.
+
+## Rename and reorder sections
+
+Fields are grouped into sections, such as **Personal Info** and **Employment Info** on candidates.
+
+- **Rename a section:** click the pencil icon next to the section name, type the new name, and confirm.
+- **Hide a whole section:** turn off the **Visible** switch on the section header.
+- **Reorder sections:** drag a section header to a new position. You can drag custom sections between system sections too.
+
+## Reset the layout
+
+To undo your changes to a record type, click **Reset layout**, then **Reset**.
+
+This resets hidden fields, required settings, section names and field order to the defaults for that record type. Your custom fields aren't affected.

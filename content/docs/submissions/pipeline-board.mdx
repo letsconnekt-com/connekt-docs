@@ -1,60 +1,110 @@
 ---
-title: "Pipeline Board: Manage All Active Deals in Connekt"
-sidebarTitle: "Pipeline Board"
-description: "Navigate Connekt's Kanban pipeline board, move deals by drag-and-drop, manage commission splits, set deal probability, and filter your view."
+title: "Use the Deals page to manage your pipeline"
+sidebarTitle: "Deals board"
+description: "Track active submissions on the Deals page. Switch between Table and Kanban, filter by owner and status, edit deals inline and open Deal Details."
 ---
 
-The Pipeline board gives you a Kanban view of all active submissions and deals, organised by stage. It's the fastest way to see where everything stands across your team and move things forward without digging into individual records.
+The **Deals** page shows every active submission as a deal, with its stage, probability and value. Use it to review your pipeline, update deals without opening each record, and forecast revenue. Click **Deals** in the sidebar to open it.
 
-## Navigating the Board
+## Tabs on the Deals page
 
-<Steps>
-  <Step title="Open Pipeline">
-    Click **Pipeline** in the main navigation.
-  </Step>
-  <Step title="Review the columns">
-    The board loads with a column for each deal stage. Each card shows the candidate name, company, job title, and deal value at a glance.
-  </Step>
-  <Step title="Choose your view">
-    Use the **My Placements** and **All Placements** tabs at the top of the board to toggle between your own deals and the full team pipeline.
-  </Step>
-</Steps>
+| Tab | What it shows | Who sees it |
+|---|---|---|
+| **Pipeline** | Active submissions (deals). This page covers this tab. | Anyone with a deals view permission |
+| **My Placements** | Placements you're the main recruiter on. | **View Personal Deals** or **View Assigned Deals** |
+| **All Placements** | Every placement in the company. | **View Company Deals** |
 
-## Moving Deals by Drag and Drop
+For the placement tabs, see [Create a placement](/placements/creating-a-placement) and [Placement and payment statuses](/placements/placement-statuses).
 
-You don't need to open a record to advance a deal through the pipeline. Simply drag a card from its current column and drop it into the new stage column. Connekt updates the submission or deal status automatically — no separate save required.
+## Which deals appear
 
-<Tip>
-  Dragging cards is the fastest way to run a daily pipeline review. Work through each column left to right and move anything that's progressed since your last check.
-</Tip>
+The **Pipeline** tab shows submissions in the 14 active statuses:
 
-## Commission Drawer
+- **Initial stages:** Submitted, Under Review, Shortlisted
+- **Interview stages:** Phone Screening, 1st Interview, 2nd Interview, 3rd Interview, Final Interview, Technical Assessment, Presentation
+- **Final stages:** Reference Check, Offer Extended, Offer Accepted
+- **Other:** On Hold
 
-Clicking any card opens the **Commission Drawer**, a side panel where you can view and manage the financial details of a deal without leaving the board.
+Submissions that are **Offer Declined**, **Rejected**, **Withdrawn**, **Process Ended** or **Hired** only appear if you pick that status in the status filter. A submission leaves the pipeline as soon as it has a placement.
 
-<CardGroup cols={1}>
-  <Card title="Fee Splits" icon="chart-pie">
-    View and edit how the placement fee is divided between contributing recruiters. Changes here are reflected immediately on the Placement record.
-  </Card>
-  <Card title="Deal Probability" icon="percent">
-    Set a percentage likelihood that the deal will close. This figure feeds into pipeline forecasting so your revenue projections reflect reality.
-  </Card>
-  <Card title="Estimated Value" icon="sterling-sign">
-    Override the fee amount with a custom estimated value. Use this when the final fee isn't confirmed yet but you want accurate pipeline numbers for reporting.
-  </Card>
-</CardGroup>
+## Stats cards
 
-## Filtering the Board
+The cards at the top summarise the deals that match your current filters.
 
-Use the filter controls at the top of the board to narrow down what you see.
+| Card | What it shows |
+|---|---|
+| **Active Interviews** | The number of deals between **1st Interview** and **Offer Extended**. |
+| **Pipeline Value** | The total estimated value of the deals, converted into the currency you've chosen. |
+| **Avg Probability** | The average probability across the deals. |
+| **Split Deals** | The number of split deals. |
+| **Forecast Deals** | The number of late-stage deals with a probability of 70% or more. |
+| **Forecasted Billings** | The total value of the forecast deals, converted into the currency you've chosen. |
 
-| Filter | What it does |
-|--------|-------------|
-| **Search** | Find cards by candidate name, job title, or company name |
-| **Team member** | Show only deals owned by a specific recruiter |
-| **Status** | Limit the board to cards at a particular stage |
-| **Ownership view** | Switch between the full pipeline, deals you own by company, or deals you own by candidate |
+Use the currency button at the top right to choose how amounts display. The **Show figures in** menu offers **Company currency**, **My currency**, and the selected office's currency when you've picked an office. It defaults to the company currency, which an admin sets in **Settings → Revenue & FX**.
 
-<Info>
-  The ownership view filters are especially useful for large teams where the full pipeline board can be overwhelming. Filtering to your own companies or candidates keeps your focus on the deals where you can take action.
-</Info>
+## Filter your pipeline
+
+| Control | What it does |
+|---|---|
+| **Search deals...** | Finds deals by candidate name, job name, company name or **Submitted To**. |
+| Team member picker | Chooses whose pipeline you see. Managers get **My Pipeline**, **All Team Members** and each team member. Users with **View Company Deals** get **All Pipeline**, **My Pipeline Only** and any user. It only appears if you can see other people's deals. |
+| Status filter | Shows **All Statuses** or a single status, including closed ones. |
+| **Full view** / **Company View** / **Candidate View** | Chooses which ownership counts. See below. |
+| Office and team menu | At the top right, admins and managers can narrow the pipeline to an office or team. |
+
+The ownership views work like this for the person you've selected:
+
+- **Full view:** every deal related to the person, as deal owner, candidate owner or company owner.
+- **Company View:** anyone's candidates in process with the person's companies.
+- **Candidate View:** the person's candidates in process with anyone's companies.
+
+<Note>
+  **Company View** and **Candidate View** have no effect while you're viewing **All Pipeline**. Choose a person first.
+</Note>
+
+## Switch between Table and Kanban
+
+Click **Table** or **Kanban** next to the filters. **Table** is the default. Connekt remembers your choice on this browser.
+
+<Tabs>
+  <Tab title="Table">
+    Each row is a deal, with these columns: **Candidate**, **Position**, **Company**, **Deal Type**, **Status**, **Probability**, **Deal Value**, **Recruiter**, **Comments**, **Last Activity** and **Actions**.
+
+    Rows at **Offer Accepted** or **Hired** are highlighted green. Rows **On Hold** are highlighted orange.
+  </Tab>
+  <Tab title="Kanban">
+    Each status is a column, and each deal is a card. Drag a card to another column to change its status.
+
+    To hide columns you don't use, click **Columns** and clear the statuses under **Visible Columns**. Connekt saves your column choice to your account. If deals are hidden in collapsed columns, a message shows how many, with a **show all** link.
+  </Tab>
+</Tabs>
+
+## Edit deals inline
+
+If you have the **Manage Deal Pipeline** permission, you can edit these fields directly in the table or on a Kanban card. Without it, they're read-only.
+
+| Field | How to edit |
+|---|---|
+| **Status** | Click the badge and pick a status. Choosing **Process Ended** asks you to confirm. |
+| **Deal Type** | Choose **Solo Deal** or **Split Deal**. |
+| **Probability** | Click the percentage, enter a value from 0 to 100 and click **Save**. |
+| **Deal Value** | Click the value, choose the **Currency** and **Amount**, then press Enter. Press Escape to cancel. |
+| **Comments** | Click the comment to open **Edit Comments**. |
+
+### How probability works
+
+Connekt sets each deal's probability from its status, with later stages getting a higher value. You can override it in **Edit Probability**. To go back to the status-based value, click **Reset**. Moving a deal to **Offer Accepted**, **Hired**, **Offer Declined**, **Rejected**, **Withdrawn** or **Process Ended** always recalculates the probability.
+
+## View deal details
+
+In the table, click **⋯** in the **Actions** column and choose **View Details**. On a Kanban card, use the card's menu. The **Deal Details** panel opens on the **Commission** tab. The panel also has a **Stage History** tab.
+
+The **Commission** tab is a read-only summary with **Deal Overview**, **Value Breakdown**, **Commission Splits**, **Comments** and **Summary**. **Commission Splits** shows an estimated split based on who owns the candidate and company. The actual splits are set on the placement. See [Deal splits](/placements/deal-splits).
+
+<Note>
+  For a deal that's already **Hired**, **View Details** opens the candidate's profile instead.
+</Note>
+
+## Create a placement from a deal
+
+When a deal reaches **Offer Accepted** or **Hired**, click **⋯** and choose **Create Placement**. You need the **Create Deals** permission. See [Convert a submission to a placement](/submissions/converting-to-placement).

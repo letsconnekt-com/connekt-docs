@@ -1,59 +1,86 @@
 ---
-title: "Sending a Document for E-Signature in Connekt E-Sign"
-sidebarTitle: "Send for Signature"
-description: "Upload a PDF to Connekt, place fields, add signers, and send for e-signature — then track signing progress and download the final signed copy."
+title: "Sending a document for e-signature"
+sidebarTitle: "Send for signature"
+description: "Upload a PDF or DOCX to Sign, set up signers, place fields and send it for e-signature. Signers are emailed one at a time, in order."
 ---
 
-Connekt's built-in e-signing lets you collect signatures from candidates, clients, or internal team members without leaving the platform. Whether it's an offer letter, a contract, or an NDA, you can upload the document, place signing fields, and dispatch it to everyone who needs to sign — all in a few steps.
+Use **Sign** to collect e-signatures on offer letters, contracts and NDAs without leaving Connekt. You upload the file, add your signers, place fields for each signer, and send. Connekt emails signers one at a time, in the order you set.
+
+<Info>
+  Sign is included on every plan. You need the **Create Documents** permission to see **Sign** in the sidebar. By default, Super Administrators, Administrators, Operations and Managers have it. An admin can give it to other roles in [Settings → Permissions](/team/customising-permissions).
+</Info>
+
+## Send a document
 
 <Steps>
-  <Step title="Upload your PDF">
-    Go to **Documents** in the main navigation and click **Upload**. Select the PDF from your computer.
+  <Step title="Create the document">
+    Go to **Sign** and click **New Document**. Drag your file into the upload area, or click to choose it.
 
-    <Note>
-      Only PDF files are supported for e-signing. If your document is in another format, convert it to PDF before uploading.
-    </Note>
+    Connekt accepts **PDF or DOCX files up to 20 MB**. DOCX files are converted to PDF automatically.
   </Step>
-  <Step title="Name the document">
-    Give the document a clear, descriptive name so you and your team can identify it at a glance — for example, **"Offer Letter – Jane Smith"** or **"PSA – Acme Corp 2025"**. This name appears in the Documents list and in the email sent to signers.
+  <Step title="Name it and choose the signing type">
+    Enter a **Title**, for example "Offer Letter – Jane Smith". Signers see this title in their emails.
+
+    Under **Signing type**, choose **Send for Signature**. To sign a document only yourself, see [Signing a document yourself](/documents/signing-yourself).
+
+    Click **Create & Place Fields**.
   </Step>
-  <Step title="Place fields on the PDF">
-    Click **Edit Fields** to open the PDF field editor. Drag signature, name, text, and date fields onto the pages where signers need to fill them in. Assign each field to the correct signer before closing the editor.
+  <Step title="Set up your signers">
+    Click **Add Signers** (or **Signers** in the top bar) to open **Setup Signers**. Signer 1 signs first.
 
-    See [Adding Fields to a PDF](/documents/adding-fields-to-pdf) for a detailed walkthrough of the field editor.
+    For each signer, click **Add Signer** and choose a **Type**:
+
+    - **Internal (team member)**: search for a colleague in **Team member**.
+    - **External (company / third party)**: enter their **Email**. **Name (optional)** can stay blank if you don't know it.
+
+    Click **Add myself** to include yourself. Click **Save** when the list and order are right.
+
+    See [Internal and external signers](/documents/internal-vs-external-signers) for how each type signs.
   </Step>
-  <Step title="Add signers">
-    Under the **Signers** section, add everyone who needs to sign the document:
+  <Step title="Place fields">
+    In the **Field Tools** panel, pick a signer under **Assign to Signer**. Then drag **Signature**, **Name**, **Date** or **Text** fields onto the document.
 
-    - **Internal signers** — select a team member from the user dropdown.
-    - **External signers** — type the person's name and email address manually. No Connekt account is required.
-
-    You can mix internal and external signers on the same document. The order you add them determines the signing sequence — Connekt automatically notifies the next signer once the previous one completes their part.
-
-    <Tip>
-      If a candidate must sign before the hiring manager countersigns, simply add the candidate first in the Signers list.
-    </Tip>
+    Fields save automatically. See [Adding fields to a document](/documents/adding-fields-to-pdf) for details.
   </Step>
-  <Step title="Finalise and send">
-    Click **Finalize & Send**. Each signer immediately receives an email containing a unique, secure signing link. External signers can sign directly in their browser — no account needed.
+  <Step title="Send it">
+    Click **Send for Signature**. The confirmation shows each signer in order.
+
+    - Leave **Send Directly** selected and click **Yes, send for signature** to send now.
+    - Or choose **Submit for Review** to have a colleague approve it first. See [Reviewing a document before it's sent](/documents/review-before-sending).
   </Step>
 </Steps>
 
-## Tracking signing progress
+<Note>
+  **Send for Signature** only appears once you've saved at least one signer and placed at least one field.
+</Note>
 
-After sending, open the document's detail page to see a real-time view of who has signed and who is still pending. You can resend the signing link to any signer who hasn't acted yet — click **Resend** next to their name in the signers list.
+## Who gets emailed, and when
+
+Connekt only emails **the first signer** when you send. Each next signer is emailed after the previous one signs. Nobody can sign out of turn.
+
+- **External signers** get an email with a secure signing link.
+- **Internal signers** get an email with a signing link too, unless they're the person who created the document. The creator signs from the document page in Connekt instead.
 
 <Warning>
-  Make sure you send the link to the correct email address for that signer.
+  Once a document is sent, you can't change its fields or signers. If something is wrong, cancel it and create a new document.
 </Warning>
 
-## Downloading the completed document
+## Track progress
 
-Once every signer has completed the document, its status changes to **Completed**. From the document detail page you can download:
+Open the document from the **Sign** list to see:
 
-- **The final signed PDF** — a copy of the document with all signatures applied.
-- **The certificate of completion** — an audit trail confirming who signed and when.
+- **Signers**: each signer's status, and whether they're **Internal** or **External**.
+- **Activity**: when the document was sent, viewed and signed.
+- The **Created**, **Sent** and **Expires** dates.
 
-<Info>
-  Documents that have been fully signed cannot be edited or resent. If corrections are needed, duplicate the document and start a fresh signing request.
-</Info>
+For external signers who haven't signed yet, click **Resend** to email them a new link. See [Document statuses](/documents/document-statuses) for reminders and expiry.
+
+## When everyone has signed
+
+The status changes to **Completed**. Connekt emails every signer, the document's creator and any [CC recipients](/documents/managing-documents) with links to the signed PDF and the certificate of completion.
+
+You can also download both from the document's **⋯** menu with **Download Document** and **Download Certificate**.
+
+<Tip>
+  You can also create and send documents from the Connekt iOS app. See [eSign on mobile](/mobile/esign).
+</Tip>

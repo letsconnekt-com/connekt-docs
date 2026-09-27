@@ -1,54 +1,64 @@
 ---
-title: "How to Delegate Leave Approvals to Another Manager"
-sidebarTitle: "Delegate Approvals"
-description: "Record a delegate to cover your leave approval responsibilities while you're unavailable, with a defined period, reason, and easy early removal."
+title: "Delegating leave approvals"
+sidebarTitle: "Delegate approvals"
+description: "Record who covers your leave approvals while you're away, set the dates and reason, and edit, pause or delete the delegation in Connekt."
 ---
 
-If you're going to be away — on annual leave, travelling, or otherwise unavailable — you can record a delegate in Connekt to cover your leave approval responsibilities during that period. Delegation is primarily a way to document who's covering for you and for what reason; it doesn't restrict other Managers or Operations users from approving requests independently.
+If you're going to be away, you can create a delegation that names a manager to cover your leave approvals for a set period. Connekt keeps the delegation with its dates and reason, and shows it to both of you.
 
-<Note>
-  Setting up a delegation requires admin access in Connekt.
-</Note>
+<Info>
+  Delegation is in **Settings → Leave Policies → Delegation**. It needs the **Team** plan or higher and the **System Administration** permission, which Super Administrators and Administrators have by default.
+</Info>
 
-## Setting up a delegate
+## Before you delegate
+
+Connekt checks every approval against roles and teams. See [Approving leave requests](/time-off/approving-leave). A delegation doesn't change those checks. It records who is covering for you.
+
+Your delegate can only approve requests they already have the rights to approve. To make sure they can cover your team, make them a manager of that team in **Settings → Organization**. See [Teams and hierarchy](/team/teams-and-hierarchy).
+
+## Create a delegation
 
 <Steps>
-  <Step title="Open Delegation settings">
-    Go to **Settings → Leave Policies → Delegation**.
+  <Step title="Open Delegation">
+    Go to **Settings → Leave Policies** and open the **Delegation** tab.
+  </Step>
+  <Step title="Start a delegation">
+    Click **Create Delegation**.
   </Step>
   <Step title="Choose your delegate">
-    Select the team member who will act as approver in your absence. They must already have Manager or Operations access in your workspace.
+    In **Delegate To**, select a manager. If no one is listed, you'll see **No eligible managers found**.
   </Step>
-  <Step title="Set the delegation period">
-    Enter a **start date** and **end date** for the delegation. This records exactly when the cover arrangement applies.
+  <Step title="Set the dates">
+    Pick a **Start Date** and **End Date**. The start date can't be in the past, and the end date must be after the start date.
   </Step>
-  <Step title="Add a reason">
-    Enter a reason for the delegation — for example, **Annual leave** or **Business travel**. This is logged with the delegation record for future reference.
+  <Step title="Add a reason (optional)">
+    Use **Reason (Optional)** to add context, such as "Annual vacation".
   </Step>
   <Step title="Save">
-    Click **Save**. The delegation is recorded and visible in the delegation history.
+    Click **Create Delegation** in the dialog. The delegation appears under **My Delegations**.
   </Step>
 </Steps>
 
-<Info>
-  Delegation doesn't grant the delegate any additional access they don't already have — it's a record of who's covering, not a permission change. Any Manager or Operations user in your workspace can approve leave requests regardless of whether a delegation is in place.
-</Info>
-
-## Removing a delegate early
-
-If your plans change and you're back before the delegation end date, you can remove the delegation at any time.
-
-1. Go to **Settings → Leave Policies → Delegation**.
-2. Click **Remove Delegate**.
-
-The delegation is ended immediately and the record is updated in the delegation history.
-
-## Delegation history
-
-All past and current delegations are logged and visible in **Settings → Leave Policies → Delegation**. You can review who covered for whom, over what period, and for what reason — useful for compliance records or simply for reference when planning future cover.
-
-## Important notes
-
 <Warning>
-  Delegates cannot further delegate their cover to another person. If your named delegate also becomes unavailable during the period, another Manager or Operations user in the workspace will still be able to action leave requests — but you'll need to manually update the delegation record if you want to formally reassign cover.
+  Your delegations can't overlap. If you already have an active delegation for some of those dates, edit it instead.
 </Warning>
+
+## See your delegations
+
+The **Delegation** tab has two lists:
+
+- **My Delegations**: cover you've set up, with the delegate, dates, reason and an **Active** badge.
+- **Delegated to Me**: cover other people have set up with you as the delegate.
+
+Both lists show active delegations only.
+
+## Edit, pause or delete a delegation
+
+1. Under **My Delegations**, click the edit icon next to the delegation.
+2. In **Edit Delegation**, change the dates or reason, then click **Update Delegation**.
+
+To pause it, turn off **Active** and click **Update Delegation**. To remove it, click **Delete**, then confirm with **Delete**.
+
+<Note>
+  Paused and deleted delegations no longer appear in either list.
+</Note>

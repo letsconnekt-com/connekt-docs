@@ -1,51 +1,73 @@
 ---
-title: "Keyword Search vs. AI Matching: Finding Records in Connekt"
+title: "Search, filters, Ask AI or AI matching: which should you use?"
 sidebarTitle: "Search vs AI"
-description: "Understand when to use Connekt's top search bar for keyword lookups and when to use AI-powered matching to surface the best-fit candidates or jobs."
+description: "Compare Connekt's four ways to find records: global search, list filters and Boolean search, Ask AI, and AI job matching. Learn when to use each one."
 ---
 
-Connekt gives you two distinct ways to find what you're looking for, and they're designed for different situations. The top search bar is your go-to for quick lookups when you already know what you want. AI matching is the right tool when you want Connekt to do the heavy lifting and surface the best candidates for a role — or the best roles for a candidate — based on meaning rather than exact keywords.
+Connekt gives you four ways to find records. Global search and list filters find records that match what you type. Ask AI and AI job matching understand meaning, so they can surface good candidates even when the wording doesn't match exactly. This page helps you pick the right tool.
 
-## The top search bar (keyword search)
+## At a glance
 
-The search bar at the top of any page runs a fast, keyword-based search across your entire workspace — covering Candidates, Jobs, Placements, and Companies in one go.
+| | Global search | Filters and Boolean search | Ask AI | AI job matching |
+|---|---|---|---|---|
+| **Where** | **Search everything...** bar at the top of every page, or **⌘K** / **Ctrl+K** | Search box and **Filter** button on each list page | **Ask AI** button next to the search bar | **Matching candidates** card on a job, **Matching open jobs** card on a candidate |
+| **What you enter** | A name, email, company or title | Keywords with AND / OR / NOT, plus field conditions | A plain-language request or question | Nothing. Click **Find matches** |
+| **What it searches** | Candidates, companies, contacts, jobs and placements | One list at a time | Candidates, plus questions about companies, contacts, jobs, submissions and placements | Candidates for one job, or open jobs for one candidate |
+| **Results** | Records grouped by type | A filtered table you can sort and bookmark | Ranked candidates with reasons and flags, or a written answer | A ranked list with a match score and reasoning |
+| **Best for** | Jumping straight to a record you know | Building a precise, repeatable list | Open-ended sourcing and quick data questions | Shortlisting for a specific role |
 
-**What it supports:**
+## Global search
 
-- **Typo-tolerance** — minor spelling mistakes won't cause you to miss results.
-- **Field filtering** — narrow results to a specific entity type or field.
-- **Search History** — every query you run is automatically tracked. Open the **Search History** dropdown from the search bar to re-run a recent or frequently used search without typing it again.
+Use global search when you already know which record you want. Type a name, email or job title and open the result.
 
-<Tip>
-  Search History is especially useful for recurring lookups you come back to throughout the day — open the dropdown from the search bar to re-run a recent search without typing it again.
-</Tip>
+When the box is empty, **Recent Searches** shows the records you opened from search recently.
 
-## AI-powered matching
+[Learn more about global search](/search/search-history)
 
-For finding the *right* fit rather than a specific record, use the **Matching Candidates** or **Matching Open Jobs** cards available on candidate and job profiles respectively.
+## Filters and Boolean search
 
-**How it works:**
+Use list filters when you need an exact, repeatable list. For example: candidates with `python OR golang` in their profile, **Country** is "Singapore", and **Status** is any of your active statuses.
 
-- Uses **semantic matching** — it understands meaning and intent, not just exact text.
-- Applies **AI re-ranking** to surface the most relevant results at the top.
-- Handles equivalent phrasing automatically — for example, "React.js" and "ReactJS" are treated as the same skill.
+On Candidates, Companies, Contacts and Jobs, your search and filters stay in the page URL, so you can bookmark the view. You can also choose and save which columns the table shows.
 
-**Where to find it:**
+[Learn more about filters and Boolean search](/search/filters-and-boolean-search)
 
-- On a **Job profile**: look for the **Matching Candidates** card to see ranked candidate suggestions for that role.
-- On a **Candidate profile**: look for the **Matching Open Jobs** card to see which open roles are the best fit for that person.
+## Ask AI
 
-<Info>
-  For a full walkthrough of the AI matching workflow, see the "Matching candidates to jobs" guide.
-</Info>
+Use Ask AI when you'd rather describe what you need than build a query. For example: "Senior React developers in London with fintech experience." Ask AI returns a ranked shortlist with the reasons behind each match. You can refine it with follow-up questions, attach a job for context, and add candidates straight to a project.
 
-## Choosing the right tool
+Ask AI also answers questions about your data, such as "Which jobs have the most active submissions?"
+
+[Learn more about Ask AI](/search/ask-ai)
+
+## AI job matching
+
+Use AI job matching when you're working on one job or one candidate.
+
+- On a job, the **Matching candidates** card ranks candidates against the job's title, skills and description.
+- On a candidate, the **Matching open jobs** card ranks open jobs against the candidate's profile and CV.
+
+Choose how many results you want, such as **Top 5**, then click **Find matches**. Click **Regenerate** to run it again after the job or profile changes.
+
+[Learn more about AI job matching](/candidates/matching-candidates-to-jobs)
+
+## Which one should you use?
 
 <CardGroup cols={2}>
-  <Card title="Use the search bar when…" icon="magnifying-glass">
-    You know roughly what you're looking for — a candidate's name, a company, a job title, or a placement reference. You want a fast, direct result.
+  <Card title="I know the record I want" icon="magnifying-glass" href="/search/search-history">
+    Use global search. Press ⌘K / Ctrl+K and type the name.
   </Card>
-  <Card title="Use AI matching when…" icon="wand-magic-sparkles">
-    You want Connekt to surface the best-fit candidates for a role, or the best roles for a candidate, based on skills and experience rather than exact keyword matches.
+  <Card title="I need an exact list" icon="list" href="/search/filters-and-boolean-search">
+    Use filters and Boolean search on the list page.
+  </Card>
+  <Card title="I want to describe who I need" icon="sparkles" href="/search/ask-ai">
+    Use Ask AI and refine the shortlist in conversation.
+  </Card>
+  <Card title="I'm filling one specific job" icon="wand-magic-sparkles" href="/candidates/matching-candidates-to-jobs">
+    Use the **Matching candidates** card on the job.
   </Card>
 </CardGroup>
+
+<Tip>
+  The tools work well together. For example, shortlist candidates with Ask AI, add them to a project, then track them from the project.
+</Tip>

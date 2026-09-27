@@ -1,76 +1,84 @@
 ---
-title: "Deal Splits: How Placement Commission Is Calculated"
-sidebarTitle: "Deal Splits"
-description: "How Connekt auto-calculates placement fee splits, how to override them manually, split categories, and first-placement and system company rules."
+title: "Deal splits"
+sidebarTitle: "Deal splits"
+description: "Split a placement fee between recruiters, researchers and referrals. Splits are set by hand on the placement and must add up to 100% of the fee."
 ---
 
-Deal splits determine how the placement fee is divided among the recruiters who contributed to closing the deal. Connekt calculates default splits automatically when a placement is created, but you can override them manually at any time.
+Deal splits record who shares a placement's fee and how much each person receives. You set splits by hand when you create or edit a placement. Connekt doesn't create them for you, and it won't save splits that don't add up to the full fee.
 
-## How Auto-Calculation Works
+## Where you set splits
 
-When you create a placement, Connekt looks at three things to determine the default split:
+Splits live in the **Splits** section of these placement pages:
 
-- **Who owns the candidate record** — the recruiter responsible for sourcing or managing the candidate
-- **Who owns the company account** — the recruiter or account manager responsible for the client relationship
-- **The deal maker role** — any deal maker role assigned during the recruitment process
+- **Create New Placement**, or the **Create Placement** dialog when you convert a submission. See [Create a placement](/placements/creating-a-placement).
+- **Edit Placement**. Open the placement and click **Edit**.
 
-Based on these, Connekt distributes the placement fee across the relevant recruiters. You can review the calculated splits immediately after creating the placement and adjust them if needed.
+Every placement needs at least one split. Once saved, splits show on the placement's **Overview** tab under **Commission Splits & Team Details**.
 
-## How to Override Splits Manually
+## Roles you can add
+
+| Role | Who it's for | How you choose the person |
+|---|---|---|
+| **Recruiter** | The credited recruiter on the deal. | Pick an active user. |
+| **Researcher** | Someone who sourced or researched the candidate. | Pick an active user with the Researcher role. |
+| **Referral** | Someone outside your team who referred the deal. | Type their name. |
+
+<Note>
+  The people you can pick depend on your access. Admins can pick anyone. If you manage an office or lead a team, you can pick people in the offices and teams you manage. Other users with the Operations or Manager role can pick anyone. Everyone else can only credit themselves.
+</Note>
+
+## Add or change splits
 
 <Steps>
-  <Step title="Open the Placement record">
-    Navigate to the placement whose splits you want to change.
+  <Step title="Set the fee first">
+    Enter the **Fee Value** in **Compensation & Fees**. The **Splits** section shows it as **Fee to split**. Until you set a fee, Connekt asks you to set one before you configure splits.
   </Step>
-  <Step title="Go to the Splits section">
-    Scroll to the **Splits** section on the placement record, or open the **Commission Drawer** from the pipeline card for the same placement.
+  <Step title="Add people">
+    Click **Add person** and choose **Recruiter**, **Researcher** or **Referral**. Then pick the user, or type the referral's name.
   </Step>
-  <Step title="Click Edit Splits">
-    Click **Edit Splits** to enter edit mode.
+  <Step title="Set each person's share">
+    For each row, choose **%** or **Flat**. Enter a percentage of the fee, or a flat amount. The **Receives** column shows what each person gets.
   </Step>
-  <Step title="Enter custom percentages">
-    Update the percentage for each recruiter as needed. You can add or remove split lines to reflect the actual contributions.
+  <Step title="Split evenly (optional)">
+    Click **Split evenly** to share the fee equally across all percentage rows.
   </Step>
-  <Step title="Save">
-    Click **Save** to apply your changes.
+  <Step title="Add region, office and team (optional)">
+    Open a row's details to set its **Billing Region**, **Office** and **Team**. Office and team come from the person's own offices and teams. Referral rows don't have an office or team.
+  </Step>
+  <Step title="Save the splits">
+    Click **Save Splits**. Then click **Create Placement** or **Update Placement** to save the placement.
   </Step>
 </Steps>
 
 <Warning>
-  Connekt doesn't strictly enforce that all split lines add up to 100%. Double-check your percentages total correctly before saving to avoid commission reporting discrepancies.
+  Connekt only saves splits that add up to 100% of the fee. The bar above the rows shows how much is assigned and how much is left, or how far over you are. **Save Splits** stays disabled until the footer shows **Adds up to 100%**.
 </Warning>
 
-## Split Categories
+<Note>
+  You must click **Save Splits** before you save the placement. While you have unsaved split changes, the placement's save button is disabled. Click **Reset** to discard your changes.
+</Note>
 
-Each individual split line can be tagged with a category to describe the type of contribution. This helps with reporting and makes commission breakdowns easier to understand.
+<Info>
+  The **Create Placement** dialog you get when converting from a **Submissions** tab uses a slightly different layout. Instead of **Add person**, it has **Add Recruiter**, **Add Referral** and **Add Researcher** buttons. You choose **Percentage (%)** or **Flat Fee** for each row, and quick buttons set 0%, 25%, 50%, 75% or 100%. **Split evenly** isn't available there. The same 100% rule and **Save Splits** button apply.
+</Info>
 
-<CardGroup cols={3}>
-  <Card title="Regular" icon="user-tie">
-    The recruiter directly worked the deal — sourced the candidate, managed the client, or drove the process to close.
-  </Card>
-  <Card title="Referral" icon="share-nodes">
-    The recruiter passed a lead but didn't actively work the deal themselves.
-  </Card>
-  <Card title="Researcher" icon="magnifying-glass">
-    The recruiter sourced or screened the candidate but wasn't involved in the client-facing side of the deal.
-  </Card>
-</CardGroup>
+If you change the fee later, percentage splits update their amounts to match the new fee.
 
-## Additional Commission Rules
+## Why office and team matter
 
-<AccordionGroup>
-  <Accordion title="First-placement handling">
-    A client's first-ever placement can be treated differently from repeat placements at the same account, depending on how your workspace is configured. If you're not sure whether this applies to you, ask your admin.
-  </Accordion>
+A split's office and team decide which office and team goals it counts towards. Office and team goals add up the split amounts for that office or team. Referral splits aren't counted. See [Goals and metric targets](/dashboard/goal-progress).
 
-  <Accordion title="System companies">
-    Companies flagged as system accounts in Connekt may have different split rules applied automatically. If you notice unexpected splits on a placement linked to a system company, contact your admin to review the account's configuration.
-  </Accordion>
-</AccordionGroup>
+## The split estimate on the Deals page
 
-## Where to View Splits
+Before a deal becomes a placement, the **Deal Details** panel on the **Deals** page shows an estimated split. Open it from **⋯ → View Details**, then look under **Commission Splits** on the **Commission** tab. The estimate uses who owns the candidate and the company, and who made the submission. Common cases:
 
-All splits and their calculated fee values are visible in two places:
+| Situation | Estimated split |
+|---|---|
+| One person owns both the candidate and the company | 100% to that person |
+| Different people own the candidate and the company | 80% company owner, 20% candidate owner |
+| A third person made the submission (first placement with the company) | 20% company owner, 20% candidate owner, 60% to the person who made the submission |
+| The company has no owner, and someone else made the submission | 20% candidate owner, 80% to the person who made the submission |
 
-- The **Commission Drawer** — accessible by clicking any deal card on the pipeline board
-- The **Placement record** itself — in the Splits section
+<Info>
+  The estimate is only a guide for forecasting. It isn't copied to the placement. You still enter the actual splits yourself when you create the placement.
+</Info>

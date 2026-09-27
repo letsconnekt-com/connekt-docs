@@ -1,8 +1,10 @@
 {
-  "title": "Advanced Features",
+  "title": "Advanced features",
   "pages": [
     "search-vs-ai-matching",
     "custom-fields",
-    "activity-and-usage"
+    "offices-and-currency",
+    "activity-and-usage",
+    "exporting-data"
   ]
 }

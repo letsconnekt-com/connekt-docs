@@ -1,0 +1,82 @@
+---
+title: "Enrich contact details for candidates and contacts"
+sidebarTitle: "Enrich contact details"
+description: "Look up work emails, personal emails and phone numbers for candidates and contacts, from a record, a list or the Chrome extension."
+---
+
+Enrich looks up missing contact details for candidates and contacts. It can find a work email, a personal email or a phone number, using the Full Enrich data provider. You can enrich one record, up to 50 records from a list, or a profile in the Chrome extension.
+
+## What Connekt needs to run a lookup
+
+Each record needs one of these:
+
+- A LinkedIn URL
+- A first name, a last name and a current employer (for contacts, their company)
+
+Records without either are skipped.
+
+## Enrich one record
+
+<Steps>
+  <Step title="Open the record">
+    Open the candidate or contact. Find the **Contact Information** card.
+  </Step>
+  <Step title="Click Enrich">
+    Click the **Enrich** badge next to **Work Email**, **Personal Email** or **Phone**. Each badge looks up only that field.
+  </Step>
+  <Step title="Wait for the result">
+    The lookup can take a couple of minutes. The field fills in automatically when a value is found.
+  </Step>
+</Steps>
+
+<Note>
+  The badge runs even if the field already has a value. If Enrich finds a different value, it replaces the one on the record.
+</Note>
+
+## Enrich several records from a list
+
+<Steps>
+  <Step title="Select the records">
+    On **Candidates** or **Contacts**, tick the boxes next to up to 50 records.
+  </Step>
+  <Step title="Open the Action menu">
+    Click **Action**, then point to **Enrich**.
+  </Step>
+  <Step title="Choose what to find">
+    - Point to **Email**, then choose **Personal email**, **Work email** or **Both**. **Both** finds a work email and a phone number.
+    - Or choose **Phone only**.
+  </Step>
+  <Step title="Let it run">
+    Connekt confirms how many records it's enriching. The lookup can take a couple of minutes, and the values fill in automatically. You can keep working while it runs.
+  </Step>
+</Steps>
+
+From a list, Connekt skips records that already have the value you asked for, so they don't use credits.
+
+## Enrich in the Chrome extension
+
+When you open a saved candidate or contact in the Connekt Chrome extension, an **Enrich** badge appears next to the email and phone fields. Click it to look up that field. The lookup can take up to 2 minutes.
+
+See [Chrome extension](/integrations/chrome-extension) to install and use the extension.
+
+## Credit costs
+
+Enrich uses enrich credits. You're only charged when Enrich finds a value. If nothing is found, no credits are used.
+
+| Detail found | Credits |
+|---|---|
+| Work email | 1 |
+| Personal email | 3 |
+| Phone number | 10 |
+
+Your workspace gets 300 enrich credits per seat each month, shared by everyone in the workspace. Admins can also set a monthly cap for each user.
+
+## If you run out of credits
+
+When your workspace has no credits left, or you've reached your personal monthly cap, the Chrome extension shows an **Out of enrich credits** message and doesn't run the lookup.
+
+An admin can check the balance and buy more credits in **Settings → Usage**. See [Usage and add-ons](/billing/usage-and-add-ons).
+
+<Tip>
+  Work emails cost the least. Start with **Work email** and look up personal emails or phone numbers only for the candidates you're actively pursuing.
+</Tip>

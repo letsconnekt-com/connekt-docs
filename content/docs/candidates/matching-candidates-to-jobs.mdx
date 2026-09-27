@@ -1,75 +1,84 @@
 ---
-title: "AI-Powered Matching: Candidates and Jobs in Connekt"
-sidebarTitle: "AI Matching"
-description: "Use Connekt's AI-powered semantic matching to surface strong job–candidate pairings from both the candidate profile and the job record."
+title: "Match candidates to jobs with AI"
+sidebarTitle: "AI matching"
+description: "Find open jobs for a candidate, or candidates for a job, with AI ranking. Learn which filters apply and how to get better matches."
 ---
 
-Connekt's matching engine goes beyond simple keyword filters. It uses semantic, meaning-based analysis combined with an AI re-ranking step to surface the strongest pairings between candidates and open roles — even when the wording doesn't match exactly. For example, a candidate who lists "React.js" can still be matched to a job that asks for "ReactJS." You can trigger matching from either direction: starting from a candidate to find relevant jobs, or starting from a job to find suitable candidates.
+AI matching ranks the best fits between candidates and jobs. It compares meaning, not just keywords, so "React.js" can match a job that asks for "ReactJS". You can match in both directions: from a candidate to find open jobs, or from a job to find candidates.
 
-## Match from a Candidate Profile
-
-Use this approach when you're reviewing a specific candidate and want to identify the best open roles for them right now.
+## Find jobs for a candidate
 
 <Steps>
-  <Step title="Open the candidate record">
-    Navigate to **Candidates** in the main navigation and open the candidate you want to match.
+  <Step title="Open the candidate">
+    Go to **Candidates** and open the candidate's profile.
   </Step>
-  <Step title="Find the Matching Open Jobs card">
-    Scroll down the candidate profile until you see the **Matching Open Jobs** card.
+  <Step title="Find the Matching open jobs card">
+    The **Matching open jobs** card ranks jobs against the candidate's profile and CV.
   </Step>
-  <Step title="Run the matching search">
-    Click **Find Matches**. Connekt analyses the candidate's full profile against all open jobs in your workspace.
+  <Step title="Choose how many results">
+    Pick a number from the selector, from **Top 5** to **Top 50**. The default is **Top 5**.
   </Step>
-  <Step title="Review the ranked results">
-    A ranked list of jobs appears, ordered by match strength. Review the suggestions to identify the best opportunities.
+  <Step title="Run the match">
+    Click **Find matches**. Each result shows a match score, the company, a short reason for the match and key skills.
   </Step>
-  <Step title="Act on a match">
-    Click any job in the list to open its full detail page. From there you can review the role requirements and submit the candidate directly.
+  <Step title="Open a job">
+    Click a result to open the job. From there, you can review it and submit the candidate.
   </Step>
 </Steps>
 
-## Match from a Job Page
+Click **Regenerate** to run the match again, for example after you update the profile.
 
-Use this approach when you're filling a specific role and want to quickly identify the best candidates in your database.
+## Find candidates for a job
 
 <Steps>
-  <Step title="Open the job record">
-    Navigate to **Jobs** in the main navigation and open the role you're recruiting for.
+  <Step title="Open the job">
+    Go to **Jobs** and open the role you're filling.
   </Step>
-  <Step title="Find the Matching Candidates card">
-    Scroll down to the **Matching Candidates** card on the job detail page.
+  <Step title="Find the Matching candidates card">
+    The **Matching candidates** card ranks candidates against the job's title, skills and description.
   </Step>
-  <Step title="Run the matching search">
-    Click **Find Matches**. Connekt scans your entire candidate database against the job's full profile.
+  <Step title="Choose how many results and run the match">
+    Pick **Top 5** to **Top 50**, then click **Find matches**.
   </Step>
-  <Step title="Review the ranked results">
-    A ranked list of candidates appears, ordered by match strength. Review the suggestions to find the strongest fits.
-  </Step>
-  <Step title="Act on a match">
-    Click any candidate in the list to open their profile. From there you can review their details and submit them to the job.
+  <Step title="Open a candidate">
+    Click a result to open the candidate's profile.
   </Step>
 </Steps>
 
-## What Drives the Matching
+## Filters that always apply
+
+Connekt filters results before it ranks them. These filters can't be turned off.
+
+| Filter | Candidate → jobs | Job → candidates |
+|---|---|---|
+| Job status | Only **Open** and **Partially Filled** jobs | Not applied |
+| Location | If the candidate has a country, only jobs in that country or remote jobs | If the job isn't remote and has a country, only candidates in that country |
+| Seniority | Leaves out jobs more than one career level below the candidate | Leaves out candidates more than one career level above the job |
+| Off-limits | Not applied | Off-limits candidates are left out |
+
+If a candidate or job has no career level, the seniority filter doesn't apply to it. See [Off-limits candidates](/candidates/off-limits).
+
+## What the AI looks at
 
 <AccordionGroup>
-  <Accordion title="Semantic matching">
-    Rather than looking for exact word matches, Connekt understands the *meaning* behind the text in candidate profiles and job descriptions. Skills, experience, and role requirements are compared conceptually, so related terms and synonyms are treated as equivalent matches.
+  <Accordion title="For a candidate">
+    Current title, career level, skills, industries and years of experience. Connekt also reads the text of the candidate's most recent attachment, such as their CV, once it has been processed.
   </Accordion>
-
-  <Accordion title="AI re-ranking">
-    After the initial semantic search identifies candidates or jobs, an AI re-ranking step refines the order — pushing the strongest overall fits to the top of the list based on the full context of both the candidate profile and the job record.
+  <Accordion title="For a job">
+    Job title, career level, skills, industries and the job description.
   </Accordion>
-
-  <Accordion title="Profile completeness matters">
-    The matching engine works from whatever information is in each record. A candidate with a detailed profile — skills, experience, education, a full CV — will generate far more accurate matches than one with only a name and email address. The same applies to jobs: a well-written description with clear requirements produces better results than a one-line title.
+  <Accordion title="How results are ranked">
+    Connekt first searches by meaning and keywords. AI then ranks the strongest results and writes the short reason you see on each match.
   </Accordion>
 </AccordionGroup>
 
-<Tip>
-  To get the most from AI matching, make sure both your candidate profiles and your job records are as complete as possible. Encourage your team to attach resumes and fill in skills fields when adding new candidates.
-</Tip>
+## Get better matches
+
+- Fill in skills, career level and country on both candidates and jobs.
+- Attach a CV to each candidate. Matching reads the most recent attachment, so upload the CV again if you add other files after it.
+- Write full job descriptions with clear requirements.
+- Rate results with the thumbs up (**Helpful**) and thumbs down (**Not helpful**) buttons. Your feedback helps improve matching.
 
 <Note>
-  Matching searches run against **open jobs** only. Closed, filled, or cancelled roles won't appear in candidate match results.
+  Matching and search work differently. To learn when to use each one, see [Search vs AI matching](/advanced/search-vs-ai-matching).
 </Note>

@@ -3,6 +3,7 @@
   "pages": [
     "user-roles",
     "customising-permissions",
+    "teams-and-hierarchy",
     "deactivating-reactivating"
   ]
 }

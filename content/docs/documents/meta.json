@@ -1,9 +1,12 @@
 {
-  "title": "Documents & E-Signing",
+  "title": "Sign",
   "pages": [
     "uploading-and-sending",
     "adding-fields-to-pdf",
     "internal-vs-external-signers",
-    "document-statuses"
+    "review-before-sending",
+    "signing-yourself",
+    "document-statuses",
+    "managing-documents"
   ]
 }
