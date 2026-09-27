@@ -1,0 +1,10 @@
+{
+  "title": "Candidates",
+  "pages": [
+    "adding-a-candidate",
+    "bulk-import",
+    "matching-candidates-to-jobs",
+    "merging-duplicates",
+    "attachments-and-notes"
+  ]
+}

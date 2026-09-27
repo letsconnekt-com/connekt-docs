@@ -1,16 +1,15 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
-
 # Documentation project instructions
 
 ## About this project
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
-- Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
+- This is a documentation site built on [Fumadocs](https://fumadocs.dev) (Next.js App Router)
+- Pages are MDX files with YAML frontmatter in `content/docs/`, served from the site root (`content/docs/billing/plans-compared.mdx` → `/billing/plans-compared`)
+- Sidebar order and groups live in `meta.json` files: the root `content/docs/meta.json` defines the group separators, each folder's `meta.json` orders its pages
+- Frontmatter supports `title`, `description`, and `sidebarTitle` (shorter sidebar label)
+- Mintlify-style components (`<Steps>`, `<Step title>`, `<Card icon>`, `<CardGroup cols>`, `<AccordionGroup>`, `<Accordion title>`, `<Tabs>`, `<Tab title>`, `<Note>`, `<Tip>`, `<Info>`, `<Warning>`) are mapped to Fumadocs UI in `src/components/mdx.tsx`
+- Card `icon` values are Font Awesome names, mapped to Lucide icons in `src/components/fa-icons.tsx` — add new names there
+- Fumadocs reference for AI tools: https://www.fumadocs.dev/llms.txt
+- Run `pnpm dev` to preview locally, `pnpm build` to verify
 
 ## Terminology
 
