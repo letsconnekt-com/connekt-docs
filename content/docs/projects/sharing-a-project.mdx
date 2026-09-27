@@ -1,0 +1,156 @@
+---
+title: "Sharing a project with a client"
+sidebarTitle: "Share with a client"
+description: "Email your client a secure link to review a project shortlist, choose what they see, and track their decisions and feedback on each candidate."
+---
+
+You can share a project with a client through a secure link. Connekt emails the link to your client, and they open the shortlist in their browser without a Connekt account. Clients can review candidates, give a decision on each one, leave feedback, view CVs and export the list as a CSV.
+
+## Before you share
+
+- **Only the project's creator can share it.** Teammates with **Can Edit** access can open the share dialog, but sharing fails for them.
+- **The project must be linked to a company.** If it isn't, you pick one in the share dialog.
+
+## Share a project
+
+<Steps>
+  <Step title="Open the share dialog">
+    Open the project, click the **⋯** menu in the header and click **Share**. You can also go to the **Settings** tab and click **Share with Company**. The **Share with Company** dialog opens.
+  </Step>
+  <Step title="Select the company">
+    Under **Select company**, check the **Company**. Click **Change** to pick a different one. You can also pick a **Job (optional)**. Your choice is saved to the project when you send the link.
+  </Step>
+  <Step title="Choose what the client can see">
+    Under **What the client can see**, turn each option on or off. See the table below.
+  </Step>
+  <Step title="Enter the client's details">
+    Under **Generate access link**, enter a **Client name (optional)** and the client's **Company email**.
+  </Step>
+  <Step title="Set the expiry">
+    Under **Link expires**, pick **7 days**, **14 days**, **30 days**, **60 days**, **90 days** or **Never**. The default is **30 days**.
+  </Step>
+  <Step title="Click Generate & Send">
+    Connekt emails the link to your client and copies it to your clipboard. The link also appears in the dialog so you can copy it again.
+  </Step>
+</Steps>
+
+The email includes the project name, the link, the expiry date and your name. Once you share a project, it shows a **Shared with Client** badge in the **Projects** list and on the project.
+
+## Choose what the client can see
+
+All seven options are on by default. They save as soon as you switch them, and they apply to every client link for the project.
+
+| Option | What the client sees |
+|---|---|
+| **Contact info** | Email, mobile and LinkedIn URL |
+| **Salary** | Current salary and currency |
+| **Resume** | A button to view the candidate's CV |
+| **Client Feedback** | The feedback thread on each candidate, where the client can post comments |
+| **Status** | Each candidate's stage in the project |
+| **Status history** | A timeline of status changes and the client's past decisions |
+| **Last Update** | Your update log for each candidate |
+
+<Warning>
+  Contact details and salary are shared by default. Turn off **Contact info** and **Salary** before you click **Generate & Send** if the client shouldn't see them.
+</Warning>
+
+<Warning>
+  Your team's candidate **Notes** in the project are always visible to the client as **Recruiter Notes**. There's no option to hide them. Only add notes you're happy for the client to read.
+</Warning>
+
+## One link per email address
+
+Each email address gets its own link. To share with several people at the client, generate a link for each email address.
+
+If you share again with an email address that already has a link, Connekt sends a new link and the old one stops working. The expiry resets to your new choice. This also restores access if you'd revoked it.
+
+## Manage active links
+
+Every link that hasn't been revoked appears under **Active access** in the share dialog. Each entry shows:
+
+- The client's name and email
+- **Shared by** and the date it was shared
+- The expiry date, or **Never expires**
+- How many times the client has viewed it, or **Not yet viewed**
+- An **Expired** badge, or a badge showing the days left when fewer than 7 remain
+
+<AccordionGroup>
+  <Accordion title="Change the expiry or client name">
+    Click the calendar icon to open **Edit access**. Update the **Client name** or pick a new **Expires** option, then click **Save changes**. The client keeps the same link. The new expiry counts from today.
+  </Accordion>
+  <Accordion title="Copy the link again">
+    Click the copy icon. You can't copy an expired link. Update its expiry first.
+  </Accordion>
+  <Accordion title="Revoke access">
+    Click the bin icon, then click **Yes**. The link stops working straight away.
+  </Accordion>
+</AccordionGroup>
+
+Only the project's creator can change, revoke or create links.
+
+## What your client sees
+
+When your client opens the link, they see the project name, company and description, plus the date their access expires. Below that, the **Candidate Shortlist** lists each candidate with their current role and company. Other columns depend on the options you turned on.
+
+Clients see client-friendly stage names. For example, **Rejected** shows as **Not Selected**, **No Reply** shows as **Did Not Reply**, and **Candidate Declined** shows as **Candidate Not Interested**.
+
+Your client can:
+
+<CardGroup cols={2}>
+  <Card title="Give a decision" icon="circle-check">
+    Under **Next Steps**, choose **Move Forward**, **Put on Hold** or **End Process**, add an optional note and click **Submit**.
+  </Card>
+  <Card title="Leave feedback" icon="pen-nib">
+    Post comments on a candidate in the **Client Feedback** thread. Needs the **Client Feedback** option.
+  </Card>
+  <Card title="View CVs" icon="file">
+    Click **View** in the **CV** column. Needs the **Resume** option.
+  </Card>
+  <Card title="Export a CSV" icon="file-lines">
+    Click **Export CSV** to download the shortlist.
+  </Card>
+</CardGroup>
+
+Clicking a candidate opens a details panel with their contact details, compensation, feedback, update log, recruiter notes, status history and the client's decision history, depending on your settings.
+
+<Note>
+  The **View** button opens the most recently uploaded file on the candidate's record. If you upload other documents after the CV, the client sees the newest one instead.
+</Note>
+
+<Info>
+  The CSV includes each candidate's name, current title and company. It includes contact details, salary and stage only when those options are on. A **Remarks** column holds the latest recruiter note.
+</Info>
+
+A client's decision applies to the candidate's current stage. When you change the candidate's status in the project, the decision resets so the client can decide again.
+
+## See your client's feedback
+
+Client activity shows up in the project's **Candidates** tab:
+
+- **Client Status** shows the latest decision: **Moved Forward**, **On Hold**, **Process Ended** or **Pending**.
+- **Client Feedback** opens the client's comments. You can read them but not reply there.
+- **History** lists each decision, labelled **By Client**.
+
+The project's creator also gets a notification:
+
+- **Client feedback: …** when the client submits a decision. This also arrives by email.
+- **New client feedback** when the client posts a comment.
+
+Client decisions don't change the candidate's status or any submission. Update the status yourself when you're ready. See [Notification preferences](/integrations/notification-preferences).
+
+## When a link stops working
+
+A link stops working when it expires, when you revoke it, or when you send a new link to the same email address.
+
+When your client opens a link that no longer works, they see **Unable to Load Project** with the reason, such as "Access token has expired" or "Access has been revoked". To give them access again, update the link's expiry under **Active access**, or share the project with their email again.
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Create and manage projects" icon="list" href="/projects/creating-a-project">
+    Add candidates, track statuses and manage access.
+  </Card>
+  <Card title="Getting help" icon="envelope" href="/getting-started/getting-help">
+    Contact support if a client can't open their link.
+  </Card>
+</CardGroup>

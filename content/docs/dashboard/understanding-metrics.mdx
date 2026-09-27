@@ -1,69 +1,102 @@
 ---
-title: "Understanding Dashboard Metrics and KPIs in Connekt"
-sidebarTitle: "Dashboard Metrics"
-description: "Learn how to read your Personal, Team, and Company dashboard views, filter by period, and use metrics effectively for reviews and one-to-ones."
+title: "Understand your Home dashboard"
+sidebarTitle: "Home dashboard"
+description: "Read and customise the Home dashboard. Choose a scope, add or hide blocks, set each card's period and pick the currency for figures."
 ---
 
-Your Connekt dashboard surfaces the KPIs that matter most to your role — whether you're tracking your own pipeline, reviewing a team, or getting a bird's-eye view of org-wide performance. What you see adapts automatically based on your plan and permission level, so the dashboard is always relevant to you.
+**Home** is your dashboard in Connekt. It shows your targets, activity, pipeline and revenue as a set of blocks you can arrange yourself. Click **Home** in the sidebar to open it.
 
-## View Types
+To open **Home**, you need at least one of these permissions: **View Personal Dashboard**, **View Team Dashboard** or **View Company Dashboard**.
 
-Connekt offers three dashboard views, each scoped to a different level of the organisation.
+## Choose whose numbers you see
 
-<CardGroup cols={3}>
-  <Card title="Personal" icon="user">
-    Your own placements, submissions, conversion rates, and revenue. Available to all users.
-  </Card>
-  <Card title="Team" icon="users">
-    Side-by-side metrics for every team member you manage. Available to managers and above.
-  </Card>
-  <Card title="Company" icon="building">
-    Org-wide performance across all users and teams. Available to admins only.
-  </Card>
-</CardGroup>
+If you're an admin, or you manage an office or lead a team, a scope menu appears at the top right. It starts on **My Dashboard**. Open it to pick:
 
-## Available Metrics
+- **Office:** everyone in an office.
+- **Teams:** everyone in a team.
+- **Users:** one person, for example before a one-to-one.
 
-The following metrics appear on the dashboard. Which ones you can see depends on your plan.
+The menu shows your choice, such as **London › Sales**. Clear it to return to **My Dashboard**. If you don't manage anyone, you only see your own numbers and there's no scope menu.
 
-| Metric | Plans |
+## Choose the currency for figures
+
+Click the currency button next to the scope menu. The **Show figures in** menu offers:
+
+- **Company currency:** official company figures. This is the default.
+- **My currency:** the currency on your profile.
+- The selected office's currency, when you've picked an office.
+
+The currency only changes how amounts display. It doesn't change which deals count. An admin sets the company currency in **Settings → Revenue & FX**. See [Offices and currency](/advanced/offices-and-currency).
+
+## Change a card's period
+
+Many cards and charts have their own period selector, so you can view each one over a different timeframe. Choose **Week**, **Month**, **Quarter** or **Year**. For month, quarter and year, you can also pick which one, for example a past quarter.
+
+## What's on the dashboard
+
+The default layout includes these blocks:
+
+| Block | What it shows |
 |---|---|
-| Placements made | All plans |
-| Submissions sent | All plans |
-| Conversion rate (submissions → placements) | All plans |
-| Jobs worked | All plans |
-| Candidates added | All plans |
-| Revenue generated, fees, profit margin | Business plan and above |
+| **Goal Progress** | Progress towards your active revenue goals. See [Goals and metric targets](/dashboard/goal-progress). |
+| **Revenue (QTD)** and **Revenue (YTD)** | Quarter-to-date and year-to-date revenue, against your target. |
+| **Candidate Meetings** | Candidate meetings, against your target. |
+| **CV Send Outs** | CVs sent to clients, against your target. |
+| **CV to Interview Ratio** | How many CVs turn into interviews, against your target. |
+| **BD Activity** | Reach outs, meetings and signed companies. |
+| **My Metrics** | Your candidates, companies, jobs and interviews. |
+| **Recruiter Revenue Billboard** | Top recruiters ranked by individual revenue. |
+| **Candidate Activity** | Candidate activity over time. |
+| **Recruitment Funnel** | Submissions, interviews and placements. |
+| **Revenue by Month** | Monthly revenue breakdown. |
+| **Revenue by Region** | Regional revenue leaderboard. |
+| **Top Recruiters by Candidate Introductions** | A leaderboard of recruiters by candidate introductions. |
+
+You can add these extra blocks:
+
+| Block | What it shows |
+|---|---|
+| **Top Performers** | Top sourcers, owners and recruiters. |
+| **Conversion Metrics** | Submission-to-placement conversion rates. |
+| **Upcoming Interviews** | Interviews scheduled this week. |
+| **Billing Health** | Billed, paid, outstanding and overdue invoices by period. |
+| **Hiring Funnel** | Stage-by-stage conversion from submission to placement. |
+| **Pipeline Forecast** | Active deals by stage and offers in progress. |
+| **Org Trends** | 12-month company-wide trends for candidates, companies and placements. |
+| **Company Overview** | Company-wide candidate, company, placement and conversion metrics. |
+
+Revenue figures leave out backed-out placements.
+
+## Who sees which blocks
+
+Each block has its own permission, such as **Dashboard: Goal Progress** or **Dashboard: Revenue (YTD)**. If your role doesn't have a block's permission, the block doesn't appear on your dashboard or in **Customize**. On the **Team** plan or higher, admins can change these permissions in **Settings → Permissions**. See [Customising permissions](/team/customising-permissions).
 
 <Note>
-  Financial metrics — revenue, fees, and profit margin — are only visible to users who have the relevant permissions **and** are on the Business plan or higher. If you expect to see these figures but can't, check with your workspace admin.
+  **Billing Health**, **Top Performers** and **Conversion Metrics** use advanced analytics, which needs the **Business** plan. See [Plans compared](/billing/plans-compared).
 </Note>
 
-## Filtering by Period
+## Customise your dashboard
 
-Use the **period selector** dropdown in the top-right corner of the dashboard to focus on the timeframe that's most useful to you. The available options are:
+Your layout is personal. Changes you make don't affect anyone else.
 
-- **Week** — the current calendar week
-- **Month** — the current calendar month
-- **Quarter** — the current quarter
-- **Year** — the current calendar year
-
-Switching between periods lets you compare current performance against prior timeframes to spot trends.
-
-## Currency
-
-Financial figures display in the currency set on your user profile. If you haven't configured a currency, figures default to **USD**. To update your currency, go to your profile settings.
-
-## Tips for Getting the Most from Your Dashboard
+<Steps>
+  <Step title="Open Customize">
+    Click **Customize** at the top right. The **Customize Dashboard** panel opens.
+  </Step>
+  <Step title="Reorder blocks">
+    Under **Visible blocks (drag to reorder)**, drag blocks into the order you want.
+  </Step>
+  <Step title="Hide or show blocks">
+    Use the switch on a block to hide it. Hidden blocks move to **Hidden**, where you can switch them back on.
+  </Step>
+  <Step title="Add blocks">
+    Under **Add blocks**, click **Add** next to any block you want.
+  </Step>
+  <Step title="Save">
+    Click **Save layout**. To go back to the default layout, click **Reset** before you save.
+  </Step>
+</Steps>
 
 <Tip>
-  Use the **period selector** to compare performance week-over-week or month-over-month. Switching between periods is the fastest way to see whether activity is trending up or down.
+  If you have the **System Administration** permission, **Customize** also shows **Targets & goals**, with shortcuts to **Goals** and **Metric targets**.
 </Tip>
-
-<Tip>
-  The **Team view** is ideal for one-to-ones. Filter down to a single team member to review their metrics in isolation — it keeps the conversation focused and gives you a shared point of reference during the meeting.
-</Tip>
-
-<Info>
-  Financial metrics respect both plan limits and individual permission settings. Even on the Business plan, a user without financial-data permissions won't see revenue figures.
-</Info>

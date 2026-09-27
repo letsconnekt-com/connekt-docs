@@ -1,60 +1,68 @@
 ---
-title: "Approving or Rejecting Leave Requests as a Manager"
-sidebarTitle: "Approve Leave"
-description: "Review pending leave requests in Connekt, approve or reject them with an optional reason, and keep your team's time-off records accurate."
+title: "Approving leave requests"
+sidebarTitle: "Approve leave"
+description: "See who can approve leave in Connekt based on roles and teams, then approve or reject requests from the Leave Requests tab in Time Off."
 ---
 
-As a Manager or Operations user, you can review and action leave requests submitted by anyone in your workspace. When a team member submits a request, it appears in your Leave Requests queue and the employee is notified once you take action. Approving or rejecting a request takes just a few clicks, and you can include a reason when rejecting so the employee understands the decision.
-
-## Accessing Leave Requests
-
-1. Go to **Time Off → Leave Requests**.
-2. The list shows all requests that are currently **Pending** and awaiting action.
-3. Click any request to open the detail view.
-
-## What you'll see in the request detail
-
-Each request detail page shows you everything you need to make an informed decision:
-
-- **Employee name** and **leave type**
-- **Requested dates** and **total duration**
-- **Reason** provided by the employee (if they included one)
-- **Current leave balance** and the **balance impact** if the request is approved
-
-## Approving a request
-
-<Steps>
-  <Step title="Open the request">
-    From **Time Off → Leave Requests**, click the request you want to approve.
-  </Step>
-  <Step title="Approve">
-    Click **Approve**. The employee is notified automatically and their leave balance is updated.
-  </Step>
-</Steps>
-
-## Rejecting a request
-
-<Steps>
-  <Step title="Open the request">
-    From **Time Off → Leave Requests**, click the request you want to reject.
-  </Step>
-  <Step title="Click Reject">
-    Click **Reject**.
-  </Step>
-  <Step title="Add a reason (optional)">
-    Enter a reason for the rejection. This is optional, but including one helps the employee understand the decision and plan accordingly.
-  </Step>
-  <Step title="Confirm">
-    Click **Confirm**. The employee is notified automatically, and your reason is included in the notification if you provided one.
-  </Step>
-</Steps>
-
-## Important notes
-
-<Warning>
-  You cannot approve or reject your own leave requests. If you need to submit leave, another Manager or Operations user in your workspace will need to action it.
-</Warning>
+Leave approvals follow your role and your team structure. Admins can approve most requests. Managers and Operations users approve requests from the teams they manage in **Settings → Organization**.
 
 <Info>
-  Leave approvals are not restricted to a single named manager. Any Manager or Operations user in your workspace can approve or reject any pending request — so requests won't be blocked if the usual approver is unavailable.
+  Time Off needs the **Team** plan or higher. Teams are set up in [Teams and hierarchy](/team/teams-and-hierarchy).
 </Info>
+
+## Who can approve whose leave
+
+| Your role | Whose requests you can approve |
+|---|---|
+| **Super Administrator** | Anyone's. |
+| **Administrator** | Anyone's, except a Super Administrator's. |
+| **Operations** | People on teams where you're a manager. You can't approve Administrators, Super Administrators or other Operations users. |
+| **Manager** | People on teams where you're a manager. |
+| Any other role | No one. |
+
+Nobody can approve their own request.
+
+<Note>
+  Being a team manager in **Settings → Organization** is different from having the **Manager** role. Operations and Manager users need both: the role, and a manager spot on the requester's team.
+</Note>
+
+## Find requests to review
+
+Go to **Time Off** and open the **Leave Requests** tab. The tab appears for Super Administrators, Administrators, Operations users and Managers who have someone to approve.
+
+Use the controls at the top to narrow the list:
+
+- Status filters: **All**, **Pending**, **Approved**, **Rejected** and **Cancelled**, each with a count.
+- **Search by type, ID or approver**.
+- A year filter.
+- **All requesters**, to show one person's requests.
+
+Each row shows the dates, the requester, the leave type, the number of days and the status. Click the arrow at the end of a row to see the **Request ID**, **Submitted** date, **Approver**, days **Deducted** and **Note**.
+
+## Approve a request
+
+On a **Pending** row, click **Approve**.
+
+The days are taken from the person's balance, and they get a notification.
+
+<Warning>
+  Connekt checks the balance again when you approve. If the person no longer has enough days, the approval fails.
+</Warning>
+
+## Reject a request
+
+1. On a **Pending** row, click **Reject**.
+2. Enter a reason in the box. The reason is shown to the employee.
+3. Click **Confirm reject**.
+
+The person gets a notification, and nothing is taken from their balance.
+
+## View a team member's time off
+
+On the **Overview** tab, use the **My Time Off** dropdown to see a team member's balances and upcoming leave. On **Leave History**, pick someone under **View team member history**.
+
+Administrators and Operations users can pick anyone. Managers can pick members of the teams they manage.
+
+<Tip>
+  You can also review requests in the Connekt iOS app. See [Using the mobile app](/mobile/using-the-mobile-app).
+</Tip>

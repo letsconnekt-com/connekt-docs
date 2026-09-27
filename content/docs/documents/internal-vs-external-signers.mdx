@@ -1,52 +1,58 @@
 ---
-title: "Internal and External Signers Explained in Connekt"
-sidebarTitle: "Signer Types"
-description: "Understand the difference between internal Connekt users and external signers, how signing order works, and how unique links keep each signature secure."
+title: "Internal and external signers"
+sidebarTitle: "Signer types"
+description: "Learn how internal team members and external signers sign documents in Connekt, how signing order works, and how signing links are protected."
 ---
 
-When you send a document for signature in Connekt, you can include two types of signers: internal team members who already have a Connekt account, and external parties — such as candidates, clients, or third-party contractors — who don't need an account at all. You can freely mix both types on the same document.
+A document in **Sign** can have internal signers (people in your Connekt workspace) and external signers (candidates, clients or anyone else). You can mix both on one document. Everyone signs in the order you set.
 
 ## Internal signers
 
-Internal signers are team members who already have a Connekt account in your workspace.
+In **Setup Signers**, choose **Internal (team member)** and pick the person in **Team member**. The list shows active users in your workspace.
 
-- **How to add them** — select the person from the user dropdown in the Signers section when setting up the document.
-- **How they're notified** — when it's their turn to sign, Connekt sends them an email with their unique signing link.
-- **Where they sign** — directly in their browser via their unique signing link.
+- **How they're told**: when it's their turn, Connekt emails them a signing link. If they created the document, there's no email. They sign from the document page instead.
+- **Where they sign**: through the link in the email, or in Connekt. When it's their turn, the document page shows **Your turn to sign** with a **Sign Now** button.
+- **Access**: adding someone as an internal signer gives them view access to the document.
+
+When internal signers sign in Connekt, they can reuse a saved signature. See [Signing a document yourself](/documents/signing-yourself).
 
 ## External signers
 
-External signers are anyone outside your organisation — candidates, clients, and third-party contractors are the most common examples.
+In **Setup Signers**, choose **External (company / third party)** and enter their **Email**. **Name (optional)** can stay blank. If you place a **Name** field for them, the name they enter is used.
 
-- **How to add them** — type their name and email address manually in the Signers section.
-- **How they're notified** — when it's their turn, they receive an email with their unique signing link.
-- **Where they sign** — directly in their browser via the link. No Connekt account is required at any point.
-
-<Note>
-  External signers never need to create a Connekt account. The entire signing experience happens in their browser through their unique link.
-</Note>
+- **How they're told**: when it's their turn, they get an email with a secure signing link.
+- **Where they sign**: in their browser. They don't need a Connekt account.
+- **What they see**: a **Secure Signing** page with their fields highlighted. They click **Next field** to move through them, then **Submit Signature**. They then confirm the **Electronic Signature Consent** and click **I Agree & Submit**.
 
 ## Signing order
 
-Signers always sign in the order they appear in the Signers list. Connekt does not notify the next signer until the previous one has completed their part.
+Signers sign in the order shown in **Setup Signers**. Signer 1 signs first.
 
-<Info>
-  This sequential flow is particularly useful when one signature must precede another — for example, when a candidate must sign an offer letter before the hiring manager countersigns it. Simply add signers in the required order.
-</Info>
+- Connekt only emails the first signer when you send.
+- Each next signer is emailed after the previous one signs.
+- A signer can't sign until everyone before them has signed.
 
-## Security
+<Tip>
+  Order your signers to match the real process. For example, add the candidate first and the hiring manager second if the candidate must sign before the countersignature.
+</Tip>
 
-Connekt protects the integrity of each signature with link-level security controls.
+## How signing links work
 
-<CardGroup cols={2}>
-  <Card title="Unique links" icon="link">
-    Every signer receives their own unique, one-time signing link tied to their specific email address. No two signers share a link.
-  </Card>
-  <Card title="Non-transferable" icon="lock">
-    A signing link cannot be forwarded to complete someone else's signing obligation. The link is bound to the signer it was issued to.
-  </Card>
-</CardGroup>
+Each signer gets their own link. Connekt records their name, email, IP address, device and signing time on the certificate of completion.
+
+- **External links** expire after **14 days**. Reminders go out on days 3, 7 and 10. See [Document statuses](/documents/document-statuses).
+- **Internal links** stay valid for **30 days**.
+- A link stops working once the signer has signed, or if the document is cancelled or expires.
 
 <Warning>
-  If a signer reports that their link isn't working, use the **Resend** button on the document detail page to send them a fresh link.
+  Signing links aren't protected by a password or login. Anyone who has a signer's link can open it. Double-check email addresses before you send, and ask signers not to forward their emails.
 </Warning>
+
+## Resend a link
+
+If an external signer can't find their email, open the document and click **Resend** next to their name. Then click **Resend Email**.
+
+- Connekt emails a new link, and the old link stops working.
+- The 14-day window and reminders start again from the resend.
+
+**Resend** appears only for external signers who haven't signed yet, while the document is still waiting for signatures. You can't resend on an expired document.

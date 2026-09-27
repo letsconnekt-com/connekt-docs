@@ -1,0 +1,108 @@
+---
+title: "Managing documents in Sign"
+sidebarTitle: "Manage documents"
+description: "Share documents with your team, add CC recipients, link signed documents to companies, download certificates, and archive or delete documents in Sign."
+---
+
+Once a document exists in **Sign**, you control who can see it, who gets a copy, and where it's filed. Open any document from the **Sign** list to manage it.
+
+## Who can see a document
+
+Documents are private by default. You see a document in your **Sign** list only if:
+
+- you created it, or
+- someone shared it with you, or
+- you're an internal signer or the reviewer on it.
+
+Admin roles don't see every document automatically. Someone has to share it with them.
+
+## Share with your team
+
+Use **Team Access** to give colleagues access to a document.
+
+<Steps>
+  <Step title="Open Team Access">
+    Open the document and click **Team Access** in the top bar.
+  </Step>
+  <Step title="Add people">
+    Search for colleagues in **Add people...**. You can add several at once.
+  </Step>
+  <Step title="Choose their access">
+    Pick **Can View** or **Can Manage**, then click **Share**.
+  </Step>
+</Steps>
+
+People you share with get a notification, and an email if their [notification preferences](/integrations/notification-preferences) allow it.
+
+| Access | What they can do |
+|---|---|
+| **Can View** | Open the document, follow its progress and download the files. The document shows a **View Only** badge. |
+| **Can Manage** | Everything in **Can View**, plus edit fields and signers on drafts, send, resend, cancel, delete, add CC recipients, link a company and manage **Team Access**. |
+
+To change someone's access, pick a new level next to their name under **People with access**. To remove them, click the **X**.
+
+<Note>
+  **Team Access** is for people in your workspace only. To send someone outside Connekt a copy, add them as a CC recipient.
+</Note>
+
+## Add CC recipients
+
+CC recipients get an email with links to the signed PDF and certificate when the document is completed. They don't sign anything.
+
+1. Open the document and find **CC Recipients**.
+2. Click **Add**, then enter a **Name** and **Email**.
+3. Click **Add CC**.
+
+You can add anyone, inside or outside your workspace. To remove someone, click the **X** next to their name. You can't change CC recipients after the document is completed or cancelled.
+
+## Link a signed document to a company
+
+Link completed documents to a company to keep contracts with the client record.
+
+1. Open a **Completed** document.
+2. From the **⋯** menu, choose **Link to Company**.
+3. Search for the company and select it.
+
+The company name then shows on the document and in the **Company** column of the **Sign** list. Connekt can also use a linked contract to suggest billing details on the company. To remove the link, choose **Unlink from Company**.
+
+<Note>
+  Only completed documents can be linked to a company.
+</Note>
+
+## Download the signed PDF and certificate
+
+When a document is **Completed**, open the **⋯** menu:
+
+- **Download Document** downloads the signed PDF with every signature and field applied.
+- **Download Certificate** downloads the certificate of completion as a separate PDF.
+
+The certificate lists the document ID, completion time and a SHA-256 fingerprint of the signed PDF. For each signer, it shows their name, email, signature, IP address, device, and when the document was sent, viewed and signed.
+
+<Tip>
+  The links in the completion email expire after 24 hours. You can always download fresh copies from the document in Connekt.
+</Tip>
+
+## Follow the activity log
+
+The **Activity** panel lists every event with a time, for example:
+
+- Document created
+- Sent to a signer
+- A signer viewed or signed
+- Submitted for review, approved or rejected
+- Document completed, cancelled or expired
+
+## Archive or delete a document
+
+From the **⋯** menu, choose **Delete**. Connekt asks whether to archive or permanently delete the document.
+
+| Option | What happens |
+|---|---|
+| **Archive** | Removes the document from your **Sign** list. Its files are kept for audit purposes. |
+| **Delete** | Asks you to confirm with **Delete Permanently?**. This removes the document record and all its files, including the original, the signed PDF, the certificate and signature images. |
+
+<Warning>
+  Permanent deletion can't be undone. For **Sign Yourself** documents, archiving also deletes the document and its files permanently.
+</Warning>
+
+To stop a document that's still waiting for signatures, use **Cancel Document** instead. See [Document statuses](/documents/document-statuses).

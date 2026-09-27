@@ -1,0 +1,100 @@
+---
+title: "Outreach templates and analytics"
+sidebarTitle: "Templates and analytics"
+description: "Create reusable Outreach email templates with personalization tokens, and track emails sent, opens and replies on the Analytics tab."
+---
+
+The **Templates** and **Analytics** tabs sit next to **Sequences** on the Outreach page. Use templates to reuse your best emails across sequences. Use analytics to see how your outreach is performing. To open Outreach, click **Outreach** in the sidebar, or press **G** then **O**.
+
+Outreach is available on the **Team** plan or higher. See [Plans compared](/billing/plans-compared).
+
+## Templates
+
+Outreach templates are reusable emails for your sequences. Templates are shared with everyone in your workspace.
+
+Each template card shows the template's name, subject and the start of its message. The bottom of the card shows how many times the template has been used in sequence emails, and the share that were opened and replied to.
+
+Use **Search templates...** to find a template.
+
+### Create a template
+
+<Steps>
+  <Step title="Start a new template">
+    On the **Templates** tab, click **New template**.
+  </Step>
+  <Step title="Fill in the details">
+    Enter a **Name**, a **Subject** and a **Body**. All three are required.
+  </Step>
+  <Step title="Personalize it">
+    Click a token button to insert a personalization token into the subject or body. Click **Preview** to see the email with sample details.
+  </Step>
+  <Step title="Choose the signature setting">
+    Select **Include sender's email signature by default** if steps made from this template should add the sender's signature.
+  </Step>
+  <Step title="Save">
+    Click **Create template**.
+  </Step>
+</Steps>
+
+To add attachments, open the template again after you create it and click **Attach file**. You can't attach files until the template is saved.
+
+### Template variables
+
+Templates use the same personalization tokens as sequence steps. Type them in double curly braces, or click the buttons in the editor.
+
+| Button | Token |
+|---|---|
+| **First name** | `{{first_name}}` |
+| **Last name** | `{{last_name}}` |
+| **Current company** | `{{company}}` |
+| **Current title** | `{{title}}` |
+| **Open role** | `{{role}}` |
+| **Location** | `{{location}}` |
+| **Recruiter name** | `{{recruiter_name}}` |
+| **Hiring company** | `{{job_company}}` |
+| **Job location** | `{{job_location}}` |
+
+Tokens are filled in when a sequence sends the email. See [Personalization tokens](/outreach/email-sequences#personalization-tokens) for what each token contains.
+
+### Use a template in a sequence
+
+In the sequence builder, click a **+** button and choose **Email from template**. Search for the template and select it. Connekt copies the template into a new email step. See [Email sequences](/outreach/email-sequences#email-steps).
+
+<Note>
+  The step is a copy. Editing the step doesn't change the template, and editing the template later doesn't change steps you've already created.
+</Note>
+
+### Edit, duplicate or delete a template
+
+Click a template card to edit it, then click **Save changes**. You can also use the **⋯** menu on a card:
+
+- **Edit** opens the template.
+- **Duplicate** creates a copy named with "(copy)".
+- **Delete** removes the template after you confirm.
+
+<Info>
+  Outreach templates are separate from the email templates you use in the Inbox. To manage Inbox templates, see [Using the inbox](/outreach/using-the-inbox#use-email-templates).
+</Info>
+
+## Analytics
+
+The **Analytics** tab shows outreach activity across your whole workspace, not just your own sequences. Choose a date range at the top: **Last 7 days**, **Last 30 days** or **Last 90 days**.
+
+| Metric | What it shows |
+|---|---|
+| **Emails sent** | Emails sent by sequences in the selected range. |
+| **Opened** | Sent emails that were opened. |
+| **Replied** | Sent emails that got a reply. |
+| **Reply rate** | Replied as a percentage of emails sent. |
+
+The **Daily volume** chart shows **Sent**, **Opened** and **Replied** for each day in the range.
+
+### Other places to see results
+
+- The top of the **Sequences** tab shows **Active sequences**, **Candidates in-flight**, **Total enrolled** and **Avg. reply rate** for your workspace.
+- Each row on the **Sequences** tab shows **Enrolled**, **In-flight** and **Reply rate** for that sequence.
+- Inside a sequence, the header shows how many emails were sent and the percentage opened and replied, once the sequence has sent its first email.
+
+<Tip>
+  Some email apps block open tracking, so open counts can be lower than the real number. Replies are the most reliable measure of how a sequence is doing.
+</Tip>

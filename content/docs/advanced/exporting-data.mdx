@@ -1,0 +1,56 @@
+---
+title: "Export your workspace data"
+sidebarTitle: "Exporting data"
+description: "Export your Connekt users, companies, candidates, jobs and contacts as CSV files, with their attachments, in a ZIP file sent to your email."
+---
+
+You can export a copy of your workspace data from **Settings → Data Import/Export**. Connekt builds the export in the background and emails you a ZIP file when it's ready.
+
+<Note>
+  Data export needs the **System Administration** permission. Super Admins and Admins have it by default.
+</Note>
+
+## Export your data
+
+<Steps>
+  <Step title="Open Data Import/Export">
+    Go to **Settings → Data Import/Export**.
+  </Step>
+  <Step title="Start the export">
+    Under **Export data**, click **Export**. A message confirms that the export has started.
+  </Step>
+  <Step title="Check your email">
+    When the export is ready, Connekt emails the address on your account. The subject is "Your Connekt data export completed successfully", and the ZIP file is attached to the email.
+  </Step>
+</Steps>
+
+You can keep working while the export runs. If you stay on the page, Connekt also shows a message when the email has been sent.
+
+<Tip>
+  Large workspaces with many attachments take longer to export. You don't need to keep the page open.
+</Tip>
+
+## What's included
+
+The ZIP file contains one CSV file per record type, plus a folder of attachments for each:
+
+| File | Contents |
+|---|---|
+| `users.csv` | Your team members, with role, teams, employment details and currency |
+| `companies.csv` | Your companies, including website, industries, BD status, owner and billing details |
+| `candidates.csv` | Your candidates, including contact details, employment, salary, skills, status and owner |
+| `jobs.csv` | Your jobs, including company, status, positions, location, skills and salary range |
+| `contacts.csv` | Your contacts, including company, job title, stage and owner |
+
+Each CSV has a `documents` column that lists the file names of that record's attachments. The files themselves are in the matching folder, such as `candidates/`.
+
+<Info>
+  The export doesn't include placements, deals, notes or custom field values. To import data instead, see [Bulk import](/candidates/bulk-import).
+</Info>
+
+## If something goes wrong
+
+- If the export finishes but the email can't be sent, Connekt shows an error. Start the export again.
+- If the export fails, Connekt shows an error message. Try again, and contact support if it keeps failing.
+
+For help, see [Getting help](/getting-started/getting-help).

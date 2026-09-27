@@ -1,0 +1,137 @@
+---
+title: "Recording meetings with Connekt Notetaker"
+sidebarTitle: "Recording meetings"
+description: "Install Connekt Notetaker, record Google Meet, Zoom and Teams calls in Stealth or Meeting Bot mode, and upload existing recordings to Connekt."
+---
+
+You record calls from the Connekt Notetaker popup in Chrome. This page covers installing the extension, starting and stopping a recording in each mode, setting your defaults, and uploading a recording you already have.
+
+<Warning>
+  Recording laws vary by country and region, and some require every participant's consent. You're responsible for telling participants that the meeting is being recorded and getting consent where required. Stealth mode isn't visible to other participants, so announce the recording at the start of the call — or use Meeting Bot, which joins as a visible participant.
+</Warning>
+
+## Install and sign in
+
+<Steps>
+  <Step title="Install the extension">
+    In Connekt, go to **Settings → Downloads & Guides**. Find **Connekt Notetaker extension** and click **Add to Chrome**. This opens the Chrome Web Store, where you add the extension to Chrome.
+  </Step>
+  <Step title="Pin it (optional)">
+    Click the puzzle-piece icon in Chrome's toolbar and pin **Connekt Notetaker** so the popup is one click away.
+  </Step>
+  <Step title="Sign in">
+    Click the Connekt Notetaker icon, then click **Sign in to Connekt**. The Connekt web app opens in a new tab. Sign in there as usual. The extension uses your web app session, so reopen the popup and you're ready.
+  </Step>
+</Steps>
+
+## Record in Stealth mode
+
+Stealth mode records from your own browser. It captures the meeting tab's audio and video plus your microphone. Other participants don't see a bot or any notice.
+
+<Steps>
+  <Step title="Join your call in Chrome">
+    Join the meeting on Google Meet, the Zoom web client or Microsoft Teams on the web.
+  </Step>
+  <Step title="Open the popup on the meeting tab">
+    With the meeting tab active, click the Connekt Notetaker icon. The popup shows the meeting it detected. If it says **No meeting detected**, make sure you're on the meeting tab.
+  </Step>
+  <Step title="Choose a summary template">
+    Pick a template under **Summary template**. **General Notes** is selected by default. Templates with questions give you a live checklist during the call. See [Summary templates](/meetings/summary-templates).
+  </Step>
+  <Step title="Choose the meeting language">
+    Under **Meeting language**, leave **Auto-detect** or pick the language being spoken. Auto-detect works best for English, Spanish, French, German, Hindi, Russian, Portuguese, Japanese, Italian and Dutch. For any other language, select it from the list for better accuracy.
+  </Step>
+  <Step title="Start recording">
+    Make sure **Join with bot** is unticked, then click **Start recording**. Chrome may ask for microphone access the first time. Allow it.
+  </Step>
+</Steps>
+
+While you record, the popup shows a timer and an audio level meter. The header shows a **Recording** badge.
+
+### Use the live panel
+
+Click **Open live panel** in the popup to open Chrome's side panel next to your meeting. If your template has questions, the panel opens automatically when you start.
+
+- **Discovery checklist** lists your template's questions. Connekt ticks them off with an **AI** badge as they're answered, and you can tick or untick any question yourself.
+- **Live transcript** shows the conversation as it happens, with speaker names.
+
+The popup also shows your checklist progress, for example **Checklist — 3 of 6 covered**.
+
+### Stop and save
+
+Click **Stop & save** in the popup. Connekt Notetaker also stops by itself when the call ends. Connekt then processes the recording and emails you when the summary is ready. See [Reviewing meetings](/meetings/reviewing-meetings).
+
+## Record with Meeting Bot
+
+Meeting Bot joins the call as its own participant, so everyone can see it's there. It works with Google Meet only.
+
+<Steps>
+  <Step title="Open the popup on your Google Meet tab">
+    Join the call in Chrome, then click the Connekt Notetaker icon while the Meet tab is active. The bot joins the meeting in that tab. There's no field for pasting a link.
+  </Step>
+  <Step title="Choose a template and language">
+    Pick a **Summary template** and **Meeting language**, as for Stealth mode.
+  </Step>
+  <Step title="Tick Join with bot">
+    Tick **Join with bot**. The button changes to **Start with bot**.
+  </Step>
+  <Step title="Start with bot">
+    Click **Start with bot**. The popup shows **Bot is joining the meeting…** while the bot asks to join the call.
+  </Step>
+  <Step title="Admit the bot">
+    If the meeting has a waiting room, the host must admit the bot. Once it's in, the popup shows **The Connekt bot has joined and is recording this meeting.**
+  </Step>
+</Steps>
+
+To end the recording early, click **Stop recording** in the popup.
+
+<Info>
+  How Meeting Bot behaves:
+
+  - It waits about 2 minutes to be admitted. If nobody lets it in, the recording fails.
+  - It leaves about 2 minutes after everyone else has left the call.
+  - It stops after 3 hours, even if the meeting is still going.
+  - There's no live transcript or checklist. The transcript, summary and question coverage appear after the call.
+</Info>
+
+## Set your recording defaults
+
+Click the **Settings** (gear) icon in the popup. Under **Recording defaults** you can set:
+
+- **Join with bot**: turn this on to make Meeting Bot the default. You can still switch mode for each meeting before you start.
+- **Meeting language**: the language selected by default for new meetings.
+
+You can also choose **Light**, **Dark** or **System** under **Appearance**.
+
+## Connect Google Calendar
+
+Connecting Google Calendar gives Connekt Notetaker the real meeting title and attendee names for scheduled Google Meet calls.
+
+1. Open the popup and click the **Settings** icon.
+2. Under **Google Calendar**, click **Connect Google Calendar** and approve access.
+
+When a Meet call matches a calendar event, the popup shows the event title and a **Names from Calendar** badge. This only works for Google Meet links. For Zoom and Teams calls, and for Meet calls with no matching event, Connekt uses the participant names shown in the meeting. To disconnect, click **Disconnect** in the same place.
+
+## Upload a recording
+
+You can upload an existing audio or video file to get a transcript and summary.
+
+<Steps>
+  <Step title="Open Meetings">
+    Click **Meetings** in the sidebar, then click **Upload Recording**.
+  </Step>
+  <Step title="Choose a file">
+    Drop in or select one file. Supported formats are MP4, MOV, WEBM, MKV, AVI, MP3, WAV, M4A and OGG, up to 2 GB.
+  </Step>
+  <Step title="Add a title and upload">
+    Enter a **Title** and click **Upload Recording**. Connekt uploads the file and starts processing it.
+  </Step>
+</Steps>
+
+Uploaded recordings show the **Uploaded** source label. Uploading uses notetaker hours in the same way as recording. See [Usage and add-ons](/billing/usage-and-add-ons).
+
+## Related
+
+- [Reviewing meetings](/meetings/reviewing-meetings)
+- [Troubleshooting](/meetings/troubleshooting)
+- [Recording meetings on mobile](/mobile/recording-meetings)

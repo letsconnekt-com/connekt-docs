@@ -1,6 +1,10 @@
 {
   "title": "Mobile App",
   "pages": [
-    "using-the-mobile-app"
+    "using-the-mobile-app",
+    "signing-in-and-security",
+    "recording-meetings",
+    "esign",
+    "ai-search"
   ]
 }

@@ -1,67 +1,169 @@
 ---
-title: "Creating a New Job Opening in Connekt: Step-by-Step"
-sidebarTitle: "Create a Job"
-description: "Create a job opening in Connekt — covers the required title field, linking a company, optional details, custom fields, and recommended next steps."
+title: "Creating a job in Connekt"
+sidebarTitle: "Create a job"
+description: "Add a job from a posting link, an uploaded job description or a blank form. Review what AI fills in, then save the job to a company."
 ---
 
-Creating a job opening in Connekt takes less than a minute for the basics, and as much detail as you want to add for richer AI matching and cleaner reporting. Every job needs only a title to get started — everything else can be filled in now or added later as the brief develops. New jobs are set to **Open** status automatically, so they're immediately available for candidate submissions and AI matching.
+Every job in Connekt belongs to a company. You can start a job from a job posting link or an uploaded job description, and Connekt reads it and fills in the form for you. You can also start from a blank form. Either way, you review every field before you save.
 
-## Creating the Job
+<Note>
+  You need permission to create jobs. If you don't see **Add Job**, ask an admin to check your role. See [User roles](/team/user-roles).
+</Note>
+
+## Choose how to start
 
 <Steps>
-  <Step title="Open the Jobs section">
-    Go to **Jobs** in the main navigation.
+  <Step title="Open Jobs">
+    Click **Jobs** in the sidebar.
   </Step>
-  <Step title="Start a new job">
-    Click **Create** to open the job creation form.
+  <Step title="Click Add Job">
+    Click **Add Job**. The **Create New Job** page asks how you want to start.
   </Step>
-  <Step title="Enter the job title">
-    Type the **job title** — this is the only required field. Make it specific enough to be meaningful (e.g. "Senior React Engineer – London" rather than just "Engineer").
-  </Step>
-  <Step title="Link a company">
-    Search for an existing company in the **Company** field, or create a new one inline. Linking a company is recommended but optional — you can come back and add it later if needed.
-  </Step>
-  <Step title="Fill in optional details">
-    Complete as many of the following fields as you have information for:
-
-    | Field | Details |
-    |---|---|
-    | **Description** | Full job description and key responsibilities |
-    | **Salary range** | Minimum, maximum, and currency |
-    | **Location** | City and country, plus a remote work toggle |
-    | **Job type** | Full-time, Part-time, Contract, Temporary, Internship, or Freelance |
-    | **Date opened** | When the role was officially opened |
-    | **Target date** | The client's target hire date |
-    | **Headcount** | Number of positions to fill |
-  </Step>
-  <Step title="Complete any custom fields">
-    If your admin has configured custom fields for jobs — such as fee percentage, job reference number, or industry sector — fill those in now.
-  </Step>
-  <Step title="Save the job">
-    Click **Save**. The job record opens immediately so you can continue setting it up.
+  <Step title="Pick a method">
+    Choose one of the three options described below.
   </Step>
 </Steps>
 
-## After Creating the Job
-
-A newly saved job is live and ready to use, but a few extra steps will set your team up for success:
-
 <CardGroup cols={3}>
-  <Card title="Assign Team Members" icon="users">
-    Open the **Assignments** section to add the recruiters and account managers working this role. Assigned users see the job in their personal view and Researchers only see jobs they're assigned to. See [Assign Team Members](/jobs/assigning-team-members).
+  <Card title="Paste a job link" icon="link">
+    Paste the URL of a job posting. Works with LinkedIn, Indeed, Glassdoor and most company career pages.
   </Card>
-  <Card title="Add Briefing Notes" icon="note-sticky">
-    Use the **Notes** tab to capture the client brief, must-have requirements, or anything else your team needs to know when sourcing for this role.
+  <Card title="Upload a job description" icon="file-lines">
+    Upload a PDF, DOC or DOCX file, such as the client's job spec.
   </Card>
-  <Card title="Upload Job Specs" icon="paperclip">
-    Attach the client's job description, briefing document, or any supporting materials in the **Attachments** tab so the whole team has the same reference point.
+  <Card title="Start from scratch" icon="pencil">
+    Open a blank form and fill in the details yourself.
   </Card>
 </CardGroup>
 
 <Tip>
-  A detailed job description dramatically improves AI matching results. The more context Connekt has about the role, the better it can surface relevant candidates from your database. See [AI Matching](/candidates/matching-candidates-to-jobs) for how matching works.
+  To import many jobs at once, click the arrow next to **Add Job** and choose **Import CSV**. See [Bulk import](/candidates/bulk-import).
 </Tip>
 
+## Paste a job link
+
+<Steps>
+  <Step title="Choose Paste a job link">
+    Click **Paste a job link**.
+  </Step>
+  <Step title="Paste the URL">
+    Paste the posting's address into **Job posting URL**.
+  </Step>
+  <Step title="Click Extract">
+    Click **Extract**. Connekt shows "Reading the posting…" while it works. Pages that need extra rendering take a little longer.
+  </Step>
+  <Step title="Review the form">
+    When extraction finishes, the job form opens with the details filled in. Check each field, pick a **Company**, then click **Create Job**.
+  </Step>
+</Steps>
+
+## Upload a job description
+
+<Steps>
+  <Step title="Choose Upload a job description">
+    Click **Upload a job description**.
+  </Step>
+  <Step title="Add the file">
+    Drag and drop a PDF or Word document, or click to browse. You can upload one file.
+  </Step>
+  <Step title="Click Extract">
+    Click **Extract**. Connekt reads the file and opens the job form with the details filled in.
+  </Step>
+  <Step title="Review the form">
+    Check each field, pick a **Company**, then click **Create Job**.
+  </Step>
+</Steps>
+
+## What AI fills in
+
+When you use a link or a file, Connekt fills in these fields when it finds them in the posting:
+
+- **Job Title**
+- **Job Description**
+- **Skills**
+- **Salary Currency**, **Minimum Salary** and **Maximum Salary**
+- **Number of Positions**
+- **Job Type**
+- **Job Level**
+- **Country**, **City** and **Remote Job**
+
+<Warning>
+  AI never picks the **Company**. You always choose it yourself. Always check the filled-in fields before you save, because postings vary and some details may be missing or misread.
+</Warning>
+
+## When a link or file can't be read
+
+If extraction fails, you see a **Failed to extract job details** message with the reason. Common reasons include:
+
+| Message | What to do |
+|---|---|
+| Could not find a readable job posting at this URL. The page may require a login, use a format we can't render, or the link may not point directly to a job posting. | Check that the link opens the job posting itself, not a search results page. If the page needs a login, copy the job description into a file and upload it instead. |
+| No text could be extracted from the job posting URL. The page may be inaccessible or protected. | The site blocked Connekt from reading the page. Upload the job description as a file instead. |
+| This document doesn't appear to contain a readable job posting. It may be corrupted, a scanned image, or unrelated content. | Upload a text-based PDF or Word file. Scanned images can't be read. |
+| No text could be extracted from the document. It may be a scanned image or corrupted. | Save the document again as a text-based PDF or DOCX and retry. |
+| The job extraction service is temporarily unavailable. Please try again in a moment. | Wait a moment and try again, or use **Start from scratch**. |
+
+To try a different method, click **Start over** on the extraction screen.
+
+## Job form fields
+
+The form has the same fields whichever method you choose. Only **Job Title** and **Company** are required.
+
+<AccordionGroup>
+  <Accordion title="Basic Information">
+    - **Job Title** (required)
+    - **Company** (required). Search for an existing company. To add a new one first, see [Adding a company](/companies/adding-a-company).
+    - **Job Type**: Full-time, Part-time, Contract, Temporary, Internship or Freelance
+    - **Status**: defaults to **Open**. See [Job statuses](/jobs/job-statuses).
+    - **Date Opened**: defaults to today
+    - **Target Start Date**
+    - **Number of Positions**: defaults to 1
+    - **Job Level**
+    - **Salary Currency**, **Minimum Salary** and **Maximum Salary**
+  </Accordion>
+  <Accordion title="Job Description">
+    The full description candidates will read. Click **Extract from URL** to replace the description with text pulled from a job posting link.
+  </Accordion>
+  <Accordion title="Location & Requirements">
+    - **Country**: defaults to your own country
+    - **City**
+    - **Remote Job**
+    - **Industries**
+    - **Skills**
+  </Accordion>
+  <Accordion title="Languages">
+    Add each required **Language** and its **Proficiency**.
+  </Accordion>
+  <Accordion title="Job Documents">
+    Upload the client's job spec or other supporting files. They're saved to the job's **Attachments** tab.
+  </Accordion>
+</AccordionGroup>
+
+Your admin may have added custom fields, hidden some fields or made others required. See [Custom fields](/advanced/custom-fields).
+
 <Note>
-  Jobs default to **Open** status on creation. You can change the status at any time from the job detail view by clicking the status badge. See [Job Statuses](/jobs/job-statuses) for a full explanation of each status.
+  **Maximum Salary** must be greater than or equal to **Minimum Salary**.
 </Note>
+
+## Create a job from a company
+
+You can also add a job from a company record. Open the company, go to the **Jobs** tab and click **Add Job**. The company is filled in for you.
+
+## After you create the job
+
+Connekt opens the new job. From there you can:
+
+<CardGroup cols={2}>
+  <Card title="Assign researchers" icon="users" href="/jobs/assigning-team-members">
+    Give Researchers access to the job.
+  </Card>
+  <Card title="Find matching candidates" icon="wand-magic-sparkles" href="/candidates/matching-candidates-to-jobs">
+    A detailed description gives AI matching more to work with.
+  </Card>
+  <Card title="Submit candidates" icon="user-plus" href="/submissions/submitting-a-candidate">
+    Add candidates to the job from the **Submissions** tab.
+  </Card>
+  <Card title="Add notes and files" icon="note-sticky" href="/candidates/attachments-and-notes">
+    Capture the client brief in the **Notes** and **Attachments** tabs.
+  </Card>
+</CardGroup>

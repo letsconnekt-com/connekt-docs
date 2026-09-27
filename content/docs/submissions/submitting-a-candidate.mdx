@@ -1,67 +1,104 @@
 ---
-title: "Submitting a Candidate to a Job Opening in Connekt"
-sidebarTitle: "Submit a Candidate"
-description: "Learn how to submit a candidate to a job from either the job record or the candidate profile, and what Connekt does automatically after submission."
+title: "Submit a candidate to a job"
+sidebarTitle: "Submit a candidate"
+description: "Submit a candidate to a job from the job's Submissions tab or the candidate's Submissions tab, and learn which fields are required."
 ---
 
-Submitting a candidate links them to a specific job opening and kicks off the recruitment pipeline for that pairing. You can start the process from either the job record or the candidate's profile — both routes create the same submission record.
+A submission links a candidate to a job and puts them on the **Deals** page, where you track them through each interview stage. You can submit from the job or from the candidate. Both routes create the same submission record.
 
-## From a Job Record
+## Submit from a job
 
-Use this approach when you already have the job open and want to add one or more candidates to it.
+Use this route when you're working a job and want to put a candidate forward for it.
 
 <Steps>
   <Step title="Open the job">
-    Navigate to the job you want to submit the candidate to.
+    Go to **Jobs** and open the job.
   </Step>
-  <Step title="Go to the Submissions tab">
-    Click the **Submissions** tab on the job record.
+  <Step title="Open the Submissions tab">
+    Click the **Submissions** tab.
   </Step>
   <Step title="Click Submit Candidate">
-    Click the **Submit Candidate** button to open the submission dialog.
+    Click **Submit Candidate**. The **Submit Candidate** dialog opens.
   </Step>
-  <Step title="Find the candidate">
-    Search for and select the candidate you want to submit.
+  <Step title="Choose the candidate">
+    In **Select Candidate**, search for and pick the candidate.
   </Step>
-  <Step title="Add submission notes">
-    Optionally add notes — for example, why they're a strong fit or any caveats the hiring team should know.
+  <Step title="Fill in the submission details">
+    Enter the **Estimated Fee Value** and choose the **Fee Currency**. Both are required. Fill in any optional fields you need (see the table below).
   </Step>
   <Step title="Submit">
-    Click **Submit** to create the submission record.
+    Click **Submit Candidate**.
   </Step>
 </Steps>
 
-## From a Candidate Profile
+<Note>
+  You can only submit to a job whose status is **Open**, **In Progress** or **Partially Filled**. For any other status, the **Submit Candidate** button is disabled. You also need the **Edit Jobs** permission to see the button.
+</Note>
 
-Use this approach when you're reviewing a candidate and want to put them forward for a specific role.
+## Submit from a candidate
+
+Use this route when you're reviewing a candidate and want to put them forward for a role.
 
 <Steps>
-  <Step title="Open the candidate profile">
-    Navigate to the candidate you want to submit.
+  <Step title="Open the candidate">
+    Go to **Candidates** and open the candidate's profile.
   </Step>
-  <Step title="Go to the Jobs or Submissions tab">
-    Click the **Jobs** or **Submissions** tab on the candidate profile.
+  <Step title="Open the Submissions tab">
+    Click the **Submissions** tab.
   </Step>
   <Step title="Click Submit to Job">
-    Click **Submit to Job** to open the submission dialog.
+    Click **Submit to Job**. The dialog opens with the candidate already selected.
   </Step>
-  <Step title="Find the job">
-    Search for and select the job you want to submit them to.
+  <Step title="Choose the company and job">
+    Select the **Company** first, then the **Job Position**. Both are required.
   </Step>
-  <Step title="Add notes and submit">
-    Add any relevant notes, then click **Submit**.
+  <Step title="Fill in the submission details">
+    Enter the **Estimated Fee Value** and choose the **Fee Currency**. Add any optional details.
+  </Step>
+  <Step title="Submit">
+    Click **Submit Candidate**.
   </Step>
 </Steps>
 
-## What Happens Next
+<Note>
+  You need the **Edit Candidate Submissions** permission to see **Submit to Job**.
+</Note>
 
-After you submit, Connekt automatically takes care of a few things:
+## Submission fields
 
-- A **Submission record** is created that links the candidate to the job.
-- The submission's initial status is set to **Submitted**.
-- The submission appears in the job's pipeline view so your team can track progress.
-- Any notes you added at submission time are recorded in the submission's activity log.
+| Field | Required | Notes |
+|---|---|---|
+| **Estimated Fee Value** | Yes | The fee you expect to earn. It becomes the deal value on the **Deals** page. |
+| **Fee Currency** | Yes | The currency of the fee. It can differ from the candidate's salary currency. |
+| **Submitted To** | No | Filled in with the job's company when you submit from a job. |
+| **Submission Method** | No | **Email** (default), **Company Portal**, **Phone**, **In-Person** or **Other**. |
+| **Rating (1-5)** | No | How well the candidate matches, from **1 - Very Poor Match** to **5 - Excellent Match**. |
+| **Notes (Optional)** | No | Free text for the hiring team, such as why the candidate fits. |
+| **Initial Status** | No | Job route only. Defaults to **Submitted**. |
+| **Deal Type** | No | Job route only. Defaults to **Candidate Submission**. |
+| **Submission Date (Optional)** | No | Candidate route only. Leave it blank to use today's date. You can't pick a future date. |
+
+## What happens after you submit
+
+- The submission appears on the job's **Submissions** tab and the candidate's **Submissions** tab.
+- It also appears on the **Deals** page, with its status and deal value. See [Deals board](/submissions/pipeline-board).
+- If the candidate belongs to another recruiter, Connekt notifies the candidate's owner.
 
 <Warning>
-  Connekt doesn't currently block or warn you if you submit the same candidate to the same job more than once. Before submitting, check the candidate's existing submissions on that job to avoid creating duplicates.
+  Connekt doesn't stop you from submitting the same candidate to the same job twice. Check the candidate's **Submissions** tab before you submit.
 </Warning>
+
+## Delete a submission
+
+Click the delete icon on the submission's row in either **Submissions** tab, then confirm. You can't delete a submission that already has a placement.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Submission statuses" icon="list" href="/submissions/submission-statuses">
+    Move the candidate through each stage of the process.
+  </Card>
+  <Card title="Convert to a placement" icon="handshake" href="/submissions/converting-to-placement">
+    Record the placement when the candidate accepts an offer.
+  </Card>
+</CardGroup>

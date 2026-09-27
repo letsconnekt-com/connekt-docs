@@ -1,0 +1,154 @@
+---
+title: "Using eSign on the mobile app"
+sidebarTitle: "eSign"
+description: "Create documents from a file, photo or scan, add fields and signers, send or submit for review, and sign documents from the Connekt app."
+---
+
+eSign in the Connekt app lets you prepare, send, review and sign documents from your phone. You can turn a paper document into a PDF with your camera, place signature fields, and sign with your finger. Documents you create in the app also appear in **Sign** on the web. For the full web guide, see [Uploading and sending documents](/documents/uploading-and-sending).
+
+<Info>
+  eSign is included on the Pro, Team and Business plans. **eSign** only appears under **More** when your plan includes it. You also need eSign access. If you see **Access Required**, ask your administrator for access. To create documents, your role also needs permission to create them.
+</Info>
+
+## Browse your documents
+
+Go to **More → eSign**. Search with **Search documents…**, or filter the list by status:
+
+| Filter | Shows documents that are |
+|---|---|
+| **All** | Any status |
+| **Draft** | Still being set up |
+| **Pending** | Waiting for signatures |
+| **Partial** | Signed by some signers but not all |
+| **Completed** | Signed by everyone |
+| **Expired** | Past their expiry date without being completed |
+
+A document can also show **Pending Review** (waiting for a reviewer) or **Cancelled**. For what each status means, see [Document statuses](/documents/document-statuses).
+
+## Create a document
+
+<Steps>
+  <Step title="Start a new document">
+    In **eSign**, tap **+** in the top-right corner to open **New Document**.
+  </Step>
+  <Step title="Add the source">
+    Tap **Tap to add a file, photo, or scan** and choose a source:
+
+    - **File** picks a PDF or Word document (`.pdf`, `.doc`, `.docx`) from your phone.
+    - **Photo** picks one or more photos from your library and combines them into one PDF.
+    - **Scan** opens the document scanner so you can photograph paper pages. The pages become one PDF.
+  </Step>
+  <Step title="Give it a title">
+    Enter a **Title**. If you picked a file, the app uses the file name until you change it.
+  </Step>
+  <Step title="Choose how it's signed">
+    Under **Signing**, choose one option:
+
+    - **Sign Yourself** when you're the only person who signs.
+    - **Send for Signature** when you want to add one or more signers.
+  </Step>
+  <Step title="Create it">
+    Tap **Create Document**. The document editor opens.
+  </Step>
+</Steps>
+
+## Add signers
+
+This step is only for **Send for Signature** documents. Add your signers before you place fields.
+
+<Steps>
+  <Step title="Open Signers">
+    In the editor, tap **Signers**, then **Add Signer**.
+  </Step>
+  <Step title="Choose the signer type">
+    For each signer, choose **Team member** or **External**.
+
+    - For a team member, tap **Select teammate…** and pick them. Tap **Add myself** to add yourself.
+    - For an external signer, enter their **Email** and, if you like, a **Name**.
+  </Step>
+  <Step title="Set the order">
+    Use the arrows to reorder signers. Signer 1 signs first, and the others sign in order.
+  </Step>
+  <Step title="Save">
+    Tap **Save Signers**.
+  </Step>
+</Steps>
+
+To learn how the two signer types differ, see [Internal vs external signers](/documents/internal-vs-external-signers).
+
+## Place fields
+
+The editor shows your document with a tray of field types at the bottom:
+
+| Field | What the signer does |
+|---|---|
+| **Signature** | Draws or types their signature |
+| **Name** | Confirms their name, which is filled in for them |
+| **Date** | Confirms the date, which defaults to the signing day |
+| **Text** | Types free text |
+
+To place a field, pick the signer from the chips at the top, scroll to the page you want and tap a field type. The field is added to that page and assigned to the selected signer. Each signer has their own color.
+
+- Drag a field to move it. Select it and drag its resize handle to change its size.
+- Tap a field to select it, then delete it if you don't need it.
+- Select a **Text** field to rename its label with **Edit Text Label**.
+
+Your changes save automatically. For more on fields, see [Adding fields to a PDF](/documents/adding-fields-to-pdf).
+
+## Send the document
+
+When your fields are in place, tap **Send**. For a **Sign Yourself** document, tap **Finish** instead.
+
+For **Send for Signature** documents, the app asks how to send it:
+
+- **Send Directly** sends the document to your signers straight away.
+- **Submit for Review** asks a teammate to check it first. Choose a reviewer from your team and tap **Submit for Review**. Once they approve it, the document goes to your signers automatically.
+
+If you leave a document before sending it, it stays as a draft. Open it and tap **Finish setting up this document** to carry on.
+
+## Review a document
+
+If someone picks you as the reviewer, the document shows **Awaiting your review**. Super Administrators and Administrators can also review any document that's pending review.
+
+- Tap **Approve** and confirm. The document is sent to the signers automatically, and you can't undo this.
+- Tap **Reject**, explain **What needs to change?** and tap **Confirm Reject**. The document goes back to draft, and the person who submitted it is told your reason.
+
+For the full review workflow, see [Review before sending](/documents/review-before-sending).
+
+## Sign a document
+
+When a document is waiting for your signature, it shows **Your signature is required**. External signers don't use the app. They sign from the email they receive.
+
+<Steps>
+  <Step title="Open the signing screen">
+    Tap the **Your signature is required** banner. To read the whole document first, tap **Review Document**.
+  </Step>
+  <Step title="Complete your fields">
+    Under **Fields**, check your name and date, and fill in any text fields. Tap a date field to pick a different date.
+  </Step>
+  <Step title="Add your signature">
+    Choose **Draw** and sign with your finger, or choose **Type** and type your full name. Tap **Clear** to start again.
+
+    If you have saved signatures, tap one under **Saved Signatures** to use it.
+  </Step>
+  <Step title="Agree and submit">
+    Tick the box to agree that your electronic signature is legally binding and has the same legal effect as a handwritten signature. Then tap **Submit Signature**.
+  </Step>
+</Steps>
+
+You see **Signed Successfully!** when you're done. You get a copy once all parties have signed.
+
+For documents you sign alone, see [Signing yourself](/documents/signing-yourself).
+
+### Saved signatures
+
+When you draw or type a new signature, tick **Save signature for future use** to keep it. You can keep up to five saved signatures. To remove one, tap its delete icon under **Saved Signatures** and confirm.
+
+## Download signed documents
+
+When a document is **Completed**, its **Overview** tab shows **Downloads**:
+
+- **Signed Document** is the final PDF with every signature.
+- **Certificate of Completion** is the signing record, when one is available.
+
+Tap either one to preview it. Only Super Administrators and Administrators see the download button in the app. The **Activity** tab shows the document's history, such as when it was sent, viewed and signed.

@@ -1,52 +1,60 @@
 ---
-title: "What Happens When a Connekt Payment Fails: A Guide"
-sidebarTitle: "Payment Failures"
-description: "Understand Connekt's automatic retry process, grace period, and notifications when a payment fails — and how to reactivate your workspace quickly."
+title: "What happens when a Connekt payment fails"
+sidebarTitle: "Payment failures"
+description: "Learn what happens when a Connekt payment fails, who gets notified, how the 7-day grace period works and how to update your payment method."
 ---
 
-Payment failures happen from time to time, and Connekt is built to handle them without immediately disrupting your team's work. You have a 7-day grace period after the first failed payment, and the system automatically retries the charge on your behalf during that time.
+If a payment fails, your team keeps working for 7 days while you fix it. Connekt emails the workspace owners and admins so the right people know straight away.
 
-## The Automatic Retry Process
+## Emails you'll receive
 
-When a payment fails, Connekt's billing system automatically retries the charge several times over the following days. You don't need to take any action while retries are in progress — the system handles this for you.
+Connekt emails every workspace owner and admin:
 
-## Notifications
-
-As soon as a payment fails, an email alert is sent to the **workspace billing admin**.
+- **Each time a payment attempt fails.** The email shows the amount due and includes an **Update payment method** button. It may also include an **Open Stripe invoice** link to pay that invoice directly.
+- **3 days after the first failure**, as a reminder, if the payment still hasn't gone through.
+- **7 days after the first failure**, as a final reminder.
 
 <Info>
-  If you're the billing admin, check your inbox — and your spam folder — for an alert from Connekt. The email will confirm what failed and prompt you to update your payment method if needed.
+  If you don't see these emails, check your spam folder. Emails go to the workspace owners and admins, so ask one of them if you're not sure.
 </Info>
 
-## Grace Period
+## Grace period
 
-You have a **7-day grace period** from the date of the first failed payment. During this window:
+You have a **7-day grace period** from the first failed payment. During this time:
 
-- Your workspace remains **fully accessible**
-- Your entire team can continue working without any interruption
-- Automatic retries continue in the background
+- Your workspace stays fully accessible, and your team keeps working as normal.
+- A banner shows how many days are left before your account is suspended.
+- Administrators see a **Past due** status on **Settings → Plan**, along with the number of days left before access is suspended.
 
-## If the Grace Period Passes Without Payment
+## Fix a failed payment
 
-If the payment isn't resolved within 7 days, your workspace access is paused.
-
-<Warning>
-  When workspace access is paused, your team loses access immediately. However, **all your data is fully preserved** — nothing is deleted. You can reactivate at any time by updating your payment method.
-</Warning>
-
-## How to Reactivate Your Workspace
+Only Administrators can update payment details.
 
 <Steps>
-  <Step title="Go to Settings → Billing">
-    Navigate to **Settings → Billing**.
+  <Step title="Open Settings → Plan">
+    Go to **Settings → Plan**. You can also click **Update payment** in the banner or in the payment email.
+  </Step>
+  <Step title="Click Update payment">
+    Click **Update payment** on your plan card. This opens the secure billing portal.
   </Step>
   <Step title="Update your payment method">
-    Add a new card or update your existing payment details.
+    Add a new card or update your existing payment details. You can also pay the outstanding invoice from the portal.
   </Step>
-  <Step title="Click Reactivate Subscription">
-    Select **Reactivate Subscription** to trigger a new payment attempt.
-  </Step>
-  <Step title="Access is restored">
-    Once the payment goes through, your workspace reactivates immediately. Your team regains access, and your data, settings, and history are exactly as you left them.
+  <Step title="Return to Connekt">
+    Once the payment goes through, your subscription becomes active again. The banner disappears, and your team keeps full access.
   </Step>
 </Steps>
+
+<Tip>
+  You can also fix a failed payment without signing in. Use the **Open Stripe invoice** link in the payment email to pay that invoice directly.
+</Tip>
+
+## If the grace period ends
+
+If the payment isn't resolved within 7 days, your workspace access is suspended and your team can't use Connekt.
+
+<Warning>
+  Your data isn't deleted when access is suspended. An Administrator can restore access at any time by paying the outstanding balance through **Update payment** or the invoice link in the email.
+</Warning>
+
+If you can't resolve a payment issue, contact the Connekt team. See [Getting help](/getting-started/getting-help).

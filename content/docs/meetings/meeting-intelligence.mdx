@@ -1,70 +1,67 @@
 ---
-title: "Meeting Intelligence with the Connekt Notetaker Feature"
-sidebarTitle: "Notetaker"
-description: "Automatically record, transcribe, and summarise Google Meet recruiting calls with Connekt Notetaker, and link results directly to candidate or job records."
+title: "Meeting intelligence with Connekt Notetaker"
+sidebarTitle: "Overview"
+description: "Record, transcribe and summarise your calls with the Connekt Notetaker Chrome extension, in Stealth or Meeting Bot mode, and review them in Meetings."
 ---
 
-Connekt Notetaker automatically records, transcribes, and summarises your recruiting calls, then saves the results straight to the relevant Candidate, Job, or Company record in your workspace. This means less time writing up notes after calls and more confidence that nothing important gets missed. Today, Notetaker works with **Google Meet** — Zoom and Microsoft Teams are not currently supported.
+Connekt Notetaker records your calls, transcribes them and writes an AI summary. Every recording lands on the **Meetings** page in Connekt, where you can review it, link it to candidates, jobs, companies and contacts, and turn it into tasks and record updates.
 
-## The Chrome Extension (Recommended Path)
+Connekt Notetaker is a Chrome extension. It's separate from the [Connekt Chrome extension](/integrations/chrome-extension), which captures LinkedIn profiles.
 
-The Chrome extension gives you the most complete Notetaker experience, including a live transcript while your call is running.
+## Two ways to record
 
-<Steps>
-  <Step title="Install the extension">
-    Install the **Connekt Notetaker** Chrome extension from the Chrome Web Store and sign in with your Connekt account credentials.
-  </Step>
-  <Step title="Join your meeting">
-    Join your **Google Meet** call as you normally would.
-  </Step>
-  <Step title="Start recording">
-    A banner appears in the meeting offering to start recording. Click it to begin. Connekt will start capturing audio and generating a live transcript.
-  </Step>
-  <Step title="Review the live transcript">
-    While the call is running, a **live transcript** appears in the sidebar. You can refer to it in real time to confirm names, decisions, or action items without relying on memory.
-  </Step>
-  <Step title="Meeting ends — notes are generated automatically">
-    When the call ends, Connekt automatically:
-    - Uploads the recording
-    - Generates an **AI summary** of the conversation
-    - Compiles a list of **action items**
-    - Saves everything as a **Meeting Note**
-  </Step>
-  <Step title="Link the note to a record">
-    From the Meeting Note, link it to the relevant **Candidate**, **Job**, or **Company** record in Connekt so it appears alongside your other notes and activity for that record.
-  </Step>
-</Steps>
+You choose a mode each time you start a recording from the extension popup.
 
-## Joining with a Bot (Experimental)
+| | **Stealth** | **Meeting Bot** |
+| --- | --- | --- |
+| How it records | Captures the meeting tab's audio and video plus your microphone, from your own browser | Sends a bot that joins the call as a separate participant |
+| Visible to others | No | Yes, it appears in the participant list |
+| Live transcript and checklist | Yes, in the live panel | No, transcript and summary arrive after the call |
+| Needs admitting | No | Yes, if the meeting has a waiting room |
 
-If you need an ad-hoc recording option without setting up the extension in advance, you can send a bot into an already-open Google Meet call directly from the extension popup.
+## Supported platforms
 
-<AccordionGroup>
-  <Accordion title="How the bot path works">
-
-    1. Open the **Connekt Notetaker** extension popup in Chrome.
-    2. Select **Join with bot** and provide the meeting link.
-    3. The bot joins the call on your behalf and begins capturing the session.
-    4. After the meeting ends, the summary and notes are generated and saved — just like the extension path.
-
-  </Accordion>
-</AccordionGroup>
-
-<Info>
-  The bot path has some differences from the full Chrome extension experience:
-
-  - It only works with **Google Meet**
-  - It's **not tied to your calendar** — you trigger it manually per meeting
-  - There is **no live transcript** during the call; the summary and notes are only available after the meeting ends
-</Info>
-
-## Where to Find Your Meeting Notes
-
-Meeting notes appear in two places:
-
-- On the linked **Candidate**, **Job**, or **Company** record in Connekt, alongside your other notes and activity for that record
-- In the **Chrome extension itself** — you can review recent meeting summaries directly from the extension popup without needing to navigate to the full web app
+| Platform | Stealth | Meeting Bot |
+| --- | --- | --- |
+| Google Meet | Yes | Yes |
+| Zoom (web client in Chrome) | Yes | No |
+| Microsoft Teams (web, in Chrome) | Yes | No |
+| Zoom, Teams or other desktop apps | No | No |
 
 <Note>
-  Connekt Notetaker is an actively evolving feature. You can expect improvements to reliability, transcript accuracy, and platform coverage — including support for additional meeting platforms beyond Google Meet — over time.
+  Connekt Notetaker only works with meetings open in a Chrome tab. If you join Zoom or Teams through the desktop app, Connekt Notetaker can't record it. Join from the browser instead.
 </Note>
+
+## What to know before you start
+
+- **You start every recording yourself.** Connekt Notetaker doesn't join meetings automatically or on a schedule. Open the popup on the meeting tab and click to start.
+- **Recordings use notetaker hours.** Each recording's length counts towards your workspace's monthly notetaker hours, including uploaded recordings. Connekt never stops a recording because you've run out. See [Usage and add-ons](/billing/usage-and-add-ons) to check your balance and top up.
+- **In-person meetings.** To record a meeting in the room rather than a call, use the Connekt mobile app. See [Recording meetings on mobile](/mobile/recording-meetings).
+- **You can also upload.** Already have a recording? Upload it from the **Meetings** page to get a transcript and summary.
+
+<Warning>
+  Recording laws vary by country and region, and some require every participant's consent. You're responsible for telling participants that the meeting is being recorded and getting consent where required. Stealth mode isn't visible to other participants, so announce the recording at the start of the call — or use Meeting Bot, which joins as a visible participant.
+</Warning>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Recording meetings" icon="video" href="/meetings/recording-meetings">
+    Install the extension, start a recording in Stealth or Meeting Bot mode, and upload recordings.
+  </Card>
+  <Card title="Reviewing meetings" icon="file-lines" href="/meetings/reviewing-meetings">
+    Find meetings, read the AI summary and transcript, ask questions and download files.
+  </Card>
+  <Card title="Linking and AI actions" icon="link" href="/meetings/linking-and-ai-actions">
+    Link meetings to records, apply AI suggestions and create follow-up tasks.
+  </Card>
+  <Card title="Summary templates" icon="wand-magic-sparkles" href="/meetings/summary-templates">
+    Choose a built-in template or create your own prompts and question lists.
+  </Card>
+  <Card title="Sharing and privacy" icon="share-nodes" href="/meetings/sharing-and-privacy">
+    Control who can see a meeting, share a public link and delete recordings.
+  </Card>
+  <Card title="Troubleshooting" icon="triangle-exclamation" href="/meetings/troubleshooting">
+    Fix microphone, connection, bot and processing problems.
+  </Card>
+</CardGroup>

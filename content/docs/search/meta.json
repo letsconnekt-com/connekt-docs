@@ -1,6 +1,8 @@
 {
-  "title": "Search & Filters",
+  "title": "Search and AI",
   "pages": [
-    "search-history"
+    "search-history",
+    "filters-and-boolean-search",
+    "ask-ai"
   ]
 }

@@ -1,56 +1,70 @@
 ---
-title: "How to Convert a Submission to a Placement in Connekt"
-sidebarTitle: "Convert to Placement"
-description: "How to convert an Offer Accepted or Hired submission into a Placement record in Connekt to track fees, commission splits, and invoicing."
+title: "Convert a submission to a placement"
+sidebarTitle: "Convert to a placement"
+description: "Create a placement from an Offer Accepted or Hired submission. Connekt fills in the candidate, job and company, and marks the submission Hired."
 ---
 
-Once a candidate reaches **Offer Accepted** or **Hired** status, you can convert the submission into a formal Placement record. The placement is where you track fees, commission splits, and invoicing — converting from the submission is the fastest way to create one because the key details are carried over automatically.
+When a candidate accepts an offer, you record the deal as a placement. The placement holds the fee, the splits and the invoicing details. Creating it from the submission saves time, because Connekt fills in the candidate, job and company for you.
 
-## Eligibility
+## Before you start
 
-You can only convert a submission that has a status of **Offer Accepted** or **Hired**. If the submission is at any other stage, the **Create Placement** button won't be available. Update the status first, then return here to convert.
+- The submission must be at **Offer Accepted** or **Hired**. The **Create Placement** option doesn't appear at any other status. To change the status, see [Submission statuses](/submissions/submission-statuses).
+- The submission can't already have a placement. Each submission can have only one placement.
+- You need the **Create Deals** permission.
 
-## Steps to Convert
+## Where to start
+
+You can create the placement from four places.
+
+<Tabs>
+  <Tab title="Job Submissions tab">
+    Go to **Jobs**, open the job and click the **Submissions** tab. On the submission's row, click **Create Placement**. The **Create Placement** dialog opens. This button also needs the **Edit Jobs** permission.
+  </Tab>
+  <Tab title="Candidate Submissions tab">
+    Open the candidate's profile and click the **Submissions** tab. On the submission's row, click **Create Placement**. The **Create Placement** dialog opens.
+  </Tab>
+  <Tab title="Deals page">
+    Click **Deals** in the sidebar. On the deal's row, click **⋯** and choose **Create Placement**. On a Kanban card, use the card's menu. The **Create New Placement** page opens.
+  </Tab>
+  <Tab title="Status change message">
+    When you change a status to **Offer Accepted** or **Hired** on a **Submissions** tab, Connekt shows a message that the submission is ready for placement conversion. Click **Create Placement** in that message.
+  </Tab>
+</Tabs>
+
+## Create the placement
 
 <Steps>
-  <Step title="Open the submission record">
-    Navigate to the submission you want to convert to a placement.
+  <Step title="Choose the placement type">
+    Pick the **Placement Type**. For a standard contingency placement, choose **Candidate**.
   </Step>
-  <Step title="Confirm the status">
-    Check that the current status is **Offer Accepted** or **Hired**. If it isn't, update it before continuing.
+  <Step title="Check the pre-filled details">
+    Connekt fills in the candidate, company and job from the submission. The **Status** starts as **Starting Soon** and the **Start Date** starts as today.
   </Step>
-  <Step title="Click Create Placement">
-    Click the **Create Placement** button on the submission record.
+  <Step title="Fill in the placement details">
+    Complete the required fields, such as **Contract Type**, **Country**, **Billing Country**, **Billing Currency**, **Fee Value** and **Start Date**. For the full list, see [Create a placement](/placements/creating-a-placement).
   </Step>
-  <Step title="Review the pre-filled fields">
-    Connekt automatically carries over the **Candidate**, **Job**, and **Company** from the submission — review these to make sure they're correct.
-  </Step>
-  <Step title="Fill in the required fields">
-    Complete the following before saving:
-    - **Start date** — the date the candidate begins in the role
-    - **Recruiter splits** — assign a percentage share to each recruiter who contributed to the deal
-  </Step>
-  <Step title="Complete the optional fields">
-    The following are optional but recommended for accurate reporting:
-    - **Fee / commission details** — the placement fee amount and currency
-    - **Invoice date** — when to bill the client (this can differ from the start date)
-    - **Documents** — attach the offer letter, signed contract, or other relevant files
+  <Step title="Add the splits">
+    In the **Splits** section, add each person who shares the fee, then click **Save Splits**. See [Deal splits](/placements/deal-splits).
   </Step>
   <Step title="Create the placement">
-    Click **Create** to finalise the conversion.
+    Click **Create Placement**.
   </Step>
 </Steps>
 
-## What Happens After Conversion
-
 <Note>
-  🎉 Connekt fires a confetti animation when a placement is successfully created — a small celebration for a big win.
+  The **Create Placement** button stays disabled until the required fields are complete and you've saved your splits.
 </Note>
 
-After you click **Create**, the following happens automatically:
+## What happens next
 
-- A new **Placement record** is created and linked to the original submission.
-- The submission is marked as **converted** so your team knows it's been actioned.
-- The placement appears in the **Placements list** and on the **pipeline board**, ready for fee tracking and invoicing.
+- Connekt creates the placement and links it to the submission.
+- The submission's status changes to **Hired**.
+- The submission leaves the **Pipeline** tab on the **Deals** page and its **Submissions** tab lists.
+- The placement appears on the **My Placements** and **All Placements** tabs on the **Deals** page.
+- The job's filled positions update. A job's status changes to **Partially Filled** or **Filled** as its positions fill.
 
-If you need to adjust splits or fee details after conversion, open the Placement record directly at any time. See [Deal Splits](/placements/deal-splits) for guidance on editing commission splits.
+<Tip>
+  If you add a placement from **Deals → My Placements → Add Placement** instead, and the candidate already has a submission for that job, Connekt links the placement to that submission automatically.
+</Tip>
+
+To change the fee, splits or status later, open the placement and click **Edit**. See [Placement and payment statuses](/placements/placement-statuses).

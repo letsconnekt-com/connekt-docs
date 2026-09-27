@@ -1,75 +1,115 @@
 ---
-title: "Adding a Candidate to Connekt: Three Methods Explained"
-sidebarTitle: "Add a Candidate"
-description: "Learn how to add candidates manually, by uploading resumes for AI parsing, or via bulk CSV import — and what to do right after creation."
+title: "Add a candidate to Connekt"
+sidebarTitle: "Add a candidate"
+description: "Add candidates with the form, upload up to 50 resumes for AI parsing, import a CSV, or save LinkedIn profiles with the Chrome extension."
 ---
 
-Connekt gives you three ways to bring candidates into your database: typing their details directly, uploading one or more resume files for automatic AI parsing, or importing a large batch from a CSV spreadsheet. Choose the method that fits the situation — quick manual entry for a single referral, resume upload when you have CVs in hand, or bulk import when you're migrating an entire pipeline.
+You can add candidates four ways: fill in the form, upload resumes for AI parsing, import a CSV, or save a LinkedIn profile with the Chrome extension. Use the form for a single referral, resume upload when you have CVs in hand, and CSV import when you're moving data from another system.
 
-## Manual Entry
+On the **Candidates** page, the **Add** button has a dropdown arrow next to it. Click **Add** to open the form. Click the arrow to open **Quick Actions**, which has **Import CSV** and **Upload / Parse Resume**.
 
-<Steps>
-  <Step title="Open the Candidates section">
-    Go to **Candidates** in the main navigation.
-  </Step>
-  <Step title="Start a new record">
-    Click **Create** to open the candidate creation form.
-  </Step>
-  <Step title="Fill in the candidate's details">
-    Enter the candidate's name, email, phone, status, and skills. Complete any custom fields your workspace admin has configured — these vary by team.
-  </Step>
-  <Step title="Save the record">
-    Click **Save**. The candidate profile opens immediately so you can continue adding information.
-  </Step>
-</Steps>
+<Note>
+  You need permission to create candidates. If you don't see the **Add** button, ask your admin to check your role.
+</Note>
 
-## Resume Upload with AI Parsing
-
-Upload one CV or drop in up to 50 at once and let Connekt's AI do the heavy lifting. Supported formats are **PDF**, **DOCX**, and **HTML**.
+## Fill in the form
 
 <Steps>
-  <Step title="Open the upload dialog">
-    Go to **Candidates → Upload**, or click the upload option inside the Create form.
+  <Step title="Open the form">
+    Go to **Candidates** and click **Add**. The **Create New Candidate** page opens.
   </Step>
-  <Step title="Add your resume files">
-    Drag and drop up to **50 resume files** into the upload dialog, or click to browse and select them. You can mix PDF, DOCX, and HTML files in the same batch.
+  <Step title="Enter the candidate's details">
+    **First Name** and **Last Name** are required. Everything else is optional unless your admin has made it required in **Settings → Field Configuration**. Required fields are marked on the form.
+
+    Some countries need ID details:
+
+    - **Singapore:** **ID Type** (NRIC or FIN) and **ID Number** are required.
+    - **Hong Kong:** **ID Type** (HK ID Card or Passport) and **ID Number** are required.
   </Step>
-  <Step title="Let the AI parse the data">
-    Connekt reads each resume and automatically maps the extracted information — name, contact details, skills, experience, education — to the correct candidate fields.
+  <Step title="Attach documents (optional)">
+    In **Candidate Documents**, add up to 5 files, 25 MB each. You can add more later on the **Attachments** tab.
   </Step>
-  <Step title="Review and confirm">
-    Check the parsed results for each candidate, correct anything that looks off, and confirm the import to create the records.
+  <Step title="Save">
+    Click **Create Candidate**. The candidate's profile opens, and you're set as the owner.
   </Step>
 </Steps>
 
 <Tip>
-  The richer and more consistently formatted the resume, the more accurate the AI parsing. Always do a quick review before confirming, especially for older or heavily designed CV layouts.
+  The fields and sections on the form depend on your workspace setup. Admins can add custom fields and reorder sections. See [Custom fields](/advanced/custom-fields).
 </Tip>
 
-## Bulk CSV Import
+## Upload resumes
 
-When you're migrating from another system or need to add a large structured batch of candidate records, the CSV import wizard is the right tool. This is a separate flow — it lives in **Settings → Data Import** and requires admin access.
+Connekt reads each resume with AI and creates the candidate for you. There's no review step: every resume that isn't a possible duplicate becomes a candidate straight away.
+
+<Steps>
+  <Step title="Open the upload dialog">
+    On **Candidates**, click the arrow next to **Add**, then click **Upload / Parse Resume**. The **Bulk Upload Resumes** dialog opens.
+  </Step>
+  <Step title="Add your files">
+    Drop up to 50 resumes into the dialog, or click to browse. Each file must be PDF, DOCX or HTML, and 10 MB or smaller.
+  </Step>
+  <Step title="Start the upload">
+    Click **Upload _N_ Resumes**. Connekt parses the files one at a time and shows the status of each one.
+  </Step>
+  <Step title="Check the results">
+    Each file ends in one of these states:
+
+    - **Candidate created**: the new record is ready, with the resume attached. Click **View** to open it.
+    - **Possible duplicate candidate**: Connekt found an existing candidate with the same email or name. See [Resolve duplicates](#resolve-duplicates) below.
+    - **Error**: the file couldn't be processed. The message tells you why.
+  </Step>
+</Steps>
+
+<Warning>
+  Each resume must include the candidate's name and email address. If Connekt can't find either one, that file fails and no candidate is created.
+</Warning>
+
+### Resolve duplicates
+
+When a file is flagged as a possible duplicate, you choose what happens:
+
+- Click **Skip** to ignore the file. Nothing is created or changed.
+- Click **Resolve** to update the existing candidate. The **Duplicate Candidate Detected** dialog shows each field where the resume differs from the existing record.
+
+In the dialog, pick **Current Profile Data** or **From New Resume** for each field. You can also click **Keep All Existing** or **Accept All New** to set every field at once. Click **Update Candidate** to save. Connekt updates the existing record and attaches the resume to it.
 
 <Note>
-  CSV import is designed for spreadsheet data, not for resumes. If you have CVs, use the resume upload method above. For the full step-by-step CSV import guide, see [Bulk Import](/candidates/bulk-import).
+  If you close the dialog while resumes are still processing, Connekt asks you to confirm. Processing continues, but you can't see the rest of the batch or resolve its duplicates.
 </Note>
 
-## After Creating a Candidate
+<Tip>
+  AI parsing works best on clearly laid out resumes. Open a few of the new records to check the parsed details, especially for heavily designed CVs.
+</Tip>
 
-Once you've saved a candidate record, a few follow-up actions will help you get the most value from Connekt:
+## Import from a CSV file
 
-<CardGroup cols={3}>
-  <Card title="Notes" icon="note-sticky">
-    Open the **Notes** tab to add context about the candidate — sourcing notes, interview impressions, or anything your team needs to know.
+Use CSV import to add many candidates from a spreadsheet or another system. On **Candidates**, click the arrow next to **Add**, then click **Import CSV**. See [Bulk import](/candidates/bulk-import) for the full steps.
+
+## Save from LinkedIn with the Chrome extension
+
+The Connekt Chrome extension saves LinkedIn profiles straight into Connekt. Open a LinkedIn profile, open the extension, and choose a quick action:
+
+- **Save as Candidate**
+- **Save as Contact**
+- **Save as Contact & Candidate**
+- **Review & Save**, to check and edit the details first
+
+See [Chrome extension](/integrations/chrome-extension) to install it and learn how duplicate checks work.
+
+## After you add a candidate
+
+<CardGroup cols={2}>
+  <Card title="Notes and attachments" icon="paperclip" href="/candidates/attachments-and-notes">
+    Add notes, upload files and log calls or meetings on the candidate's record.
   </Card>
-  <Card title="Attachments" icon="paperclip">
-    Use the **Attachments** tab to upload their resume, cover letter, portfolio, or any other supporting documents (up to 25 MB per file).
+  <Card title="Matching open jobs" icon="briefcase" href="/candidates/matching-candidates-to-jobs">
+    Use the **Matching open jobs** card to find roles the candidate fits.
   </Card>
-  <Card title="Matching Open Jobs" icon="briefcase">
-    The **Matching Open Jobs** card on the candidate profile uses AI to surface roles they may be a strong fit for. Click **Find Matches** to run a search. See [AI Matching](/candidates/matching-candidates-to-jobs) for details.
+  <Card title="Enrich contact details" icon="envelope" href="/candidates/enriching-contact-details">
+    Look up a work email, personal email or phone number.
+  </Card>
+  <Card title="Submit to a job" icon="handshake" href="/submissions/submitting-a-candidate">
+    Put the candidate forward for an open role.
   </Card>
 </CardGroup>
-
-<Info>
-  Custom fields shown on the creation form are configured by your workspace admin. If you need additional fields added, reach out to your Connekt admin.
-</Info>

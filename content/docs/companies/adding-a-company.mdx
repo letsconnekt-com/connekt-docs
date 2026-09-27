@@ -1,59 +1,90 @@
 ---
-title: "Adding a New Company to Your Connekt CRM Workspace"
-sidebarTitle: "Add a Company"
-description: "Create a company record in Connekt, add billing details and custom fields, then link contacts and job openings to build your complete client hub."
+title: "Add a company to Connekt"
+sidebarTitle: "Add a company"
+description: "Create a company record with its status, industries, countries and billing details, then add contacts and jobs. Learn what deleting a company removes."
 ---
 
-Companies are the central hub for everything related to your clients and target employers — linking contacts, job openings, notes, and billing details in one place. Before you start sourcing for a new client, create a company record so that all activity is tracked against it from day one.
+Companies hold everything about a client or target employer: contacts, jobs, placements, notes and billing details. Create the company before you start work for a new client, so all activity is tracked against it from day one.
+
+## Create a company
 
 <Steps>
-  <Step title="Open the Companies section">
-    Go to **Companies** in the main navigation and click **Create**.
-  </Step>
-  <Step title="Enter the company's details">
-    Fill in the core fields for the company:
+  <Step title="Open the form">
+    Go to **Companies** and click **Add**. The **Create New Company** page opens.
 
-    - **Company name** *(required)* — the only field you must provide to save the record.
-    - **Industry** *(optional)* — helps you filter and segment your client list.
-    - **Website** *(optional)* — useful for quick reference and enrichment.
-    - **Location** *(optional)* — enter the city and country where the company is based.
+    To add many companies at once, click the arrow next to **Add**, then click **Import CSV**. See [Bulk import](/candidates/bulk-import).
+  </Step>
+  <Step title="Enter the basic details">
+    **Company Name** is required and must be at least 2 characters. The other fields are optional unless your admin has made them required:
+
+    - **Industries** and **Countries:** choose one or more of each.
+    - **Status:** Active, Inactive, Prospect, Prospect - Cold, Prospect - Lead, Prospect - Negotiating, Signed or Signed & Paying.
+    - **Website** and **LinkedIn URL**
+    - **About:** a short description of the company.
+    - **Sourced by:** the teammate who brought in the company.
   </Step>
   <Step title="Add billing details (optional)">
-    If you manage invoicing through Connekt, expand the billing section and complete the relevant fields:
+    Fill these in if you invoice the company:
 
-    - **Payment terms** — enter the number of days (e.g. 30, 60).
-    - **Billing address** and **billing entity** — the legal entity you invoice.
-    - **Tax ID** — for VAT or other tax reference numbers.
-    - **Billing terms / notes** — any freeform notes about invoicing arrangements for this client.
+    - **Billing Entity Name:** the legal entity you invoice.
+    - **Tax ID / VAT Number**
+    - **Billing Address**
+    - **Billing Currencies:** one or more currencies you bill this company in.
+    - **Payment Terms (Days):** for example 30, 60 or 90.
+    - **Fee Terms:** your fee structure, for example "30% base".
   </Step>
-  <Step title="Complete custom fields">
-    If your workspace admin has configured custom fields for companies, you'll see them on this form. Fill in any that are relevant to the record.
-
-    <Tip>
-      Custom fields are configured in **Settings → Field Configuration**. Ask your admin if you need a field that isn't currently available.
-    </Tip>
+  <Step title="Fill in custom fields">
+    If your admin has added custom fields for companies, they appear on the form. Admins manage them in **Settings → Field Configuration**. See [Custom fields](/advanced/custom-fields).
   </Step>
-  <Step title="Save the record">
-    Click **Save**. The company record is created and you're taken to its detail page.
+  <Step title="Save">
+    Click **Create Company**. The company's record opens.
   </Step>
 </Steps>
 
-## After creating the company
+### If the company already exists
 
-Once the record exists, a few follow-up steps help you get the most out of it straight away.
+If the name, website or LinkedIn URL matches an existing company, Connekt shows **Duplicate Company Detected** instead of creating a new record. For each field that differs, choose the existing value or the one you just entered. Then click **Update Company** to update the existing company. No new company is created.
 
-<CardGroup cols={3}>
-  <Card title="Add contacts" icon="user-plus">
-    Go to the **Contacts** tab on the company record to add the people you work with there — hiring managers, HR leads, and other stakeholders. You can also create contacts from the Contacts section and link them to this company during creation.
+## After you create the company
+
+The company record has tabs for **Notes**, **Activity**, **News**, **Invoice Instructions**, **Jobs**, **Contacts**, **Placements**, **Attachments**, **Tasks** and **Meetings**.
+
+<CardGroup cols={2}>
+  <Card title="Add contacts" icon="user-plus" href="/companies/managing-contacts">
+    On the **Contacts** tab, click **Add Contact**. The new contact is linked to this company.
   </Card>
-  <Card title="Set a primary contact" icon="star">
-    On the **Contacts** tab, mark one contact as **Primary**. The primary contact appears prominently on the company profile card for quick reference. Only one primary contact can be set per company.
+  <Card title="Set a primary contact" icon="star" href="/companies/managing-contacts#set-a-primary-contact">
+    Turn on **Primary Contact** on the contact you deal with most. The **Contacts** tab labels them **Primary**.
   </Card>
-  <Card title="Create job openings" icon="briefcase">
-    Create job openings and link them to this company so candidates, submissions, and placements all roll up to the right client record automatically.
+  <Card title="Create jobs" icon="briefcase" href="/jobs/creating-a-job">
+    On the **Jobs** tab, click **Add Job** to open a role for this company.
+  </Card>
+  <Card title="Record invoice instructions" icon="file-lines">
+    Use the **Invoice Instructions** tab to note how this client wants to be invoiced.
   </Card>
 </CardGroup>
 
-<Note>
-  Company records are never deleted when jobs are filled or closed — they remain fully searchable and auditable. All associated contacts, jobs, notes, and billing information stay connected to the record over time.
-</Note>
+## Change the owner
+
+Click the **⋯** menu in the company header, then click **Change Owner**. You need permission to change company ownership.
+
+## Merge duplicate companies
+
+If a company is in Connekt twice, click the **⋯** menu, then click **Merge Duplicate**. See [Merge duplicates](/candidates/merging-duplicates#merge-two-companies).
+
+## Delete a company
+
+Users with permission to delete companies can remove them.
+
+<Steps>
+  <Step title="Open the menu">
+    Open the company, click the **⋯** menu, then click **Delete Company**.
+  </Step>
+  <Step title="Confirm">
+    Type `DELETE` in the box, then confirm.
+  </Step>
+</Steps>
+
+<Warning>
+  Deleting a company also deletes its contacts, jobs, submissions, placements, notes and attachments. You can't undo this in Connekt. If you only want to stop working with a client, change the company's **Status** to **Inactive** instead.
+</Warning>

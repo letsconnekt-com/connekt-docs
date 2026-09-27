@@ -1,80 +1,95 @@
 ---
-title: "Placement Statuses and Payment Tracking in Connekt"
-sidebarTitle: "Statuses & Payment"
-description: "Reference for Connekt placement statuses (Starting Soon, Already Started, Backed Out) and payment statuses (Pending Invoice to Payment Received)."
+title: "Placement and payment statuses"
+sidebarTitle: "Statuses and payment"
+description: "The four placement statuses and five payment statuses in Connekt, who can change them, and how backed-out placements affect jobs and revenue."
 ---
 
-Placements have their own status lifecycle, separate from submission statuses, and payment is tracked as a further independent status. Keeping both up to date gives you an accurate view of confirmed hires and outstanding revenue across your team.
+Each placement has two separate statuses. The placement status tracks the candidate's start. The payment status tracks invoicing and collection of your fee.
 
-## Placement Statuses
-
-Placement statuses reflect what's happening with the candidate's start and tenure in the role.
-
-<CardGroup cols={2}>
-  <Card title="Starting Soon" icon="calendar-clock">
-    The placement has been created but the candidate's start date hasn't arrived yet.
-  </Card>
-  <Card title="Already Started" icon="briefcase">
-    The candidate has started in the role.
-  </Card>
-  <Card title="Backed Out Before Start" icon="circle-xmark">
-    The candidate or client backed out before the start date.
-  </Card>
-  <Card title="Backed Out During Probation" icon="triangle-exclamation">
-    The placement ended during the probation period after the candidate had already started.
-  </Card>
-</CardGroup>
-
-### How to Update Placement Status
-
-<Steps>
-  <Step title="Open the Placement record">
-    Navigate to the placement you need to update.
-  </Step>
-  <Step title="Click the current status">
-    Click the status indicator displayed on the record.
-  </Step>
-  <Step title="Select the new status">
-    Choose the appropriate status from the options shown.
-  </Step>
-  <Step title="Confirm the change">
-    Confirm the update to apply it.
-  </Step>
-</Steps>
-
-<Note>
-  Status changes are logged in the placement's activity timeline with a timestamp, so you always have a full record of how a placement progressed.
-</Note>
-
-## Payment Statuses
-
-Payment is tracked separately from placement status. The payment status tells you where things stand with invoicing and collection for each placement fee.
+## Placement statuses
 
 | Status | What it means |
-|--------|--------------|
-| **Pending Invoice** | The invoice hasn't been raised yet |
-| **Invoice Sent** | The invoice has been sent to the client |
-| **Payment Received** | The fee has been paid in full |
-| **Overdue** | The payment is past its due date |
-| **Cancelled** | The invoice was cancelled |
+|---|---|
+| **Starting Soon** | The candidate hasn't started yet. New placements start here by default. |
+| **Already started** | The candidate has started the role. |
+| **Backed out before the start date** | The candidate or client pulled out before the start date. |
+| **Backed out during probationary period** | The placement ended during probation. |
 
-### How to Update Payment Status
+In the placements list, the **Status** column shows short labels: **Starting Soon**, **Started** and **Backed Out**.
+
+### Change a placement's status
+
+You change the placement status on the placement's edit page.
 
 <Steps>
-  <Step title="Go to the Placements list">
-    Navigate to the **Placements** section in the main navigation.
+  <Step title="Open the placement">
+    Click **Deals** in the sidebar, open **My Placements** or **All Placements**, and click **View** on the placement's row.
   </Step>
-  <Step title="Find the placement">
-    Locate the placement you want to update in the list.
+  <Step title="Click Edit">
+    Click **Edit** at the top of the placement.
   </Step>
-  <Step title="Click the payment status">
-    Find the payment status column on the placement's row and click it.
+  <Step title="Change the status">
+    In **Placement Details**, choose the new **Status**.
   </Step>
-  <Step title="Select the new status">
-    Choose the new payment status from the dropdown.
+  <Step title="Save">
+    Click **Update Placement**.
   </Step>
 </Steps>
 
+To edit a placement, you need the **Edit Deals** permission. You also need to be the placement's main recruiter, an Admin or Operations. For anyone else, the **Edit** button is disabled.
+
+### What a backed-out status changes
+
+- **Jobs:** only **Starting Soon** and **Already started** placements count as filled positions. When a placement backs out, the position opens up again and the job's status can change back to **Open** or **Partially Filled**.
+- **Revenue and goals:** backed-out placements are left out of dashboard fee totals and goal progress.
+
+## Payment statuses
+
+| Status | What it means |
+|---|---|
+| **Pending Invoice** | You haven't sent the invoice yet. |
+| **Invoice Sent** | You've sent the invoice to the client. |
+| **Payment Received** | The client has paid. |
+| **Overdue** | The payment is late. |
+| **Cancelled** | The invoice was cancelled. |
+
+A placement with no payment status shows **Not Set**.
+
+<Note>
+  Only Super Admins, Admins and Operations can change the payment status, invoice number, invoice date and payment due date. Everyone else sees these values as read-only.
+</Note>
+
+### Change a payment status
+
+<Steps>
+  <Step title="Open the placements list">
+    Click **Deals** in the sidebar, then open **My Placements** or **All Placements**.
+  </Step>
+  <Step title="Show the payment columns">
+    The **Payment Status**, **Invoice Number**, **Invoice Date** and **Payment Due Date** columns are hidden by default. Add them using the table's column settings.
+  </Step>
+  <Step title="Pick the new status">
+    Click the placement's **Payment Status** and choose a status. It saves right away.
+  </Step>
+</Steps>
+
+When you choose **Invoice Sent** and the placement has no invoice date, Connekt sets the invoice date to today. To set dates yourself, click the calendar icon next to the payment status. Then pick the **Invoice Date** and **Payment Date**. You can also edit **Invoice Number**, **Invoice Date** and **Payment Due Date** directly in their columns.
+
 <Tip>
-  Use the payment status column to filter the Placements list for outstanding invoices. Filtering by **Invoice Sent** or **Overdue** gives you an instant view of what needs chasing — useful for weekly revenue reviews.
+  The invoice date can lock the exchange rate used for reporting, depending on your company's policy in **Settings → Revenue & FX**. See [Offices and currency](/advanced/offices-and-currency).
 </Tip>
+
+## Filter placements
+
+On **My Placements** and **All Placements**, use the search box or open the filters. You can filter by:
+
+- **Status** and **Type**
+- **Country**
+- **Start Date**, **Created Date** and **Updated Date**
+- **Year** and **Quarter**
+- **Main Recruiter**, **Candidate**, **Company** and **Job**
+- **Placement ID**
+
+<Note>
+  You can't filter by payment status. To review unpaid invoices, show the **Payment Status** column and sort by it.
+</Note>

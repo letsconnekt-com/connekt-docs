@@ -1,70 +1,102 @@
 ---
-title: "How to Merge Duplicate Candidate Records in Connekt"
-sidebarTitle: "Merge Duplicates"
-description: "Consolidate duplicate candidate records without losing any history — find duplicates, choose a primary record, resolve conflicts, and confirm the merge."
+title: "Merge duplicate candidates and companies"
+sidebarTitle: "Merge duplicates"
+description: "Merge a duplicate candidate or company into the record you keep, choose which values win, and see exactly what moves across and what doesn't."
 ---
 
-Duplicate records are a fact of life in any busy recruitment database — the same candidate may be added twice from different sources, or re-entered after a gap. Connekt's merge tool lets you consolidate two records into one without losing any of the history, submissions, or documents attached to either. The process takes just a few clicks, but it's permanent, so it's worth taking a moment to choose the right primary record before you confirm.
+When the same person or company is in Connekt twice, you can merge the duplicate into the record you want to keep. You start from the record you're keeping, pick the duplicate, and choose which values to keep where they differ. The duplicate is then removed.
 
-## Merging Two Candidate Records
+<Warning>
+  You can't undo a merge in Connekt. Some data on the duplicate isn't moved across (see below). Check both records before you merge.
+</Warning>
+
+## Merge two candidates
+
+You need permission to edit candidates.
 
 <Steps>
   <Step title="Open the record you want to keep">
-    Navigate to **Candidates** and open the candidate profile you want to be the **primary record** — this is the record whose ID and URL will be preserved after the merge.
+    Go to **Candidates** and open the candidate you want to keep. This record keeps its ID and URL.
   </Step>
-  <Step title="Launch the Find Duplicates tool">
-    Click **Find Duplicates** in the candidate detail view. Connekt automatically searches for likely duplicates by matching on name, email address, and phone number.
+  <Step title="Open Merge Duplicate">
+    Click the **⋯** menu in the record header, then click **Merge Duplicate**. The **Merge Duplicate Candidate** dialog opens.
   </Step>
-  <Step title="Select the duplicate to merge">
-    Review the list of suggested duplicates and select the record you want to merge into the primary. Click the record to inspect it if you're unsure which one to keep.
+  <Step title="Find the duplicate">
+    Connekt lists possible duplicates that share the candidate's name, email or mobile number. If the duplicate isn't listed, search by name, email, phone or company.
   </Step>
-  <Step title="Click Merge">
-    Click **Merge** to begin the merge process.
+  <Step title="Select the duplicate">
+    Click **Select** on the duplicate. A comparison dialog opens with every field where the two records differ.
   </Step>
-  <Step title="Confirm the primary record">
-    You'll be asked to confirm which record is the **primary**. The primary record keeps its ID, URL, and core data — make sure you've selected the right one.
+  <Step title="Choose the values to keep">
+    For each field, choose **Current Profile Data** (the record you're keeping) or **From New Resume** (the duplicate you selected). The dialog reuses the labels from resume upload, so "From New Resume" means the duplicate here.
+
+    Click **Keep All Existing** or **Accept All New** to set every field at once.
   </Step>
-  <Step title="Resolve any conflicting data">
-    Where both records contain different values for the same field — for example, two different phone numbers or addresses — Connekt prompts you to choose which value to keep. Review each conflict and select your preferred data.
-  </Step>
-  <Step title="Confirm the merge">
-    Review your choices and click **Confirm Merge** to complete the process.
+  <Step title="Merge">
+    Click **Update Candidate**. Connekt merges the duplicate into the record you're keeping.
   </Step>
 </Steps>
 
-## What's Preserved After the Merge
-
-Everything from the secondary record is transferred to the primary — nothing is lost:
-
-- Submissions and placements
-- Work experience, education, languages, and social profiles
-- Notes and attachments
-- Any linked jobs
-
-The secondary record is removed from your active candidate list, and all the data it held moves to the primary record.
-
 <Tip>
-  Before merging, open both records side by side in separate browser tabs so you can compare them and confidently choose the primary record and any conflicting field values.
+  Click a choice for every field, or use **Keep All Existing** or **Accept All New**, before you click **Update Candidate**. Then open the merged record and check the key fields.
 </Tip>
 
-## Important: Merges Are Permanent
+### What moves to the record you keep
 
-<Warning>
-  Merges **cannot be reversed** from the Connekt UI. Once you confirm, the secondary record is gone and cannot be restored. Double-check your primary record selection and your choices for conflicting data before clicking **Confirm Merge**.
-</Warning>
+- Submissions and placements
+- Work experience and education entries. Entries from both records are kept, so you may see repeats to tidy up.
+- Notes and attachments
+- Languages and social profiles, except where both records have the same language or the same platform. In that case, the kept record's entry stays and the duplicate's is dropped.
+- Custom field values, where the kept record's field is empty
 
-## Keeping Your Database Clean
+For skills and industries, you keep one record's list. The two lists aren't combined. Fields that don't appear in the comparison keep the kept record's values.
+
+### What doesn't move
+
+These stay with the duplicate and are no longer visible once it's removed:
+
+- Logged activities on the **Activity** tab
+- Tasks and linked meetings
+- Email conversations
+- Project memberships
+- Email sequence enrolments
+- **History** entries
+
+The duplicate's owner and off-limits status aren't carried over either. The kept record's **History** tab records the merge.
+
+## Merge two companies
+
+Companies have the same merge flow. You need permission to edit companies.
+
+<Steps>
+  <Step title="Open the company you want to keep">
+    Go to **Companies** and open the company you want to keep.
+  </Step>
+  <Step title="Open Merge Duplicate">
+    Click the **⋯** menu in the header, then click **Merge Duplicate**. The **Merge Duplicate Company** dialog lists possible duplicates that share the company's name, website or LinkedIn URL. You can also search by name, website or industry.
+  </Step>
+  <Step title="Select and compare">
+    Click **Select** on the duplicate. For each field that differs, choose **Current Company Data** (the company you're keeping) or **From New Submission** (the duplicate). You can also click **Keep All Existing** or **Accept All New**.
+  </Step>
+  <Step title="Merge">
+    Click **Merge Company**.
+  </Step>
+</Steps>
+
+**What moves:** contacts, jobs, submissions, placements, email conversations, notes and attachments.
+
+**What doesn't move:** projects and signing documents linked to the duplicate, plus its logged activities, tasks and meetings.
+
+## Keep your database clean
 
 <AccordionGroup>
-  <Accordion title="When should I merge vs. leave records separate?">
-    Merge when you're confident both records represent the exact same person. If there's any doubt — for example, two people with the same name at different companies — leave the records separate and add a note to clarify the distinction.
+  <Accordion title="When should I merge?">
+    Merge only when you're sure both records are the same person or company. Two people with the same name at different employers are usually different candidates. If you're unsure, leave both records and add a note.
   </Accordion>
-
-  <Accordion title="Can I find duplicates across my whole database?">
-    The **Find Duplicates** tool searches for matches against a specific candidate record. For a broader database cleanup after a bulk import, open each recently imported record and run Find Duplicates to catch overlaps with existing records.
+  <Accordion title="The duplicate has the better profile. Which record should I keep?">
+    Keep the record with the most history, such as submissions, activities, tasks and project memberships, because those don't move. Then use the comparison to copy across the duplicate's better field values.
   </Accordion>
-
-  <Accordion title="What if the duplicate has a more complete profile?">
-    You can choose either record as the primary. If the "duplicate" record is actually the richer one, open it first and run Find Duplicates from there — that way it becomes the primary and keeps its data and ID by default.
+  <Accordion title="How do I avoid duplicates in the first place?">
+    Resume upload and the Chrome extension check for existing candidates before they create one. Bulk import has duplicate rules you set before each run. See [Adding a candidate](/candidates/adding-a-candidate) and [Bulk import](/candidates/bulk-import).
   </Accordion>
 </AccordionGroup>

@@ -1,0 +1,112 @@
+---
+title: "Troubleshooting Connekt Notetaker and meetings"
+sidebarTitle: "Troubleshooting"
+description: "Fix common Connekt Notetaker problems: microphone errors, lost connections, recordings that won't save, Meeting Bot failures and notetaker hours."
+---
+
+Use this page to fix the most common problems with Connekt Notetaker and the **Meetings** page. Each section starts with the message you see.
+
+## Starting a recording
+
+<AccordionGroup>
+  <Accordion title="The popup says “No meeting detected”">
+    Connekt Notetaker only detects the meeting in the tab you're looking at. Click the meeting tab first, then open the popup.
+
+    Check that you're using a supported platform in Chrome: Google Meet, the Zoom web client or Microsoft Teams on the web. Desktop apps aren't supported.
+  </Accordion>
+  <Accordion title="“Microphone access is blocked for this site”">
+    Chrome has blocked the meeting site from using your microphone. Click the lock icon in the address bar, allow microphone access, then try again.
+  </Accordion>
+  <Accordion title="“No microphone was found”">
+    Connect a microphone and try again. If you use a headset, check it's plugged in and selected in your computer's sound settings.
+  </Accordion>
+  <Accordion title="“Your microphone seems to be in use by another app”">
+    Another app is using your microphone. Close it and try again.
+  </Accordion>
+  <Accordion title="“Connekt session needs refreshing”">
+    Your sign-in has expired. Open the Connekt web app and sign in, then reopen the popup and try again.
+  </Accordion>
+  <Accordion title="“Join with bot” is greyed out">
+    The popup shows **Bot mode currently only supports Google Meet.** Meeting Bot only works on Google Meet. For Zoom and Teams, untick **Join with bot** and record in Stealth mode.
+  </Accordion>
+</AccordionGroup>
+
+## During a recording
+
+<AccordionGroup>
+  <Accordion title="“Connection lost — reconnecting…”">
+    Connekt Notetaker lost its connection to Connekt. Keep the call going. It reconnects by itself and shows **Connection restored** when it's back.
+  </Accordion>
+  <Accordion title="“Can't reach Connekt” in the popup">
+    Recording continues on your computer and syncs when the connection returns. The popup shows how many recordings are waiting to sync. Click **Retry connection** once you're back online.
+
+    If the connection can't be restored during the call, the meeting tab shows **Connection lost — recording continues locally and will finish processing once you're back online.** Keep Chrome open until the recording has synced.
+  </Accordion>
+  <Accordion title="The live transcript or checklist isn't showing">
+    Click **Open live panel** in the popup. The checklist only shows questions if your summary template has them. Meeting Bot recordings don't have a live transcript or checklist. Those appear on the meeting after the call.
+  </Accordion>
+  <Accordion title="“Audio capture failed”">
+    Connekt Notetaker couldn't capture audio from the meeting. Stop the recording, reload the meeting tab, then start again.
+  </Accordion>
+</AccordionGroup>
+
+## Saving and processing
+
+<AccordionGroup>
+  <Accordion title="“Couldn't finish saving this recording — it will retry automatically”">
+    Connekt Notetaker is retrying the upload in the background. Keep Chrome open and connected until it finishes.
+  </Accordion>
+  <Accordion title="“This recording couldn't be saved after repeated attempts”">
+    Connekt Notetaker gave up after several tries. Contact support and include the meeting's date and time. See [Getting help](/getting-started/getting-help).
+  </Accordion>
+  <Accordion title="The meeting has been “Processing” for a long time">
+    Transcribing and summarising usually takes a few minutes, and longer for long meetings. You get an email when it's ready. If it stays in **Processing** for much longer than the meeting itself, contact support.
+  </Accordion>
+  <Accordion title="“Recording interrupted”">
+    Connekt stopped receiving the recording partway through, for example because the connection dropped or the browser closed. The banner may say **No recording activity received — assumed interrupted.**
+  </Accordion>
+  <Accordion title="“Recording saved with issues”">
+    The meeting was saved, but part of it had a problem. The banner explains what happened. For example, the video may be silent while the transcript is complete.
+  </Accordion>
+  <Accordion title="“Recording failed”">
+    The recording couldn't be processed, so there's no transcript or summary. The banner shows the reason where Connekt knows it. If you have a copy of the recording, you can upload it from the **Meetings** page with **Upload Recording**.
+  </Accordion>
+  <Accordion title="The transcript has the wrong speaker names">
+    Hover over a speaker's name in the **Transcript** tab and click the pencil icon to rename them. Only the meeting organizer can rename speakers. To get real names for scheduled Google Meet calls, connect Google Calendar in the popup's **Settings**.
+  </Accordion>
+</AccordionGroup>
+
+## Meeting Bot
+
+<AccordionGroup>
+  <Accordion title="“Failed to start meeting bot” or “Could not start the meeting bot”">
+    Connekt couldn't send the bot to your meeting. Wait a moment and try again. If it keeps failing, record in Stealth mode instead.
+  </Accordion>
+  <Accordion title="The bot never joined the call">
+    If the meeting has a waiting room, the host must admit the bot. The bot waits about 2 minutes. If nobody admits it, or Google Meet refuses the join, the meeting shows **Recording failed**. Start the bot again and admit it when it asks to join.
+  </Accordion>
+  <Accordion title="The bot left before the meeting ended">
+    The bot leaves about 2 minutes after everyone else has left, and stops after 3 hours. If your meeting runs longer than 3 hours, use Stealth mode.
+  </Accordion>
+</AccordionGroup>
+
+## Uploads, sharing and hours
+
+<AccordionGroup>
+  <Accordion title="My upload is rejected">
+    Uploads must be a single MP4, MOV, WEBM, MKV, AVI, MP3, WAV, M4A or OGG file, up to 2 GB. You also need to enter a title.
+  </Accordion>
+  <Accordion title="I can't link, share or delete a meeting">
+    Linking records, managing access, creating a public link and deleting are organizer-only actions. Ask the person who recorded the meeting. See [Sharing and privacy](/meetings/sharing-and-privacy).
+  </Accordion>
+  <Accordion title="I can't find a teammate's meeting">
+    Meetings are private to the organizer by default. Ask them to add you in **Manage access**.
+  </Accordion>
+  <Accordion title="“Out of notetaker hours”">
+    This appears on **Settings → Usage** when your workspace has used its monthly notetaker hours and has no purchased hours left. Connekt doesn't block recordings when this happens. Click **Buy more hours** to top up. See [Usage and add-ons](/billing/usage-and-add-ons).
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck?
+
+Contact the Connekt team through in-app chat or by email. See [Getting help](/getting-started/getting-help).

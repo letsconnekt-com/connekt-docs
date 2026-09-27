@@ -1,49 +1,71 @@
 ---
-title: "Track Activity and Usage Across Your Connekt Workspace"
-sidebarTitle: "Activity & Usage"
-description: "Use per-record History tabs and the workspace-level Audit Log to monitor changes, track who did what, and maintain visibility across your team."
+title: "Track activity with record history and the audit log"
+sidebarTitle: "Activity & usage"
+description: "See what happened on a candidate or job in its History tab, and review user actions across your workspace in the Audit Log (Team plan and above)."
 ---
 
-Connekt gives you two complementary ways to understand what's happening in your workspace: a detailed per-record history on every individual record, and a workspace-level audit log for administrators who need broader visibility. Together they cover the range from "what happened on this specific candidate?" to "what activity has been happening across the whole workspace?"
+Connekt keeps two kinds of activity record. The **History** tab on a candidate or job shows what happened to that record. The workspace **Audit Log** shows actions taken by users across the whole workspace, such as sign-ins, record changes and document events.
 
-## Per-record History tab
+## See a record's history
 
-Every Candidate, Job, Placement, and Company record includes a **History** tab that automatically logs every significant change made to that record.
+Candidates and jobs have a **History** tab. Projects have a similar **Activity** tab.
 
-**What it tracks:**
+Each entry shows what happened, who did it, and when. Entries include:
 
+- The record being created or updated
 - Status changes
-- Submissions added or updated
-- Placements created or modified
-- Stage movements through your pipeline
-
-**What you'll see for each entry:**
-
-- The specific change that was made
-- Which team member made the change
-- The date and time it happened
+- Submissions to jobs and submission status changes
+- Placements
+- Notes, comments and logged activities
+- Files added or deleted
+- Off-limits changes
 
 <Tip>
-  The History tab is the most reliable place to answer questions like "when did this candidate's status change?" or "who moved this job to Closed?" — go here first when you need to understand what happened on a specific record.
+  Go to the History tab first when you need to answer questions like "When did this candidate's status change?" or "Who moved this job to a new status?"
 </Tip>
 
-## Workspace-level Audit Log
+To see how a deal moved through its stages, go to **Deals**, open the deal's **⋯** menu, click **View Details**, then open the **Stage History** tab. See [Deals pipeline](/submissions/pipeline-board).
 
-For a broader view of activity across your entire workspace, administrators can access the Audit Log.
+## Review the audit log
+
+The Audit Log lists user actions across your workspace in the **Activity Feed**.
+
+<Info>
+  The Audit Log is available on the **Team** and **Business** plans. See [Plans compared](/billing/plans-compared).
+</Info>
 
 <Note>
-  Accessing the Audit Log requires `system_administration` permission. This is available to Super Administrator and Administrator roles by default.
+  Only Super Admins and Admins can open the Audit Log by default. It needs the **System Administration** permission.
 </Note>
 
 <Steps>
   <Step title="Open the Audit Log">
     Go to **Settings → Audit Log**.
   </Step>
-  <Step title="Review workspace activity">
-    The Audit Log provides high-level visibility into actions taken across the workspace, giving admins an overview of what's been happening beyond what's visible on any single record.
+  <Step title="Filter the feed">
+    Search by user or event with **Search user or event…**. Pick an event type from **All events**, and a time range from **All time**, **Last hour**, **Today**, **Yesterday**, **Last 3 days** or **Last 7 days**.
+  </Step>
+  <Step title="Review the entries">
+    Each row shows the **Time**, the **User**, the **Event**, and **Details**. Hover over a detail to see its full value, or over **+N more** to see all the details for that event.
   </Step>
 </Steps>
 
-<Info>
-  If your organisation needs a detailed, exportable, field-level "before vs. after" change log across every entity — for example, for compliance or audit purposes — contact Connekt support to confirm what's currently available on your plan. This is an area of the product that is actively evolving.
-</Info>
+Click **Refresh** to load the latest events. Click **Clear** to remove your filters.
+
+### What the audit log records
+
+The feed includes events such as:
+
+- Sign-ins and sign-outs
+- Candidates, companies, contacts, jobs and placements being created, updated or deleted
+- Ownership transfers and merges
+- Submissions and submission status changes
+- Notes, and attachments being uploaded, previewed, downloaded or deleted
+- Documents being created, submitted for review, signed, cancelled or deleted
+- Leave requests being submitted, approved, rejected or cancelled
+
+Details can include the IP address, approximate location, and browser or device used.
+
+## Check plan usage
+
+To see notetaker hours, enrichment credits and other plan usage, go to **Settings → Usage**. See [Usage and add-ons](/billing/usage-and-add-ons).

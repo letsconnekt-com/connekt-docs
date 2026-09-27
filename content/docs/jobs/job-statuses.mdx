@@ -1,76 +1,92 @@
 ---
-title: "Connekt Job Statuses: All Eight Pipeline States Explained"
-sidebarTitle: "Job Statuses"
-description: "All 8 Connekt job statuses explained — when to use each one, how to update a job's status, and why closed and cancelled jobs remain fully searchable."
+title: "Job statuses in Connekt"
+sidebarTitle: "Job statuses"
+description: "The 8 job statuses, how to change them, how placements update a job's status automatically, and which statuses accept new submissions."
 ---
 
-Every job in Connekt carries a single status that tells your team — and the system — where that role sits in your pipeline. Status drives filtering, reporting, and which jobs appear in default list views, so keeping statuses accurate gives everyone a clear, real-time picture of your open workload. Jobs are created with **Open** status by default, and you can move them to any status at any time as the role progresses.
+Every job has one status that shows where the role stands. New jobs start as **Open**. You can change the status yourself, and Connekt also updates it automatically when placements are added, changed or removed.
 
-## The 8 Job Statuses
+## The 8 statuses
 
-<CardGroup cols={2}>
-  <Card title="Open" icon="circle-check">
-    The role is actively being recruited for and accepts new candidate submissions. This is the default status when a job is first created.
-  </Card>
-  <Card title="In Progress" icon="circle-half-stroke">
-    Recruiting is actively underway, with candidates moving through the pipeline stages. Use this to signal active work to your team.
-  </Card>
-  <Card title="Partially Filled" icon="circle-three-quarters-stroke">
-    Used for multi-hire roles where some positions have been filled but recruiting continues for the remaining headcount. Still accepts new submissions.
-  </Card>
-  <Card title="Filled" icon="circle-check">
-    All positions on the role have been filled. No further submissions are expected.
-  </Card>
-  <Card title="On Hold" icon="circle-pause">
-    Recruiting is temporarily paused — the client may have frozen hiring or the brief needs clarifying. The role isn't closed, just paused.
-  </Card>
-  <Card title="Closed" icon="circle-xmark">
-    The role is no longer active, whether it was ultimately filled or not. No new submissions should be made against a closed job.
-  </Card>
-  <Card title="Cancelled" icon="ban">
-    The role was called off before being filled — for example, the client cancelled the requirement or it was filled internally.
-  </Card>
-  <Card title="Inactive" icon="circle-minus">
-    The job is not currently being worked and is hidden from default active job views. Use this for roles that are on long-term pause or deprioritised.
-  </Card>
-</CardGroup>
+| Status | Typical use |
+|---|---|
+| **Open** | The role is live and you're recruiting. This is the default for new jobs. |
+| **In Progress** | Recruiting is underway, with candidates moving through the process. |
+| **Partially Filled** | Some positions on a multi-hire job are filled. Recruiting continues for the rest. |
+| **Filled** | All positions are filled. |
+| **On Hold** | Recruiting is paused, for example during a client hiring freeze. |
+| **Closed** | The role is no longer active. |
+| **Cancelled** | The client called off the role. |
+| **Inactive** | The job isn't being worked right now. |
 
-## How to Change a Job's Status
+## Change a job's status
 
-<Steps>
-  <Step title="Open the job record">
-    Navigate to **Jobs** in the main navigation and open the role you want to update.
-  </Step>
-  <Step title="Click the Status badge">
-    Find the **Status badge** at the top of the job record and click it.
-  </Step>
-  <Step title="Select the new status">
-    Choose the new status from the dropdown list.
-  </Step>
-  <Step title="Confirm">
-    The change saves immediately. The new status appears on the badge, and the change is automatically logged in the job's activity history with a timestamp.
-  </Step>
-</Steps>
+You can change status in three places.
 
-<Tip>
-  Get in the habit of updating job status promptly — it keeps your pipeline reporting accurate and helps your team quickly see what still needs attention versus what's been wrapped up.
-</Tip>
+<Tabs>
+  <Tab title="On the job">
+    <Steps>
+      <Step title="Open the job">
+        Click **Jobs** in the sidebar and open the job.
+      </Step>
+      <Step title="Click the status badge">
+        Click the status badge in the job header. The **Change Job Status** menu opens.
+      </Step>
+      <Step title="Pick a status">
+        Click the new status.
+      </Step>
+      <Step title="Confirm">
+        Click **Change Status** in the confirmation dialog.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="In the Jobs list">
+    In the **Jobs** list, use the dropdown in the **Status** column. The change saves as soon as you pick a status.
+  </Tab>
+  <Tab title="For several jobs">
+    <Steps>
+      <Step title="Select jobs">
+        In the **Jobs** list, tick the checkbox next to each job.
+      </Step>
+      <Step title="Change the status">
+        Click **Change Status**, then pick the new status. It applies to every selected job.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
 
-## Closed and Cancelled Jobs Are Never Deleted
+Status changes you make are recorded in the job's **History** tab.
+
+## Automatic status changes
+
+Connekt counts a job's active placements and compares them with its **Number of Positions**. A placement is active when its status is **Already started** or **Starting Soon**.
+
+| Active placements | Status becomes |
+|---|---|
+| None | **Open** |
+| Some, but fewer than the number of positions | **Partially Filled** |
+| Equal to the number of positions | **Filled** |
+
+This check runs when you create a placement for the job, change a placement's status or delete a placement. For jobs with more than one position, you can also run it yourself with the refresh button next to the status badge.
+
+<Warning>
+  The automatic update replaces whatever status the job had, including one you set by hand. For example, if you set a job to **Closed** and then delete its only placement, the job goes back to **Open**. Check the status after you change placements.
+</Warning>
+
+## Which jobs accept new submissions
+
+On a job's **Submissions** tab, **Submit Candidate** only works when the job is **Open**, **In Progress** or **Partially Filled**. For any other status the button is disabled and shows "Cannot submit candidates to a closed job". You also can't change submission statuses on that tab until the job is back in one of those three statuses.
 
 <Note>
-  Closing or cancelling a job doesn't delete it. Closed and cancelled jobs remain in Connekt permanently — they can be found using the **status filter** in the jobs list view and are fully searchable. All associated submissions, placements, notes, and history are preserved. This keeps your records complete for reporting, compliance, and future reference.
+  This check only applies on the job's own page. When you submit from a candidate's **Submissions** tab with **Submit to Job**, you can pick jobs in any status. Check the job's status before you submit from the candidate side. See [Submitting a candidate](/submissions/submitting-a-candidate).
 </Note>
 
-## Quick Reference
+AI matching also uses status. **Matching open jobs** on a candidate record only suggests jobs that are **Open** or **Partially Filled**. See [Matching candidates to jobs](/candidates/matching-candidates-to-jobs).
 
-| Status | Accepts New Submissions | Visible in Default Active View |
-|---|---|---|
-| Open | ✅ Yes | ✅ Yes |
-| In Progress | ✅ Yes | ✅ Yes |
-| Partially Filled | ✅ Yes | ✅ Yes |
-| Filled | ❌ No | ✅ Yes |
-| On Hold | ❌ No | ✅ Yes |
-| Closed | ❌ No | ❌ Filtered out by default |
-| Cancelled | ❌ No | ❌ Filtered out by default |
-| Inactive | ❌ No | ❌ Filtered out by default |
+## Finding jobs by status
+
+Changing a status never deletes a job. Closed, cancelled and inactive jobs keep their submissions, placements, notes and history. To find them, filter the **Jobs** list by **Status**.
+
+<Info>
+  Users with permission to delete jobs can delete them from the job's **⋯** menu or with the **Actions** bulk menu. Deleted jobs no longer appear in Connekt. If you only want to stop working a role, change its status instead.
+</Info>

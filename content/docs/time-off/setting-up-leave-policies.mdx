@@ -1,60 +1,87 @@
 ---
-title: "Setting Up and Configuring Leave Policies in Connekt"
-sidebarTitle: "Leave Policies"
-description: "Create and configure leave policies in Connekt to define entitlements, accrual rules, carryover limits, and pro-rata calculations for your team."
+title: "Setting up leave policies"
+sidebarTitle: "Leave policies"
+description: "Create leave policies in Settings → Leave Policies, set entitlements, accrual and carryover by region, and give your team their leave balances."
 ---
 
-Leave policies control how each leave type works in your workspace — how many days employees receive, how those days accrue over time, what happens to unused days at the end of a period, and any bonus entitlements for long service. Setting these up correctly before assigning them to your team ensures that balances and calculations are accurate from day one.
+Leave policies decide how much leave people get and how it builds up and carries over. Each policy covers one leave type in one region, or one person. Set up your policies before your team starts requesting leave, so balances are right from the start.
 
-<Note>
-  Creating leave policies requires the **Time Off** feature to be enabled on your Connekt plan, plus system administration permission.
-</Note>
+<Info>
+  Time Off needs the **Team** plan or higher. To manage leave policies, you need the **System Administration** permission. By default, only Super Administrators and Administrators have it.
+</Info>
 
-## Creating a leave policy
+## Where to find leave policies
+
+Go to **Settings → Leave Policies**. There are three tabs:
+
+- **Policy Configurations**: create and edit policies.
+- **Delegation**: record who covers your approvals. See [Delegating leave approvals](/time-off/delegating-approvals).
+- **Admin**: give people their balances and run grant, rollover and expiry jobs.
+
+## Create a policy
 
 <Steps>
-  <Step title="Open Policy Configurations">
-    Go to **Settings → Leave Policies → Policy Configurations**.
-  </Step>
   <Step title="Start a new policy">
-    Click **Create Policy Configuration**.
+    On **Policy Configurations**, click **Create Policy Configuration**.
   </Step>
-  <Step title="Select the leave type">
-    Choose the type of leave this policy applies to: **Annual Leave**, **Birthday Leave**, **Personal Day**, or **Public Holiday**.
+  <Step title="Fill in the basic information">
+    - **Policy Name**, for example "UK Annual Leave". This is what people see when they request leave.
+    - **Leave Type**: **Annual Leave**, **Birthday Leave** or **Personal Day**.
+    - **Region**: the country the policy applies to. People get the policies for the **Region** on their user profile.
+    - **Override For (User-Specific)**: leave blank for a region-wide policy. Pick one person to create a policy that replaces the region-wide one for them.
+    - **Effective From** and **Effective To**: the dates the policy applies. Leave **Effective To** blank for no end date.
   </Step>
-  <Step title="Name the policy">
-    Give the policy a clear, descriptive name — for example, **Annual Leave — Standard** or **Annual Leave — Senior Staff**. This name will appear when assigning the policy to users.
+  <Step title="Set the initial entitlement">
+    - **Initial Days Granted**: the days granted each period.
+    - **Eligibility Wait Days**: how long new starters wait before they can take leave, for example a 90-day probation.
+    - **Accrual Period Type**: **Anniversary** (granted on each person's hire date anniversary), **Calendar Year** (granted on 1 January) or **Fiscal Year**.
+    - **Pro-Rate First Year**: give mid-year starters a proportional amount. This applies to **Calendar Year** policies.
+    - **Bonus Days** and **Bonus Eligibility Days**: extra days after someone reaches a length of service.
   </Step>
-  <Step title="Configure the policy options">
-    Set up each of the following options according to your organisation's leave rules:
-
-    | Option | What it controls |
-    |---|---|
-    | **Initial days granted per year** | The total entitlement for a full period (e.g. 20 days). |
-    | **Accrual period** | How the entitlement period is measured: **Anniversary** (based on each employee's start date), **Calendar Year**, or **Fiscal Year**. |
-    | **Carryover** | The maximum number of unused days that roll over to the next period. Set to **0** to prevent any carryover. |
-    | **Expiry** | If carryover is allowed, set when those carried-over days expire (e.g. 3 months into the new period). |
-    | **Pro-rata** | Enable this to automatically calculate a partial entitlement for employees who join part-way through a period. |
-    | **Bonus days** | Grant additional days once an employee reaches a set number of years of service (for example, +2 days after 5 years). |
+  <Step title="Set annual increases (optional)">
+    Turn on **Has Annual Increase** to add days for each year of service. Set **Days Added Per Year** and a **Max Days Cap**.
   </Step>
-  <Step title="Save the policy">
-    Click **Save Policy**.
+  <Step title="Set carryover (optional)">
+    Turn on **Can Carry Over** to let unused leave roll into the next period. Choose a **Carryover Expiry Type** and set **Max Carryover Days**. Leave the maximum blank for no limit.
+  </Step>
+  <Step title="Save">
+    Click **Create Policy**.
   </Step>
 </Steps>
 
-## Assigning the policy to users
-
-Once your policy is saved, you need to assign it to the relevant team members before their balances are calculated.
-
-1. From the policy, choose how to assign it:
-   - **Target a specific region or country** to apply the policy to users in that location.
-   - Click **Setup All Users** to apply the policy workspace-wide.
-2. Confirm the assignment.
-
-<Warning>
-  Policies take effect immediately on assignment. Existing leave balances are **not** retroactively adjusted — if you need to correct a balance after assigning a policy, you'll need to update it manually.
-</Warning>
+The form also has a **Cash Out & Special Features** section with optional advanced settings.
 
 <Tip>
-  Create separate policy configurations for different employee groups if your entitlements vary — for example, one policy for standard staff and another for senior employees with additional leave days.
+  Create one policy per leave type for each region you employ people in. For someone with a special arrangement, create a user-specific override instead of a new region-wide policy.
 </Tip>
+
+## Give people their balances
+
+Connekt sets up leave balances automatically for people you invite. For everyone else, and after you add a policy, use the **Admin** tab.
+
+| Button | When to use it |
+|---|---|
+| **Set Up All Users Without Complete Data** | Some people have missing or zero balances, for example after you first switch on Time Off. People who are already set up are skipped. |
+| **Create Missing Entitlements for New Policies** | You've added a new policy and existing users need balances for it. Existing balances aren't changed. |
+
+Both buttons ask you to confirm first.
+
+<Warning>
+  The **Admin** tab's operations affect everyone in your workspace. Read each confirmation carefully before you continue.
+</Warning>
+
+## Other Admin tab tools
+
+- **Grant & Expiry Management** shows **Upcoming Grants** (anniversaries in the next 30 days) and **Upcoming Expirations** (grants expiring in the next 90 days). Grants and expirations normally run automatically. Use **Process Anniversary Grants**, **Process Calendar Year Grants** or **Process Expirations** to run them now.
+- **Year-End Rollover Processing** carries unused leave into the next year based on your carryover rules. Enter the **Year to Process** and click **Process Rollover**.
+- **Expire Carried Forward Balances** removes carried-over days that are past their expiry date. Click **Expire Balances**.
+
+## Edit or deactivate a policy
+
+On **Policy Configurations**, use the icons in the **Actions** column:
+
+- **Preview calculation** shows how the policy works out.
+- **Edit policy** opens the form. Click **Update Policy** to save.
+- **Deactivate policy** stops the policy being used. The **Status** column shows **Inactive**.
+
+To change one person's balance, use the **Team Management** tab in Time Off. See [Managing team leave balances](/time-off/team-balances).

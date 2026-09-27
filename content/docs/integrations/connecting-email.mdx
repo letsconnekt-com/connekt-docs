@@ -1,0 +1,133 @@
+---
+title: "Connect your email (Gmail or Outlook)"
+sidebarTitle: "Email"
+description: "Connect Gmail or Outlook to Connekt so emails with your candidates and contacts sync to their records automatically."
+---
+
+Connect your email account so your conversations with candidates and contacts appear on their records in Connekt. You can connect a Gmail or Outlook account. Each team member connects their own mailbox, and you can connect one account at a time.
+
+## Connect your account
+
+<Steps>
+  <Step title="Open Integrations">
+    Go to **Settings → Integrations**. The **Email** card shows your connection status.
+  </Step>
+  <Step title="Start the connection">
+    Click **Connect** on the **Email** card, then click **Connect Email** in the dialog.
+  </Step>
+  <Step title="Choose your provider and sign in">
+    A sign-in window opens. Choose Google or Outlook, sign in to the account you want to sync, and grant the requested access.
+  </Step>
+  <Step title="Confirm the connection">
+    When the window closes, you see **Email account connected successfully!** Your account appears on the card, and the first sync starts.
+  </Step>
+</Steps>
+
+<Note>
+  Only one email account can be connected at a time. To switch accounts or providers, disconnect the current account first, then connect the new one.
+</Note>
+
+## Check your connection status
+
+The **Email** card shows one of three statuses:
+
+| Status | What it means |
+|---|---|
+| **Connected** | Your account is connected and syncing normally. |
+| **Needs attention** | A sync failed, the account reported an error, or sending isn't enabled. Check the account row for details. |
+| **Not connected** | No email account is connected. |
+
+Under your account name, you also see the current sync state:
+
+| Sync state | What it means |
+|---|---|
+| **Pending sync** | The account is connected and waiting to sync. |
+| **Syncing...** | A sync is running now. |
+| **Synced** | The last sync finished. Connekt shows when it ran. |
+| **Sync failed** | The last sync didn't complete. The error appears below the account. |
+| **Paused** | Syncing is paused for this account. |
+
+The top of the page shows totals for **Messages**, **Conversations**, and **Last sync**.
+
+## Manage your connected account
+
+Use the controls on your account row:
+
+- **Sync this account** (the refresh icon) starts a sync straight away.
+- **Resume integration** (the play icon) appears when the account is **Paused**. Click it to restart syncing.
+- **Reauthenticate** lets you sign in to the same account again. Use it when the connection has expired or the account shows an error.
+- **Disconnect account** (the trash icon) removes the connection. Confirm in the dialog that opens.
+
+## How email sync works
+
+Connekt syncs new mail in near real time. It also runs a scheduled catch-up sync once a day.
+
+- **Only relevant mail syncs.** Connekt only syncs emails to or from the email address of an existing candidate or contact in your workspace. Personal emails and messages with unknown people aren't synced.
+- **Full history for known people.** On your first sync, Connekt brings in your past email history with every candidate and contact already in Connekt.
+- **Backfill for new records.** When you add a candidate or contact with an email address, Connekt looks back through connected mailboxes in your workspace for past emails with that address.
+- **Work and personal addresses both count.** Connekt matches on both the work email and the personal email on a record.
+
+<Warning>
+  Attachments larger than 25 MB are skipped. The email itself still syncs.
+</Warning>
+
+## Where synced emails appear
+
+- Synced emails appear on the **Conversations** tab of the candidate or contact record.
+- Synced emails are shared with your team. Anyone who can see the record can see its conversations, not just the person whose mailbox they came from.
+- Emails you send are also logged on the record's **Activity** timeline. If the contact belongs to a company, the email also appears on that company's **Activity** timeline.
+
+You can also see all your candidate and contact conversations in one place in the Inbox. See [Using the inbox](/outreach/using-the-inbox).
+
+## Sending email from Connekt
+
+Your connected account is also used to send email from Connekt, such as Outreach sequences and Inbox replies.
+
+If your connection doesn't have sending access, a **Sending not enabled** banner appears on the Integrations page. Click **Upgrade connection** and sign in to the same account again to grant sending access.
+
+<Warning>
+  Sending from Connekt currently works with Gmail only. You can connect Outlook to sync your emails, but Outlook accounts can't send Outreach sequence emails or reply and compose from Connekt. Outlook conversations on a record are read-only. See [Email sequences](/outreach/email-sequences).
+</Warning>
+
+## Disconnect your email
+
+<Steps>
+  <Step title="Open Integrations">
+    Go to **Settings → Integrations**.
+  </Step>
+  <Step title="Disconnect the account">
+    On your account row, click **Disconnect account** (the trash icon).
+  </Step>
+  <Step title="Confirm">
+    Confirm in the dialog.
+  </Step>
+</Steps>
+
+<Info>
+  Emails that have already synced stay in Connekt after you disconnect. Only new emails stop syncing.
+</Info>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The status says Needs attention">
+    Look at the account row for a **Sync failed** state or an error message. Click **Reauthenticate** and sign in to the same account again. If the **Sending not enabled** banner appears, click **Upgrade connection**.
+  </Accordion>
+  <Accordion title="An email with a candidate or contact isn't showing">
+    Check that the person's email address on their Connekt record matches the address they emailed from. Connekt only syncs mail with addresses already saved on a candidate or contact. You can also click **Sync this account** to run a sync straight away.
+  </Accordion>
+  <Accordion title="I see &quot;Email connection cancelled or timed out&quot;">
+    The sign-in window closed before the connection finished. Click **Connect** again and complete the sign-in. Make sure your browser allows pop-ups from Connekt.
+  </Accordion>
+  <Accordion title="I see &quot;Missing account information for this integration&quot;">
+    Connekt can't reauthenticate this account. Disconnect it, then connect it again from scratch.
+  </Accordion>
+  <Accordion title="An attachment is missing from a synced email">
+    Attachments over 25 MB aren't synced. Open the email in Gmail or Outlook to get the file.
+  </Accordion>
+  <Accordion title="I can't send or reply from Connekt">
+    Sending needs a connected Gmail account with sending access. If you use Outlook, you can read synced emails but can't send from Connekt. If you use Gmail and see **Sending not enabled**, click **Upgrade connection**.
+  </Accordion>
+</AccordionGroup>
+
+Still stuck? See [Getting help](/getting-started/getting-help).

@@ -1,0 +1,230 @@
+---
+title: "Automate candidate outreach with email sequences"
+sidebarTitle: "Email sequences"
+description: "Build multi-step email sequences with follow-ups, manual LinkedIn and call tasks, waits and conditions, then enroll candidates from a project."
+---
+
+An email sequence is a series of steps that Connekt runs for each candidate you enroll. Steps can send personalized emails from your own mailbox, wait a number of days, check whether someone opened or clicked, or create a task for you to do by hand. When a candidate replies, their sequence stops automatically.
+
+To open Outreach, click **Outreach** in the sidebar, or press **G** then **O**. Sequences are on the **Sequences** tab.
+
+## Before you start
+
+Outreach sends email through your own connected account. You need:
+
+- The **Team** plan or higher. See [Plans compared](/billing/plans-compared).
+- A connected Gmail account with sending enabled. See [Connect your email](/integrations/connecting-email).
+- Candidates in a [project](/projects/creating-a-project), because you enroll candidates from a project.
+
+If your account isn't connected, Outreach shows **Connect email** instead of your sequences. If it's connected but sending isn't enabled, you see **Sending isn't enabled yet**. Reconnect and grant sending access.
+
+<Warning>
+  Outreach currently sends with Gmail only. An Outlook account can sync emails to records, but it can't send sequence emails.
+</Warning>
+
+## The Sequences tab
+
+The **Sequences** tab lists the sequences you created. Your teammates can't see or edit your sequences. The cards at the top show **Active sequences**, **Candidates in-flight**, **Total enrolled** and **Avg. reply rate** across your workspace.
+
+For each sequence, the list shows its status, **Owner**, **Enrolled**, **In-flight** and **Reply rate**. Use **Search sequences...** and the status filter to find a sequence.
+
+### Sequence statuses
+
+| Status | What it means |
+|---|---|
+| **Draft** | The sequence is new and hasn't been activated. Nothing is sent. |
+| **Active** | The sequence is running. Steps run for everyone enrolled. |
+| **Paused** | Nothing is sent. When you activate the sequence again, it continues where it left off. |
+| **Archived** | The sequence is retired. You can't enroll anyone into it. |
+
+To pause or activate a sequence from the list, click the pause or play button on its row. The **⋯** menu has **Edit**, **Duplicate** and **Delete**.
+
+## Create a sequence
+
+<Steps>
+  <Step title="Start a new sequence">
+    On the **Sequences** tab, click **New sequence**.
+  </Step>
+  <Step title="Name it">
+    Enter a **Name** and, optionally, a **Description**. Click **Create**. The sequence builder opens.
+  </Step>
+  <Step title="Add steps">
+    Click a **+** button on the canvas to add a step at that point. Click a step to edit it in the panel on the right.
+  </Step>
+  <Step title="Check the delivery schedule">
+    Click the schedule button in the header to choose when emails can be sent. See [Set the delivery schedule](#set-the-delivery-schedule).
+  </Step>
+  <Step title="Save and activate">
+    Click **Save** to keep your changes. When you're ready, click **Activate**. Activating also saves the sequence.
+  </Step>
+</Steps>
+
+To rename a sequence, hover over its name in the builder and click the pencil icon.
+
+<Note>
+  To activate a sequence, it needs at least one email step or manual step. Email steps need a subject and a message. Manual steps need a message.
+</Note>
+
+## Step types
+
+| Step | What it does |
+|---|---|
+| **Email step** | Sends an email from your connected account. |
+| **Email from template** | Adds an email step pre-filled from one of your [Outreach templates](/outreach/templates-and-analytics). |
+| **Manual LinkedIn message** | Creates a task for you to send a LinkedIn message by hand. |
+| **Manual LinkedIn connection request** | Creates a task for you to send a LinkedIn connection request by hand. |
+| **Manual phone call** | Creates a task for you to call the candidate. |
+| **Manual task** | Creates a task with your own instructions. |
+| **Wait** | Pauses the sequence for a number of days. |
+| **Condition** | Continues only if the candidate meets a rule. Otherwise, they leave the sequence. |
+
+### Email steps
+
+An email step has these settings:
+
+- **Step name**: a label for the step, such as "Intro email".
+- **Delay (days)**: how long to wait after the previous step before sending.
+- **Subject** and message: use the token buttons to add personalization. Click **Preview** to see the email with sample details.
+- **Attachments**: click **Attach file**. You need to save the sequence once before you can attach files to a new step.
+- **Include sender's email signature**: adds your signature to the end of the email. See [Profile and email signature](/account/profile-and-email-signature).
+- **Include unsubscribe link**: adds a short footer with an unsubscribe link. It's on by default.
+
+Follow-up emails are sent as replies in the same email thread as the earlier emails in the sequence.
+
+When you add an **Email from template** step, Connekt copies the template's name, subject, message and signature setting into the step. The template's attachments are copied when you save. Changing the step afterwards doesn't change the template.
+
+### Manual steps
+
+Manual steps have a **Step name**, a **Delay (days)** and a **Message**. When a manual step runs, Connekt:
+
+1. Creates a task assigned to you, the sequence owner. The task is linked to the candidate and includes the message, with tokens filled in.
+2. Sends you a notification straight away.
+3. Moves the candidate on to the next step. It doesn't wait for you to complete the task.
+
+You'll find these tasks on the [Tasks](/tasks/managing-tasks) page.
+
+<Warning>
+  Connekt never sends anything on LinkedIn for you. Manual LinkedIn steps only create a task. You send the message or connection request yourself.
+</Warning>
+
+### Wait steps
+
+Set **Wait (days)** to pause the sequence before the next step.
+
+### Condition steps
+
+Choose a rule under **Continue only if the candidate…**:
+
+- **opened but no reply**
+- **clicked a link**
+- **has not opened**
+
+If the candidate meets the rule (**Yes**), they continue to the next step. If not (**No**), they exit the sequence.
+
+The condition checks the most recent email step before it. If there's no email step before the condition, it always continues.
+
+<Tip>
+  Connekt tracks opens and link clicks in sequence emails. Some email apps block open tracking, so treat open counts as a guide.
+</Tip>
+
+## Personalization tokens
+
+Tokens are replaced with each candidate's details when the email is sent. Click a token button in the step editor to insert it, or type it in double curly braces.
+
+| Button | Token | Filled with |
+|---|---|---|
+| **First name** | `{{first_name}}` | The candidate's first name |
+| **Last name** | `{{last_name}}` | The candidate's last name |
+| **Current company** | `{{company}}` | The candidate's current employer |
+| **Current title** | `{{title}}` | The candidate's current title |
+| **Open role** | `{{role}}` | The job title of the project's job |
+| **Location** | `{{location}}` | The candidate's city |
+| **Recruiter name** | `{{recruiter_name}}` | Your name |
+| **Hiring company** | `{{job_company}}` | The company of the project's job |
+| **Job location** | `{{job_location}}` | The city and country of the project's job, or "Remote" |
+
+**Open role**, **Hiring company** and **Job location** come from the job linked to the project you enroll from. If the project has no job, these tokens are empty.
+
+<Warning>
+  If a candidate's record is missing a value, the token is left blank. Check that your candidates have the details your emails use before you enroll them.
+</Warning>
+
+## Set the delivery schedule
+
+The schedule button in the builder header shows when emails can be sent, such as **5 days, 9:00am–6:00pm**. New sequences use your time zone, Monday to Friday, 9:00am to 6:00pm.
+
+Click the button to change:
+
+- **Timezone**: the time zone the schedule uses. If no time zone is set, the schedule doesn't apply and steps can run at any time.
+- **Days**: the days steps can run. No days selected means every day is allowed.
+- **From** and **To**: the time window steps can run in.
+
+Click **Save** to apply your changes.
+
+Delays only count allowed days. For example, with Monday to Friday selected, a 2-day delay from Friday runs on Tuesday. Connekt processes steps every 15 minutes, so a step can run up to 15 minutes after its scheduled time.
+
+## Enroll candidates
+
+<Steps>
+  <Step title="Open the enroll dialog">
+    In the sequence builder, click **Enroll**.
+  </Step>
+  <Step title="Choose a project">
+    Find the project with **Filter projects...** and select it. To pick a different one, click **Change project**.
+  </Step>
+  <Step title="Choose candidates">
+    Every candidate with an email address is selected. Clear the ones you don't want, or use **Select all** and **Deselect all**.
+  </Step>
+  <Step title="Enroll">
+    Click **Enroll**. Connekt tells you how many candidates were enrolled, and how many were skipped because they were already in the sequence.
+  </Step>
+</Steps>
+
+- Candidates without an email address can't be selected. Click the enrich icon next to them to look up a personal email. See [Enriching contact details](/candidates/enriching-contact-details).
+- For candidates, Connekt sends to the personal email first, then the work email.
+- A candidate can only be enrolled in the same sequence once.
+- You can enroll candidates while a sequence is a draft or paused. Nothing is sent until you activate it.
+
+<Note>
+  You can enroll up to 500 candidates at a time. The enroll dialog shows up to 500 candidates from a project.
+</Note>
+
+## Enrollment statuses
+
+Each enrolled candidate has a status. You can see it in the [Inbox](/outreach/using-the-inbox) when you open a conversation with them.
+
+| Status | What it means |
+|---|---|
+| **In flight** | The candidate is moving through the sequence. |
+| **Completed** | The candidate reached the end of the sequence. |
+| **Replied** | The candidate replied. Their remaining steps were cancelled. |
+| **Opted out** | The candidate clicked the unsubscribe link. Their remaining steps were cancelled. |
+| **Bounced** | An email couldn't be delivered. Their remaining steps were cancelled. |
+| **Exited (condition)** | The candidate left the sequence. This happens when they don't meet a condition, or when an email can't be sent to them, such as when they have no email address. |
+
+## Replies, bounces and opt-outs
+
+- **Replies stop the sequence.** When a candidate replies to a sequence email, Connekt marks them as **Replied** and cancels their remaining steps. Their reply appears in your [Inbox](/outreach/using-the-inbox).
+- **Bounces stop the sequence.** If an email bounces, the candidate is marked **Bounced** and gets no more steps.
+- **Opt-outs apply to one sequence.** When a candidate clicks the unsubscribe link, they stop getting emails from that sequence. It doesn't remove them from your other sequences.
+
+## Daily sending limit
+
+Each user can send up to 400 sequence emails per day. When you reach the limit, the remaining emails wait and send after the limit resets the next day.
+
+## Edit a running sequence
+
+You can change steps and click **Save** while a sequence is active. The changes apply to steps that haven't run yet.
+
+<Warning>
+  You can't remove a step that already has enrollment activity. Connekt shows "Can't remove a step that already has enrollment activity — stop or complete those enrollments first."
+</Warning>
+
+## Duplicate or delete a sequence
+
+- To copy a sequence, click **⋯ → Duplicate** on its row. The copy is a **Draft** named with "(copy)" and has the same steps and schedule. It has no enrolled candidates.
+- To delete a sequence, click **⋯ → Delete** and confirm.
+
+<Warning>
+  Only draft or archived sequences can be deleted. Once you've activated a sequence, pause it instead. Deleting can't be undone.
+</Warning>

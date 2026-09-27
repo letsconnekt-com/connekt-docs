@@ -1,83 +1,95 @@
 ---
-title: "Creating and Managing Contacts in Your Connekt CRM"
+title: "Create and manage contacts"
 sidebarTitle: "Contacts"
-description: "Create and link contacts to companies, set a primary contact from either record, and use notes and attachments to track your client relationships."
+description: "Create contacts, link them to companies, set a primary contact, track contact stages, and keep notes and files on each client relationship."
 ---
 
-Contacts are the individuals you work with at your client companies — hiring managers, HR directors, procurement leads, and anyone else involved in the recruitment process. Keeping contact records up to date means your whole team has instant context on who to reach out to and what's been discussed.
+Contacts are the people you work with at client companies: hiring managers, HR leads and anyone else involved in hiring. Keeping them up to date gives your whole team context on who to talk to and what's been discussed.
 
-## Creating a contact
-
-<Steps>
-  <Step title="Open the Contacts section">
-    Go to **Contacts** in the main navigation and click **Create**.
-  </Step>
-  <Step title="Fill in the contact's details">
-    Enter the contact's information:
-
-    - **Name** *(required)* — the only mandatory field.
-    - **Email** *(optional)* — used for communication and email sync.
-    - **Phone** *(optional)* — mobile or direct line.
-    - **Job title** *(optional)* — helps clarify their role in the hiring process.
-  </Step>
-  <Step title="Link to a company (optional)">
-    Use the **Company** field to associate this contact with an existing company record. You can skip this at creation and set it later if needed.
-  </Step>
-  <Step title="Save the record">
-    Click **Save**. The contact record is created and you're taken to its detail page.
-  </Step>
-</Steps>
-
-## Linking a contact to a company
-
-You can connect a contact to a company at any point — during creation or afterwards.
-
-- **At creation** — select the company from the **Company** field on the creation form.
-- **After creation** — open the contact record, click **Edit**, then select or update the **Company** field and save.
-
-## Setting a primary contact
-
-Each company can have one primary contact — the go-to person whose name appears prominently on the company profile card. There are two ways to set this, depending on where you're working.
-
-**From the contact record:**
+## Create a contact
 
 <Steps>
-  <Step title="Open the contact record">
-    Navigate to the contact you want to make primary.
-  </Step>
-  <Step title="Set as primary">
-    Click **Set as Primary Contact**. The change takes effect immediately.
-  </Step>
-</Steps>
+  <Step title="Open the form">
+    Go to **Contacts** and click **Add**. To add a contact for a specific company, open the company, go to the **Contacts** tab, and click **Add Contact** instead. The company is filled in for you.
 
-**From the company record:**
-
-<Steps>
-  <Step title="Open the company record">
-    Navigate to the company and click the **Contacts** tab.
+    To add many contacts at once, click the arrow next to **Add**, then click **Import CSV**. See [Bulk import](/candidates/bulk-import).
   </Step>
-  <Step title="Select the contact">
-    Find the contact in the list and select **Set as Primary** from their options.
+  <Step title="Enter the contact's details">
+    Fill in the fields you need, such as **First Name**, **Last Name**, **Work Email**, **Personal Email**, **Job Title**, **Contact Stage**, **LinkedIn URL**, **Work Phone** and **Mobile Phone**. Your admin can make fields required in **Settings → Field Configuration**.
+  </Step>
+  <Step title="Link a company">
+    In **Company Association**, choose the contact's **Company**. You can skip this and add it later.
+  </Step>
+  <Step title="Save">
+    Click **Create Contact**. The contact's record opens.
   </Step>
 </Steps>
 
 <Note>
-  Each company can only have one primary contact at a time. Setting a new primary automatically removes the designation from the previous one — you don't need to clear it manually first.
+  Each email address can belong to only one contact. If a contact already uses the email, Connekt shows "Contact with this email already exists".
 </Note>
 
-## Notes and attachments
+You can also save contacts from LinkedIn with the Chrome extension. Use **Save as Contact** or **Save as Contact & Candidate**. See [Chrome extension](/integrations/chrome-extension).
 
-Contact records include dedicated tabs for storing qualitative context and supporting documents alongside the contact's core details.
+## Link a contact to a company
+
+To link or change the company later, open the contact, click **Edit**, choose the **Company**, and click **Update Contact**.
+
+## Set a primary contact
+
+Each company can have one primary contact: the main person you deal with there.
+
+<Steps>
+  <Step title="Open the contact's form">
+    Open the contact and click **Edit**. Or turn it on while you create the contact.
+  </Step>
+  <Step title="Turn on Primary Contact">
+    In **Company Association**, turn on **Primary Contact**. Make sure the contact is linked to a company.
+  </Step>
+  <Step title="Save">
+    Click **Update Contact**, or **Create Contact** for a new contact.
+  </Step>
+</Steps>
+
+The contact's record shows a **Primary Contact** badge, and the company's **Contacts** tab labels them **Primary**.
+
+<Note>
+  When you make someone the primary contact, Connekt removes the primary flag from the company's previous primary contact. You don't need to turn it off first.
+</Note>
+
+## Track contact stages
+
+Use **Contact Stage** to track where each relationship stands:
+
+- Not Available
+- Prospect
+- Prospect - Cold
+- Prospect - Lead
+- Prospect - Negotiating
+- Signed
+- Signed & Paying
+
+Set the stage on the contact's form. On **Contacts**, you can filter the list by stage.
+
+## Notes, activity and attachments
+
+Each contact record has tabs for **Overview**, **Notes**, **Activity**, **Conversations**, **Attachments**, **Tasks** and **Meetings**.
 
 <CardGroup cols={2}>
-  <Card title="Notes tab" icon="note-sticky">
-    Record meeting summaries, conversation context, personal preferences, and relationship notes. Notes display the author's name and timestamp, and you can tag team members with **@mentions** to notify them of relevant updates.
+  <Card title="Notes and activity" icon="note-sticky" href="/candidates/attachments-and-notes">
+    Write notes with **@mentions**, pull in meeting summaries, and log calls, emails and meetings.
   </Card>
-  <Card title="Attachments tab" icon="paperclip">
-    Upload signed agreements, NDAs, onboarding forms, or any other documents relevant to your relationship with this contact. Any file type is accepted, up to 25 MB per file.
+  <Card title="Attachments" icon="paperclip" href="/candidates/attachments-and-notes#upload-attachments">
+    Upload agreements, NDAs and other files, up to 25 MB each.
+  </Card>
+  <Card title="Enrich contact details" icon="wand-magic-sparkles" href="/candidates/enriching-contact-details">
+    Look up a missing work email, personal email or phone number.
+  </Card>
+  <Card title="Conversations" icon="envelope" href="/integrations/connecting-email">
+    See emails with this contact synced from your connected mailbox.
   </Card>
 </CardGroup>
 
-<Tip>
-  Use the Notes tab to capture anything from a call or meeting before you forget it — even a brief summary helps future you (and your colleagues) pick up the relationship seamlessly.
-</Tip>
+## Change the owner or delete a contact
+
+Open the contact and click the **⋯** menu in the header. From there, you can transfer ownership or delete the contact, if your role allows it.

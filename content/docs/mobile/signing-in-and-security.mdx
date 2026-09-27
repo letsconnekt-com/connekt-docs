@@ -1,0 +1,143 @@
+---
+title: "Signing in and security on the mobile app"
+sidebarTitle: "Signing in and security"
+description: "Sign in to the Connekt app with email or Google, use two-factor authentication, reset or change your password, and understand screenshot protection."
+---
+
+You sign in to the Connekt app with the same account you use on the web. This page covers signing in, two-factor authentication (2FA), passwords, screenshot protection and signing out. For account security on the web, see [Security and 2FA](/account/security-and-2fa).
+
+<Note>
+  The app doesn't have a sign-up option. You need an existing Connekt account, either from creating a workspace on the web or from an invitation.
+</Note>
+
+## Sign in
+
+<Tabs>
+  <Tab title="Email and password">
+    <Steps>
+      <Step title="Enter your details">
+        Open the app and enter your **Email** and **Password**.
+      </Step>
+      <Step title="Tap Login">
+        Tap **Login**. If your account has 2FA turned on, the app asks for a code next.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Google">
+    <Steps>
+      <Step title="Tap Continue with Google">
+        On the login screen, tap **Continue with Google**.
+      </Step>
+      <Step title="Choose your Google account">
+        Pick the Google account that matches your Connekt email. If your account has 2FA turned on, the app asks for a code next.
+      </Step>
+    </Steps>
+
+    Google sign-in only works for an email address that already has a Connekt account. It won't create a new account.
+  </Tab>
+</Tabs>
+
+### Enter your 2FA code
+
+If you've turned on 2FA, you see a verification screen after you sign in. Open your authenticator app and enter the 6-digit code for Connekt. The app verifies it as soon as you enter all six digits, or you can tap **Verify**.
+
+Signed in to the wrong account? Tap **Back to login**.
+
+## Reset a forgotten password
+
+<Steps>
+  <Step title="Open Forgot password">
+    On the login screen, tap **Forgot password?**.
+  </Step>
+  <Step title="Request a link">
+    Enter your email address and tap **Send reset link**. The app shows **Check your inbox**. The email can take a minute to arrive.
+  </Step>
+  <Step title="Set a new password">
+    Open the link in the email on your phone. Enter your new password and confirm it, then tap **Update password**.
+  </Step>
+</Steps>
+
+<Tip>
+  New passwords set in the app must be at least 8 characters.
+</Tip>
+
+## Change your password
+
+<Steps>
+  <Step title="Open Security">
+    Go to **More → View profile → Security**.
+  </Step>
+  <Step title="Tap Change Password">
+    Enter your **Current Password**, a **New Password** of at least 8 characters and the same password again in **Confirm New Password**.
+  </Step>
+  <Step title="Save">
+    Tap **Update Password**. You might be signed out and asked to sign in again with your new password.
+  </Step>
+</Steps>
+
+## Turn on two-factor authentication
+
+2FA asks for a code from an authenticator app, such as Google Authenticator, Authy or 1Password, each time you sign in. The **Security** screen shows **Enabled** or **Disabled** next to **Two-Factor Authentication**.
+
+<Steps>
+  <Step title="Open 2FA settings">
+    Go to **More → View profile → Security** and tap **Two-Factor Authentication**.
+  </Step>
+  <Step title="Start setup">
+    Tap **Set Up Authenticator App**.
+  </Step>
+  <Step title="Add Connekt to your authenticator">
+    Choose one of these options:
+
+    - Tap **Open in Authenticator App** if the authenticator is on this phone.
+    - Copy the key shown under **Or enter this setup key manually** and paste it into your authenticator.
+    - Tap **Setting up on another device? Show QR code** and scan the code with the other device.
+  </Step>
+  <Step title="Verify">
+    Tap **Next — Enter Code**. Enter the 6-digit code from your authenticator and tap **Verify & Enable**. You see **Account Protected** when 2FA is on.
+  </Step>
+</Steps>
+
+### Turn off two-factor authentication
+
+Go to **More → View profile → Security → Two-Factor Authentication**. Tap **Disable 2FA**, then confirm with **Disable**.
+
+<Warning>
+  Turning off 2FA makes your account easier to break into. Only do it if you're setting it up again or your workspace doesn't need it.
+</Warning>
+
+## Screenshot protection
+
+Screenshot protection stops people from capturing Connekt data on their phones. When it's on, screenshots and screen recordings of the app come out blank. This is expected, and it isn't a fault with your phone.
+
+- It's an organisation-wide setting that applies to all members of your organisation.
+- It's **on by default**.
+- Only Super Administrators and Administrators can change it.
+
+To turn it on or off in the app, go to **More → View profile → Security**. Use the **Screenshot Protection** switch under **Organisation Security**. Admins can also change it on the web under **Settings → Security**.
+
+<Info>
+  If you need a screenshot for a support request and you aren't an admin, ask your admin to turn off protection for a while. You can also describe the problem in the chat instead.
+</Info>
+
+## Sign out
+
+Go to **More → View profile** and tap **Sign Out**, then confirm with **Sign out**.
+
+Signing out only affects this device. You stay signed in on the web app and any other devices. This device also stops getting push notifications until you sign in again.
+
+## Error messages
+
+| Message | What it means and what to do |
+|---|---|
+| Please enter your email and password. | One of the fields is empty. Fill in both and try again. |
+| No account found for this Google address. Please contact your administrator. | There's no Connekt account for that Google email. Sign in with the email you were invited with, or ask your admin to invite you. |
+| Please enter the 6-digit code from your authenticator app. | The 2FA code is incomplete. Enter all six digits. |
+| No MFA factor found. Please contact support. | Your account is waiting for a 2FA code, but no authenticator is set up. Contact support through [Getting help](/getting-started/getting-help). |
+| Sign-in already in progress. | A Google sign-in is already open. Finish or close it, then try again. |
+| Password must be at least 8 characters. | Choose a longer password. |
+| Passwords do not match. | The new password and the confirmation are different. Type them again. |
+| Incorrect password or an error occurred | Your current password is wrong, or the change couldn't be saved. Check your current password and try again. |
+| Invalid code. Please check your authenticator app and try again. | The code you entered while setting up 2FA was wrong or expired. Enter the latest code from your authenticator. |
+
+If you still can't sign in, see [Getting help](/getting-started/getting-help).

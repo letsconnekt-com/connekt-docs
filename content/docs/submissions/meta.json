@@ -1,9 +1,9 @@
 {
-  "title": "Submissions & Pipeline",
+  "title": "Deals & Submissions",
   "pages": [
     "submitting-a-candidate",
     "submission-statuses",
-    "converting-to-placement",
-    "pipeline-board"
+    "pipeline-board",
+    "converting-to-placement"
   ]
 }

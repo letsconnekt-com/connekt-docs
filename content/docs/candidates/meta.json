@@ -3,8 +3,10 @@
   "pages": [
     "adding-a-candidate",
     "bulk-import",
+    "attachments-and-notes",
     "matching-candidates-to-jobs",
-    "merging-duplicates",
-    "attachments-and-notes"
+    "enriching-contact-details",
+    "off-limits",
+    "merging-duplicates"
   ]
 }

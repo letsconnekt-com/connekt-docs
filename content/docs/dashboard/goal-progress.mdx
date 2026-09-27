@@ -1,76 +1,135 @@
 ---
-title: "Tracking Goal Progress and Metric Targets in Connekt"
-sidebarTitle: "Goals & Targets"
-description: "Set an org-wide revenue Goal and per-user Metric Targets in Connekt to track performance with colour-coded actual vs. target indicators."
+title: "Goals and metric targets"
+sidebarTitle: "Goals and targets"
+description: "Set revenue goals for your company, offices or teams, and metric targets with org defaults and per-user overrides. Track both on the Home dashboard."
 ---
 
-Connekt gives you two distinct but complementary tools for measuring performance against expectations: a company-level **Goal** that tracks overall revenue, and **Metric Targets** that set individual KPI benchmarks for each team member. Together they help you keep the whole organisation — and every person in it — pointed in the right direction.
+Connekt has two ways to measure performance against expectations. **Goals** are revenue targets for the whole company, an office or a team over a date range. **Metric targets** set benchmarks for individual metrics, such as CV send-outs per week, and appear on each person's dashboard cards.
 
-## The Company Goal
+You manage both in **Settings**, under **System**. You need the **System Administration** permission, which Admins have by default.
 
-The Goal is a single, org-wide revenue target for a defined period. There is only one active Goal at a time, shared across your entire workspace.
+## Goals
 
-### Setting the Goal
-
-<Note>
-  Only admins can create or update the company Goal.
-</Note>
+### Create a goal
 
 <Steps>
-  <Step title="Open Goal settings">
+  <Step title="Open Goals">
     Go to **Settings → Goals**.
   </Step>
-  <Step title="Enter the target">
-    Set the target revenue value and the time period it applies to.
+  <Step title="Click Create Goal">
+    Click **Create Goal**. The **Create New Goal** dialog opens.
   </Step>
-  <Step title="Save">
-    Click **Save**. The Goal takes effect immediately.
+  <Step title="Name the goal and set the target">
+    Enter a **Goal Name**, the **Target Amount** and the **Currency**.
+  </Step>
+  <Step title="Set the dates">
+    Choose the **Start Date** and **End Date**. The end date must be after the start date.
+  </Step>
+  <Step title="Choose the scope">
+    Under **Scope**, choose **Organization-wide**, **Specific office(s)** or **Specific team(s)**. For an office or team goal, select one or more offices or teams. For example, select several offices to model a region like APAC.
+  </Step>
+  <Step title="Create the goal">
+    Click **Create Goal**. The new goal is active straight away.
   </Step>
 </Steps>
 
-### Tracking Goal Progress
+### How active goals work
 
-Once a Goal is set, anyone in the workspace can check progress from the dashboard.
+You can have many goals, but only one active goal for any overlapping scope:
 
-1. Go to **Dashboard**.
-2. Find the **Goal Progress** card.
-3. Progress is displayed as a percentage of actual revenue against the target — for example, "74% of goal reached."
+- **Organization-wide:** creating or activating one deactivates the other active organization-wide goal.
+- **Office goals:** creating or activating one deactivates other active office goals that share an office.
+- **Team goals:** creating or activating one deactivates other active team goals that share a team.
 
-## Metric Targets
-
-Metric Targets are granular KPI benchmarks set on a per-user basis. They let you define what "good" looks like for each person — for example, a target of 4 placements per month or £50,000 revenue per quarter.
-
-### Setting Metric Targets
+Goals that don't overlap, such as goals for two different offices, can be active at the same time.
 
 <Note>
-  Only admins can create or update Metric Targets.
+  You can only activate a goal while its end date hasn't passed and its progress is under 100%. Only Admins can change an organization-wide goal.
 </Note>
 
+### Manage goals
+
+The **Goals** page groups goals into **Organization**, **Offices** and **Teams**, with active goals listed first. On each goal you can:
+
+- Use the switch to activate or deactivate it.
+- Click the edit icon to change its name, target, currency, dates or scope.
+- Click the delete icon to delete it permanently.
+
+### What counts towards a goal
+
+- Placements reported between the goal's start and end dates count towards it.
+- Backed-out placements don't count.
+- An organization-wide goal adds up the full fee of each placement.
+- An office or team goal adds up only the split amounts credited to that office or team. Referral splits don't count. See [Deal splits](/placements/deal-splits).
+- Amounts are converted into the goal's currency.
+
+## Track goal progress on the dashboard
+
+The **Goal Progress** block on **Home** shows your active goals. The header shows the number of active goals and how much of the combined target has been achieved. If there are goals at more than one level, tabs let you switch between **Company**, **Offices** and **Teams**.
+
+Each goal shows its **Progress**, **Target Amount**, **Achieved** and **Remaining** amounts, plus the days left. A goal shows **Achieved** once it reaches its target, or how many days overdue it is once its end date passes.
+
+Which goals you see:
+
+- By default, you see the organization-wide goal plus the active office and team goals within your view. For most people, that's the goals for their own office and teams. Admins see every goal. Office managers and team leads also see goals for the offices and teams they manage.
+- If you pick an office, team or person in the scope menu, the block shows the goals for that scope.
+
+<Note>
+  The block needs the **Dashboard: Goal Progress** permission. If no goals are active, the block doesn't appear.
+</Note>
+
+## Metric targets
+
+Metric targets set the benchmark shown on metric cards, such as **Revenue (QTD)** or **CV Send Outs**. Each card shows the **Target** and a rating of **GOOD**, **OKAY** or **POOR**.
+
+Targets work in two layers:
+
+- **Org-Level Defaults** apply to everyone. Revenue defaults are matched by office, currency and employee level. Other metrics apply company-wide unless overridden.
+- **Per-user overrides** replace the defaults for one person. Only add exceptions here. Everyone else inherits the organization defaults.
+
+### Metrics you can target
+
+| Metric | Periods |
+|---|---|
+| **Candidate Meetings** | Per week, month, quarter or year |
+| **CV Send-Outs** | Per week, month, quarter or year |
+| **CV to Interview Ratio (%)** | Per week, month, quarter or year |
+| **BD Activity:** Reach Outs, Meetings or Signed | Per week, month, quarter or year |
+| **Revenue QTD** | Per quarter only |
+| **Revenue YTD** | Per year only |
+
+### Add an organization default
+
 <Steps>
-  <Step title="Open Metric Targets settings">
+  <Step title="Open Metric Targets">
     Go to **Settings → Metric Targets**.
   </Step>
-  <Step title="Create a new target">
-    Click **Create Target**.
+  <Step title="Click Add target">
+    In **Org-Level Defaults**, click **Add target**. The **Add org default** dialog opens.
   </Step>
-  <Step title="Configure the target">
-    Select the **user**, choose the **KPI** you want to benchmark, and enter the **target value**.
+  <Step title="Choose the metric and period">
+    Pick the **Metric**. For **BD Activity**, also pick the **Detail**. Then choose the **Period**.
+  </Step>
+  <Step title="Set the scope for revenue">
+    For **Revenue QTD** or **Revenue YTD**, also choose the **Office / Region**, **Currency** and **Employee level**. All three are required.
   </Step>
   <Step title="Save">
-    Click **Save**. The target appears on that user's dashboard immediately.
+    Enter the **Target value** and click **Save target**.
   </Step>
 </Steps>
 
-### Viewing Metric Targets
+### Add a per-user override
 
-Targets are surfaced in context so they're always visible alongside real performance data.
+<Steps>
+  <Step title="Find the person">
+    In **Per-user overrides**, search for the team member.
+  </Step>
+  <Step title="Click Add target">
+    Click **Add target** on their row.
+  </Step>
+  <Step title="Set the target">
+    Choose the **Metric** and **Period**, enter the **Target value** and click **Save target**.
+  </Step>
+</Steps>
 
-- **Individual users** see their own targets on their personal dashboard under the **Individual Metrics** cards. Each card shows the actual value alongside the target, colour-coded for instant interpretation:
-  - 🟢 **Green** — on track or exceeding the target
-  - 🟡 **Amber** — approaching but not yet at target
-  - 🔴 **Red** — below target
-- **Managers** see their team members' targets and actuals in the Team view, making it easy to spot who needs support at a glance.
-
-<Tip>
-  Use Metric Targets as a talking point in one-to-ones. The colour-coded view means both you and the team member can see the same numbers in real time, keeping performance conversations grounded in data rather than memory.
-</Tip>
+People without an override show "No overrides set. Using org defaults or role-based thresholds." To remove a target, click its delete icon.

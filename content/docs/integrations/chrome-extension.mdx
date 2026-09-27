@@ -1,70 +1,208 @@
 ---
-title: "Capturing LinkedIn Profiles with the Chrome Extension"
-sidebarTitle: "Chrome Extension"
-description: "Use the Connekt Chrome extension to capture candidates, companies, and contacts from LinkedIn directly into your workspace as you browse."
+title: "Capture LinkedIn profiles with the Connekt Extension"
+sidebarTitle: "Chrome extension"
+description: "Use the Connekt Extension for Chrome to save LinkedIn profiles and companies to Connekt, spot duplicates and update records without leaving LinkedIn."
 ---
 
-The Connekt Chrome extension lets you add and enrich records in your workspace without leaving LinkedIn. As you browse profiles and company pages, a side panel appears so you can capture data with a single click — complete with automatic duplicate detection to keep your database clean. It works for candidates, companies, and contacts all in one place.
+The Connekt Extension adds a Connekt side panel to Chrome. While you browse LinkedIn, you can save people as candidates or contacts, save companies, and work on records that already exist in Connekt. The extension checks for duplicates automatically, so you don't create the same record twice.
 
 <Note>
-  The extension is currently distributed as an **unpacked installation** rather than through the Chrome Web Store. Ask your workspace admin for the install package and setup instructions.
+  Connekt has two Chrome extensions. The **Connekt Extension** on this page captures LinkedIn profiles and companies. **Connekt Notetaker** records and summarises your meetings. See [Recording meetings](/meetings/recording-meetings). You can install either one or both.
 </Note>
 
-## What the extension captures
-
-<CardGroup cols={3}>
-  <Card title="LinkedIn Profiles" icon="user">
-    Creates new or enriches existing **Candidate** records from individual LinkedIn profiles.
-  </Card>
-  <Card title="Company Pages" icon="building">
-    Creates new or enriches existing **Company** records from LinkedIn company pages.
-  </Card>
-  <Card title="Team Members" icon="users">
-    Captures individuals listed on a company page as **Contact** records.
-  </Card>
-</CardGroup>
-
-## How to capture a record
+## Install the extension
 
 <Steps>
-  <Step title="Install and sign in">
-    Install the extension using the package from your admin, then sign in with your Connekt credentials — the same email and password you use on the web app, including MFA if you have it enabled.
+  <Step title="Open Downloads & Guides">
+    In Connekt, go to **Settings → Downloads & Guides**.
   </Step>
-  <Step title="Browse to a LinkedIn profile or company page">
-    Navigate to any LinkedIn candidate profile, company page, or team member listing you want to capture.
+  <Step title="Add it to Chrome">
+    Under **Connekt Chrome extension**, click **Add to Chrome**. The Chrome Web Store opens. Click **Add to Chrome** there and confirm.
   </Step>
-  <Step title="Open the extension panel">
-    A floating indicator appears on the page. Click it to open the Connekt side panel.
-  </Step>
-  <Step title="Review the pre-filled details">
-    The panel automatically detects whether you're viewing a candidate, contact, or company and pre-fills a form with data scraped from the page. Review the details and make any corrections.
-  </Step>
-  <Step title="Check for duplicates">
-    Connekt checks your existing records for likely matches and flags any duplicates before you save — helping you avoid creating the same person or company twice.
-  </Step>
-  <Step title="Save the record">
-    Click **Save** to create a new record or update an existing one in your Connekt workspace.
+  <Step title="Pin the extension">
+    Pin the Connekt icon to your Chrome toolbar so it's easy to open.
   </Step>
 </Steps>
 
-## Other things the extension can do
+## Sign in and give consent
 
-Beyond capturing LinkedIn data, the extension's side panel gives you quick access to several other actions:
+The extension doesn't have its own login. It follows your Connekt web session.
+
+- If you're signed in to Connekt in Chrome, the extension signs you in automatically.
+- If you're not, the panel shows **Sign in on Connekt**. Click it, sign in on the Connekt website, and the panel picks up your session.
+- When you sign out of the Connekt website, the extension signs out too. The extension has no separate sign-out button.
+
+The first time you use the extension, you see a **Before you continue** screen. It explains that the extension reads the LinkedIn page you're viewing to create or update records in Connekt. When a page doesn't load everything it needs, Connekt may fill in the record from a third-party data provider. This only happens on pages you visit while the extension is open. Click **Agree and Continue** to start using the extension.
+
+## Open the side panel
+
+Open the panel in either of these ways:
+
+- Click the Connekt icon in your Chrome toolbar.
+- Press **Ctrl+Shift+K** (Windows) or **Cmd+Shift+K** (Mac).
+
+On LinkedIn, a coloured dot on the toolbar icon shows the status of the page you're viewing:
+
+| Dot colour | What it means |
+|---|---|
+| Grey | You're not signed in. |
+| Blue | You're signed in, but the extension hasn't read a profile or company on this page yet. |
+| Green | The extension read the page and found no matching record in Connekt. |
+| Orange | A matching record already exists in Connekt. |
+| Red | Something went wrong reading the page. Refresh the page. |
+
+## Supported pages
+
+| Page | What you can do |
+|---|---|
+| LinkedIn profiles (`linkedin.com/in/…`) | Save or open a candidate or contact. |
+| LinkedIn company pages (`linkedin.com/company/…`) | Save or open a company. The extension moves you to the company's **About** page to read its details. |
+| LinkedIn Recruiter profiles | Save or open a candidate or contact. |
+
+<Warning>
+  LinkedIn Sales Navigator isn't supported.
+</Warning>
+
+On any other page, the panel shows **No profile open**. You can still search Connekt from the **Search in Connekt...** bar at the top of the panel. Search by name, email, phone or company to find candidates, contacts and companies.
+
+## Save a new person
+
+When you open a LinkedIn profile that isn't in Connekt yet, the panel shows **Quick Actions**:
+
+- **Save as Candidate** saves the person as a candidate straight away.
+- **Save as Contact** saves the person as a contact straight away.
+- **Save as Contact & Candidate** saves both records at once.
+- **Review & Save** opens the full candidate form so you can check and edit the details first.
+
+### Review & Save
+
+The candidate form is filled in from the profile. It includes work experience, education, languages, a professional summary, notes, attachments and any custom fields your admin has added to the extension.
+
+<Steps>
+  <Step title="Review the details">
+    Check the pre-filled fields and correct anything that's wrong.
+  </Step>
+  <Step title="Add a resume (optional)">
+    Under **Attachments**, add the person's resume. If it's a PDF, DOC or DOCX file, a **Resume Detected** prompt appears. Click **Extract Data** to fill in the form from the resume, or **Skip** to just attach it.
+  </Step>
+  <Step title="Save">
+    To create a contact as well, tick **Also save as a contact**. Then click **Save Candidate**.
+  </Step>
+</Steps>
+
+<Note>
+  Attachments on new records can be up to 25 MB each. Attachments you add to a record that's already saved can be up to 10 MB each. Larger files are skipped.
+</Note>
+
+## Save a company
+
+On a LinkedIn company page that isn't in Connekt yet, the panel shows the company form. Review the details and click **Save Company**.
+
+## Work with existing records
+
+When the extension finds a match, it opens the existing record in the panel instead of Quick Actions.
+
+For candidates, the record has these tabs:
+
+- **Overview**: contact details, salary, status and owner. You can also click **Add as Contact** or **Assign to Project** here.
+- **Assigned**: the projects the candidate is in.
+- **Notes & Attachments**: add notes and files.
+- **Tasks**: see and add tasks.
+- **Actions**: update a submission status or log an activity.
+- **History**: the record's activity history.
+
+Contact records have **Overview**, **Notes**, **Files**, **Tasks** and **Actions** tabs. Company records have **Overview**, **Notes**, **Files**, **Tasks**, **Actions** and **History** tabs.
+
+The **⋯** menu at the top of a record has these options:
+
+- **Open in Connekt**: opens the record in the Connekt web app.
+- **Copy link**: copies the link to the Connekt record.
+- **Edit**: opens the candidate form to edit the record (candidates only).
+- **Auto Update**: refreshes the candidate from their LinkedIn profile (candidates only).
+
+### Auto Update a candidate
+
+Open the candidate's LinkedIn profile, then choose **⋯ → Auto Update**. Click **Review Changes** to check the updated details in the form before saving. Click **Update Now** to save the changes straight away.
+
+### Find contact details with Enrich
+
+On a saved record, click **Enrich** next to an empty email or phone field. You can look up a work email, personal email or phone number for candidates, and a work email or phone number for contacts. The search can take up to about two minutes. Enrich uses your workspace's enrich credits. See [Enriching contact details](/candidates/enriching-contact-details).
+
+### Warning banners
+
+The panel shows a banner at the top of a candidate record when:
+
+- **This candidate is off-limits**: the candidate is marked off-limits. The banner shows the reason and how long it lasts. See [Off-limits candidates](/candidates/off-limits).
+- **Placed by us in the past**: your workspace has placed this person before.
+- **Works at a signed client**: the person currently works at a company whose status is **Signed** or **Signed & Paying**.
+
+## Take action on a candidate
 
 <AccordionGroup>
-  <Accordion title="Upload and parse a resume">
-    Upload a resume file directly from the side panel and Connekt will automatically parse the candidate's information using AI, populating the candidate record for you.
-  </Accordion>
+  <Accordion title="Assign to a project">
+    On the **Overview** tab, click **Assign to Project**. Select one or more projects and click **Save**. Projects the candidate is already in are pre-selected, so deselect one to remove the candidate from it.
 
-  <Accordion title="Attach a Notetaker meeting summary">
-    If you've recently run a Connekt Notetaker meeting with or about this person, you can attach the meeting summary to the record directly from the extension.
+    To create a new project, click **+ Create new project**. Enter a **Project name**, and optionally a description, company and job. Choose the **Visibility**: **Private**, **Team** or **Specific People**. Then click **Create & assign**. See [Creating a project](/projects/creating-a-project).
   </Accordion>
-
-  <Accordion title="Search your Connekt workspace">
-    Use the **Status** tab in the extension to search across your Candidates, Contacts, and Companies without navigating away from LinkedIn. Useful for quickly checking if someone is already in your database.
+  <Accordion title="Update a submission status">
+    Open the **Actions** tab and click **View Submissions**. Choose a submission, pick the **New Status** and click **Update Status**. You can't submit a candidate to a new job from the extension. See [Submission statuses](/submissions/submission-statuses).
+  </Accordion>
+  <Accordion title="Log an activity">
+    Open the **Actions** tab and click **Log Activity**. Choose the **Type** (**Call**, **Meeting**, **Email**, **LinkedIn** or **Other**), set **When** it happened, add optional notes and click **Log activity**.
+  </Accordion>
+  <Accordion title="Create a task">
+    Open the **Tasks** tab and click **Add Task**. Enter a **Title**, and optionally a description, **Priority**, **Due Date** and **Assignee**. Click **Create Task**. See [Managing tasks](/tasks/managing-tasks).
+  </Accordion>
+  <Accordion title="Add notes from a meeting">
+    When you add a note, click **Pull from Meeting Notes** to find a meeting recorded with Connekt Notetaker. Click **View**, edit the summary if needed, and click **Insert to Notes**. Tick the box to link the meeting to the record as well. Linked meetings appear under **Linked Meetings**.
   </Accordion>
 </AccordionGroup>
 
-<Tip>
-  Always let the duplicate detection run before saving. If Connekt flags a match, review it — you may want to update the existing record rather than creating a second one.
-</Tip>
+## Lock the panel to a profile
+
+Lock the panel to keep the current profile open while you browse other pages. Click the lock button at the top of the panel, or press **Ctrl+Shift+L** (Windows) or **Cmd+Shift+L** (Mac). Press it again to unlock and load the page you're on.
+
+## Chrome permissions
+
+The extension uses these Chrome permissions:
+
+- Access to your Connekt sign-in cookie, so the extension can follow your Connekt web session.
+- Access to website data, so the extension can read the LinkedIn profile or company page you're viewing. It runs on every page so the panel knows whether you're on LinkedIn. Off LinkedIn, it only offers search.
+- The Chrome side panel, so Connekt can open next to the page.
+- Local storage, so the extension can remember your consent, theme and the last page it read.
+
+The extension saves records using your own Connekt account, so your role's permissions still apply. Admins can choose which custom fields appear in the extension in **Settings → Field Configuration** with **Show in extension** or **Hide from extension**. See [Custom fields](/advanced/custom-fields).
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The panel says &quot;Sign in on Connekt&quot;">
+    You're not signed in to Connekt in this Chrome profile. Click **Sign in on Connekt** and sign in on the website.
+  </Accordion>
+  <Accordion title="&quot;Connekt session needs refreshing&quot;">
+    Your web session has expired. Open Connekt in a Chrome tab to reconnect, then try again.
+  </Accordion>
+  <Accordion title="&quot;Extension was reloaded. Please refresh the page and try again.&quot;">
+    Chrome updated or restarted the extension. Refresh the LinkedIn page.
+  </Accordion>
+  <Accordion title="&quot;Could not check for duplicates. Please verify manually.&quot;">
+    The duplicate check couldn't finish. Search for the person in the **Search in Connekt...** bar before you save. If you see "Duplicate check timed out", refresh the page and try again.
+  </Accordion>
+  <Accordion title="The panel shows &quot;No profile open&quot; on LinkedIn">
+    The extension only reads profile and company pages. Open a profile (`linkedin.com/in/…`), a company page or a LinkedIn Recruiter profile. Sales Navigator isn't supported.
+  </Accordion>
+  <Accordion title="The panel doesn't change when I open a new profile">
+    The panel may be locked. Click the lock button or press **Ctrl+Shift+L** (Windows) or **Cmd+Shift+L** (Mac) to unlock it.
+  </Accordion>
+  <Accordion title="&quot;Out of enrich credits&quot;">
+    Your workspace has used its enrich credits. An admin can top up credits. See [Usage and add-ons](/billing/usage-and-add-ons).
+  </Accordion>
+  <Accordion title="&quot;Network error. Please check your connection and try again.&quot;">
+    Check your internet connection and try again.
+  </Accordion>
+  <Accordion title="An attachment didn't upload">
+    Check the file size. New records accept files up to 25 MB, and existing records accept files up to 10 MB.
+  </Accordion>
+</AccordionGroup>
+
+Still stuck? See [Getting help](/getting-started/getting-help).

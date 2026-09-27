@@ -1,76 +1,92 @@
 ---
-title: "How to Customise Role Permissions in Connekt Settings"
+title: "Customising role permissions"
 sidebarTitle: "Permissions"
-description: "Open the permission matrix in Settings → Permissions, toggle access for each role, and tailor permissions across your team without recreating accounts."
+description: "Change what each role can do in Settings → Permissions, and grant or deny individual permissions for one person with permission overrides."
 ---
 
-Connekt's default role permissions cover the most common access patterns for recruitment teams, but every organisation works differently. If the out-of-the-box settings don't quite match how your team operates, you can fine-tune them using the permission matrix — enabling or disabling individual permissions for any role without affecting other roles or requiring users to re-log in.
+Each role comes with default permissions. If they don't match how your team works, you can change them for a whole role, or override them for one person. See [User roles](/team/user-roles) for the defaults.
 
-## Accessing the permission matrix
+<Info>
+  Editing role permissions needs the **Team** plan or higher. Only Super Administrators and Administrators can open **Settings → Permissions**.
+</Info>
+
+## Change a role's permissions
 
 <Steps>
-  <Step title="Go to Settings → Permissions">
-    Navigate to **Settings → Permissions** in your workspace. You need **Super Administrator** or **Administrator** role to access this page.
+  <Step title="Open Permissions">
+    Go to **Settings → Permissions**.
   </Step>
-  <Step title="Review the matrix">
-    The permission matrix displays all roles as columns and all permission categories as rows. Each cell contains a toggle showing whether that role currently has the permission enabled.
+  <Step title="Pick a role">
+    Choose the role from the dropdown at the top. You can edit every role except Super Administrator.
+  </Step>
+  <Step title="Find the permissions">
+    Open a category to see its permissions, or type in **Search permissions…**. The summary shows how many permissions are enabled for the role.
+  </Step>
+  <Step title="Make your changes">
+    Turn individual permissions on or off. Use **All** or **None** on a category to change the whole category. Use **Enable all** or **Disable all** to change every permission for the role.
+  </Step>
+  <Step title="Save">
+    A bar appears at the bottom saying **Unsaved changes to** the role. Click **Save changes** to apply them, or **Discard** to undo them.
   </Step>
 </Steps>
+
+Saved changes apply to everyone with that role.
+
+<Warning>
+  If you switch to another role before saving, your unsaved changes are lost.
+</Warning>
 
 ## Permission categories
 
-Permissions are grouped into the following categories, each covering a distinct area of the platform:
-
 | Category | What it covers |
 |---|---|
-| **Dashboard** | Access to workspace-level dashboards and reporting widgets. |
-| **Candidates** | Viewing, creating, editing, and deleting candidate records. |
-| **Companies** | Viewing, creating, editing, and deleting company records, including billing information. |
-| **Contacts** | Viewing, creating, editing, and deleting contact records. |
-| **Jobs** | Viewing, creating, editing, and managing job openings. |
-| **Deals** | Accessing and managing deal records. |
-| **Placements** | Viewing, creating, editing, and managing placement records. |
-| **Operations** | Leave management, operational configuration, and related admin functions. |
-| **E-Sign** | Uploading documents, placing fields, sending for signature, and downloading signed copies. |
-| **System** | User management, billing, workspace settings, and data import. |
+| **Dashboard** | Personal, team and company dashboards, financial data, and which Home dashboard widgets the role sees. |
+| **Candidates** | Viewing, creating, editing and deleting candidates, ownership, notes and attachments. |
+| **Companies** | Viewing, creating, editing and deleting companies, ownership, notes and attachments. |
+| **Contacts** | Viewing, creating, editing and deleting contacts, primary contacts, notes and attachments. |
+| **Jobs** | Viewing all or assigned jobs, creating, editing and deleting jobs, notes, attachments and submissions. |
+| **Deals** | Seeing personal, team, company or assigned deals, deal financial data, and creating, editing and deleting deals. |
+| **Placements** | Notes and attachments on placements. |
+| **System** | **System Administration** (admin settings such as Plan, Permissions and Organization), **Team Management** (**Manage Users**), **User Settings**, **View Reports** and **Advanced Analytics**. |
+| **Operations** | **View Operations Dashboard**. |
+| **E sign** | **Create Documents**, which shows **Sign** in the sidebar. |
+| **Checklist** | Which steps appear on the getting-started checklist on Home. |
 
-## Enabling and disabling permissions
-
-<Steps>
-  <Step title="Find the permission you want to change">
-    Locate the relevant category row and the role column you want to adjust.
-  </Step>
-  <Step title="Click the toggle">
-    Click the toggle in the cell to enable or disable that permission for the selected role. The change saves immediately — there is no confirmation step.
-  </Step>
-</Steps>
-
-<Info>
-  Changes apply immediately to every user currently holding that role. You do not need to re-invite users or ask anyone to log out.
-</Info>
-
-## Common customisations
-
-Here are a few examples of adjustments teams frequently make:
+## Examples
 
 <AccordionGroup>
-  <Accordion title="Allow Recruiters to view all placements across the team">
-    By default, Recruiters may only see their own placements. Enable the relevant **Placements** permission for the Recruiter role to give them visibility across the full team pipeline.
+  <Accordion title="Let consultants send documents for signature">
+    Consultants, Recruiters and Researchers don't have **Sign** by default. Pick the role, open **E sign**, turn on **Create Documents** and save. **Sign** then appears in their sidebar.
   </Accordion>
-
-  <Accordion title="Prevent Researchers from creating or editing placements">
-    If your Researchers should be able to source candidates but not manage placement records, disable the create and edit placement permissions for the Researcher role.
+  <Accordion title="Let Managers delete candidates">
+    Only Super Administrators and Administrators can delete candidates by default. Pick **Manager**, open **Candidates**, turn on **Delete Candidate Profiles** and save.
   </Accordion>
-
-  <Accordion title="Give Consultants access to company billing information">
-    Billing details on company records are often restricted to senior roles. You can enable the billing permission for the Consultant role while keeping it disabled for Researchers and Users.
+  <Accordion title="Hide revenue figures from a role's dashboard">
+    Pick the role, open **Dashboard**, and turn off widgets such as **Dashboard: Revenue (QTD)** and **Dashboard: Revenue (YTD)**. Save, and those widgets no longer appear on the role's Home dashboard.
   </Accordion>
 </AccordionGroup>
 
-<Warning>
-  You cannot edit permissions for the **Super Administrator** role. Super Administrator always retains full access to every feature and setting in the workspace — this cannot be changed.
-</Warning>
+## Override permissions for one person
 
-<Tip>
-  If you need a configuration that no standard role supports out of the box, start with the closest matching role and adjust its permissions from the matrix, rather than trying to work around the role system entirely.
-</Tip>
+Use permission overrides when one person needs different access from the rest of their role. Overrides don't change the person's role.
+
+<Steps>
+  <Step title="Open Manage Users">
+    Go to **Settings → Manage Users** and find the person.
+  </Step>
+  <Step title="Open their overrides">
+    Click **⋯** next to them and choose **Manage Permission Overrides**.
+  </Step>
+  <Step title="Set each permission">
+    For each permission, choose **Default** (follow the role), **Grant** or **Deny**. Use **Search permissions…** to find one quickly.
+  </Step>
+  <Step title="Save">
+    The footer shows how many permissions are overridden. Click **Save changes**.
+  </Step>
+</Steps>
+
+An override always wins over the role's setting. To undo one, set it back to **Default**.
+
+<Note>
+  Super Administrators, Administrators and Operations users can open **Manage Permission Overrides**. Only Super Administrators and Administrators can **Grant** permissions. Operations users can only deny permissions or reset them to default.
+</Note>

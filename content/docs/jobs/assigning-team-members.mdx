@@ -1,73 +1,86 @@
 ---
-title: "Assigning Recruiters and Team Members to a Job in Connekt"
-sidebarTitle: "Assign Team Members"
-description: "Add individual recruiters or bulk-assign multiple users to a job, understand what assignment controls, and learn how to remove an assignment."
+title: "Assigning researchers to a job"
+sidebarTitle: "Assign researchers"
+description: "Assign Researchers to one job or many jobs at once, remove them, and understand how assignment controls which jobs a Researcher can see."
 ---
 
-Assignments are how you control who's working a role in Connekt. Assigning a team member to a job puts that job in their personal view, logs the action in the job's activity history, and — critically for Researcher-role users — grants them visibility of the role. There's no limit to how many people you can assign to a single job, so you can build out full recruitment teams for complex or high-priority roles.
+Researchers only see the jobs they're assigned to. You give a Researcher access to a job by assigning them to it, either from the job itself or in bulk from the Jobs list. The assignment list only shows users with the **Researcher** role.
 
-## Adding an Individual Team Member
+<Note>
+  You need permission to edit jobs to assign or remove researchers.
+</Note>
+
+## Assign researchers to a job
 
 <Steps>
-  <Step title="Open the job record">
-    Navigate to **Jobs** and open the role you want to assign someone to.
+  <Step title="Open the job">
+    Click **Jobs** in the sidebar and open the job.
   </Step>
-  <Step title="Go to the Assignments section">
-    Scroll down to the **Assignments** section on the job detail page.
+  <Step title="Open Assign Researchers">
+    Click the **⋯** menu in the job header, then click **Assign Researchers**.
   </Step>
-  <Step title="Search for the team member">
-    Type the person's name in the search box. Matching users appear in the dropdown as you type.
+  <Step title="Pick researchers">
+    Under **Add researchers**, search for and select one or more Researchers.
   </Step>
-  <Step title="Assign them">
-    Click **Assign** next to the user's name. They're immediately added to the job's assignment list.
+  <Step title="Confirm">
+    Click **Assign**. The button shows how many researchers you've selected.
   </Step>
 </Steps>
 
-## Bulk Assigning Multiple Team Members
+The **Currently assigned** list at the top of the dialog shows everyone already assigned to the job.
 
-When you need to assign several people at once — for example, setting up a full delivery team on a new retained search — use the bulk assign option.
+## Assign researchers to several jobs at once
 
 <Steps>
-  <Step title="Open the Assignments section">
-    Open the job record and scroll to the **Assignments** section.
+  <Step title="Select jobs">
+    In the **Jobs** list, tick the checkbox next to each job.
   </Step>
-  <Step title="Click Assign Multiple">
-    Click **Assign Multiple** to open the multi-select panel.
+  <Step title="Open the bulk action">
+    Click **Actions**, then click **Assign Researcher**.
   </Step>
-  <Step title="Select your team members">
-    Tick the checkbox next to each user you want to assign to this job.
+  <Step title="Pick researchers">
+    Search for and select one or more Researchers.
   </Step>
-  <Step title="Confirm the assignments">
-    Click **Confirm**. All selected users are added to the job in one action.
+  <Step title="Confirm">
+    Click **Assign to X Jobs**. Each selected Researcher is added to every selected job. Researchers who are already assigned to a job stay assigned.
   </Step>
 </Steps>
 
-## What Assignment Does
+## Remove a researcher
 
-Understanding what happens when you assign someone helps you use assignments deliberately:
+<Steps>
+  <Step title="Open Assign Researchers">
+    Open the job, click the **⋯** menu and click **Assign Researchers**.
+  </Step>
+  <Step title="Remove them">
+    In **Currently assigned**, click the **X** next to the researcher's name.
+  </Step>
+</Steps>
+
+The Researcher loses access to the job straight away.
+
+## What assignment does
 
 <AccordionGroup>
-  <Accordion title="Personal job view">
-    Assigned jobs appear in each team member's personal job view, making it easy for them to filter to just the roles they're actively working without sifting through the entire jobs list.
+  <Accordion title="Controls what Researchers can see">
+    A Researcher's Jobs list only shows jobs they're assigned to. If a Researcher can't find a job, check that they're assigned to it.
   </Accordion>
-
-  <Accordion title="Activity log">
-    Every assignment and removal is recorded in the job's activity history — including who made the change and when. This gives you a clear record of team involvement over the life of a role.
-  </Accordion>
-
-  <Accordion title="Researcher role visibility">
-    Users with the **Researcher** role can only see jobs they've been explicitly assigned to. Assignment is the access control mechanism for Researchers — if a Researcher can't see a job, check that they've been assigned to it.
+  <Accordion title="Logged in the job's history">
+    Each new assignment is recorded in the job's **History** tab with who made it. Removals aren't logged.
   </Accordion>
 </AccordionGroup>
 
 <Warning>
-  Assigned and removed users are **not** sent a notification when their assignment changes. Make sure you let your team know directly when you add them to a role, especially for urgent or time-sensitive positions.
+  Connekt doesn't notify Researchers when you assign or remove them. Let them know directly, especially for urgent roles.
 </Warning>
 
-## Removing an Assignment
+## Related pages
 
-To remove a team member from a job, scroll to the **Assignments** section and click the **X** next to their name. The removal is logged in the job's activity history.
-
-<Note>
-  There is no limit on the number of team members you can assign to a single job. Add as many people as the role requires.
-</Note>
+<CardGroup cols={2}>
+  <Card title="User roles" icon="user-tie" href="/team/user-roles">
+    See what the Researcher role can do.
+  </Card>
+  <Card title="Customising permissions" icon="shield-halved" href="/team/customising-permissions">
+    Change who can view and edit jobs.
+  </Card>
+</CardGroup>
