@@ -1,19 +1,12 @@
-import { source } from '@/lib/source';
-import {
-  DocsBody,
-  DocsDescription,
-  DocsPage,
-  DocsTitle,
-  MarkdownCopyButton,
-  ViewOptionsPopover,
-} from 'fumadocs-ui/layouts/docs/page';
-import { notFound } from 'next/navigation';
-import { getMDXComponents } from '@/components/mdx';
-import type { Metadata } from 'next';
-import { createRelativeLink } from 'fumadocs-ui/mdx';
-import { getPageImageUrl, getPageMarkdownUrl } from '@/lib/shared';
+import { source } from "@/lib/source";
+import { DocsBody, DocsDescription, DocsPage, DocsTitle, MarkdownCopyButton, ViewOptionsPopover } from "fumadocs-ui/layouts/docs/page";
+import { notFound } from "next/navigation";
+import { getMDXComponents } from "@/components/mdx";
+import type { Metadata } from "next";
+import { createRelativeLink } from "fumadocs-ui/mdx";
+import { appName, getPageImageUrl, getPageMarkdownUrl } from "@/lib/shared";
 
-export default async function Page(props: PageProps<'/[[...slug]]'>) {
+export default async function Page(props: PageProps<"/[[...slug]]">) {
   const params = await props.params;
   const page = source.getPage(params.slug);
   if (!page) notFound();
@@ -32,7 +25,6 @@ export default async function Page(props: PageProps<'/[[...slug]]'>) {
       <DocsBody>
         <MDX
           components={getMDXComponents({
-            // this allows you to link to other pages with relative file paths
             a: createRelativeLink(source, page),
           })}
         />
@@ -45,20 +37,25 @@ export async function generateStaticParams() {
   return source.generateParams();
 }
 
-export async function generateMetadata(props: PageProps<'/[[...slug]]'>): Promise<Metadata> {
+export async function generateMetadata(props: PageProps<"/[[...slug]]">): Promise<Metadata> {
   const params = await props.params;
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  const image = { url: getPageImageUrl(page).url, width: 1200, height: 630, alt: page.data.title };
+
   return {
-    title: page.data.title,
+    title: page.data.title.startsWith(appName) ? { absolute: page.data.title } : page.data.title,
     description: page.data.description,
     openGraph: {
-      images: getPageImageUrl(page).url,
+      type: "article",
+      siteName: appName,
+      url: page.url,
+      images: image,
     },
     twitter: {
-      card: 'summary_large_image',
-      images: getPageImageUrl(page).url,
+      card: "summary_large_image",
+      images: image,
     },
   };
 }
