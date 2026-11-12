@@ -1,0 +1,11 @@
+{
+  "title": "請求とサブスクリプション",
+  "pages": [
+    "plans-compared",
+    "adding-removing-seats",
+    "switching-billing-interval",
+    "usage-and-add-ons",
+    "payment-failures",
+    "cancelling-subscription"
+  ]
+}

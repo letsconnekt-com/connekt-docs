@@ -18,12 +18,15 @@ import { buttonVariants } from '../ui/button';
 import { useChat, type UseChatHelpers } from '@ai-sdk/react';
 import { DefaultChatTransport, type Tool, type UIMessage, type UIToolInvocation } from 'ai';
 import { Markdown } from '../markdown';
+import { useTranslations } from '@fuma-translate/react';
 
 export type ChatUIMessage = UIMessage<
   never,
   {
     client: {
       location: string;
+      /** Help Centre language, so answers and links use it */
+      lang: string;
     };
   }
 >;
@@ -31,6 +34,7 @@ export type ChatUIMessage = UIMessage<
 export type SearchTool = Tool<{ query: string; limit: number }>;
 
 const Context = createContext<{
+  lang: string;
   open: boolean;
   setOpen: (open: boolean) => void;
   chat: UseChatHelpers<ChatUIMessage>;
@@ -38,6 +42,7 @@ const Context = createContext<{
 
 export function AISearchPanelHeader({ className, ...props }: ComponentProps<'div'>) {
   const { setOpen } = useAISearchContext();
+  const t = useTranslations();
 
   return (
     <div
@@ -48,14 +53,12 @@ export function AISearchPanelHeader({ className, ...props }: ComponentProps<'div
       {...props}
     >
       <div className="px-3 py-2 flex-1">
-        <p className="text-sm font-medium mb-2">AI Chat</p>
-        <p className="text-xs text-fd-muted-foreground">
-          AI can be inaccurate, please verify the answers.
-        </p>
+        <p className="text-sm font-medium mb-2">{t('AI Chat', { note: 'AI chat panel title' })}</p>
+        <p className="text-xs text-fd-muted-foreground">{t('AI can be inaccurate, please verify the answers.', { note: 'AI chat panel' })}</p>
       </div>
 
       <button
-        aria-label="Close"
+        aria-label={t('Close', { note: 'AI chat panel close button, aria-label' })}
         tabIndex={-1}
         className={cn(
           buttonVariants({
@@ -74,6 +77,7 @@ export function AISearchPanelHeader({ className, ...props }: ComponentProps<'div
 
 export function AISearchInputActions() {
   const { messages, status, setMessages, regenerate } = useChatContext();
+  const t = useTranslations({ note: 'AI chat panel' });
   const isLoading = status === 'streaming';
 
   if (messages.length === 0) return null;
@@ -93,7 +97,7 @@ export function AISearchInputActions() {
           onClick={() => regenerate()}
         >
           <RefreshCw className="size-4" />
-          Retry
+          {t('Retry')}
         </button>
       )}
       <button
@@ -107,7 +111,7 @@ export function AISearchInputActions() {
         )}
         onClick={() => setMessages([])}
       >
-        Clear Chat
+        {t('Clear Chat')}
       </button>
     </>
   );
@@ -116,6 +120,8 @@ export function AISearchInputActions() {
 const StorageKeyInput = '__ai_search_input';
 export function AISearchInput(props: ComponentProps<'form'>) {
   const { status, sendMessage, stop } = useChatContext();
+  const { lang } = useAISearchContext();
+  const t = useTranslations();
   const [input, setInput] = useState(() => localStorage.getItem(StorageKeyInput) ?? '');
   const isLoading = status === 'streaming' || status === 'submitted';
   const onStart = (e?: SyntheticEvent) => {
@@ -130,6 +136,7 @@ export function AISearchInput(props: ComponentProps<'form'>) {
           type: 'data-client',
           data: {
             location: location.href,
+            lang,
           },
         },
         {
@@ -150,7 +157,7 @@ export function AISearchInput(props: ComponentProps<'form'>) {
     <form {...props} className={cn('flex items-start pe-2', props.className)} onSubmit={onStart}>
       <Input
         value={input}
-        placeholder={isLoading ? 'AI is answering...' : 'Ask a question'}
+        placeholder={t(isLoading ? 'AI is answering...' : 'Ask a question', { note: 'AI chat input placeholder' })}
         autoFocus
         className="p-3"
         disabled={status === 'streaming' || status === 'submitted'}
@@ -179,7 +186,7 @@ export function AISearchInput(props: ComponentProps<'form'>) {
           onClick={stop}
         >
           <Loader2 className="size-4 animate-spin text-fd-muted-foreground" />
-          Abort Answer
+          {t('Abort Answer', { note: 'AI chat panel' })}
         </button>
       ) : (
         <button
@@ -261,12 +268,12 @@ function Input(props: ComponentProps<'textarea'>) {
   );
 }
 
-const roleName: Record<string, string> = {
-  user: 'you',
-  assistant: 'Connekt AI',
-};
-
 function Message({ message, ...props }: { message: ChatUIMessage } & ComponentProps<'div'>) {
+  const t = useTranslations();
+  const roleName: Record<string, string> = {
+    user: t('You', { note: 'AI chat message author' }),
+    assistant: 'Connekt AI',
+  };
   let markdown = '';
   const searchCalls: UIToolInvocation<SearchTool>[] = [];
 
@@ -307,9 +314,14 @@ function Message({ message, ...props }: { message: ChatUIMessage } & ComponentPr
           >
             <SearchIcon className="size-4" />
             {call.state === 'output-error' || call.state === 'output-denied' ? (
-              <p className="text-fd-error">{call.errorText ?? 'Failed to search'}</p>
+              <p className="text-fd-error">{call.errorText ?? t('Failed to search', { note: 'AI chat search status' })}</p>
             ) : (
-              <p>{!call.output ? 'Searching…' : `${call.output.length} search results`}</p>
+              <p>{!call.output
+                  ? t('Searching…', { note: 'AI chat search status' })
+                  : t('{count} search results', {
+                      note: 'AI chat search status',
+                      variables: { count: String(call.output.length) },
+                    })}</p>
             )}
           </div>
         );
@@ -318,17 +330,18 @@ function Message({ message, ...props }: { message: ChatUIMessage } & ComponentPr
   );
 }
 
-export function AISearch({ children }: { children: ReactNode }) {
+export function AISearch({ lang, children }: { lang: string; children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const chat = useChat<ChatUIMessage>({
-    id: 'search',
+    // one conversation per language, answers are written in the page's language
+    id: `search-${lang}`,
     transport: new DefaultChatTransport({
       api: '/api/chat',
     }),
   });
 
   return (
-    <Context value={useMemo(() => ({ chat, open, setOpen }), [chat, open])}>{children}</Context>
+    <Context value={useMemo(() => ({ lang, chat, open, setOpen }), [lang, chat, open])}>{children}</Context>
   );
 }
 
@@ -429,6 +442,7 @@ export function AISearchPanel() {
 
 export function AISearchPanelList({ className, style, ...props }: ComponentProps<'div'>) {
   const chat = useChatContext();
+  const t = useTranslations();
   const messages = chat.messages.filter((msg) => msg.role !== 'system');
 
   return (
@@ -444,14 +458,14 @@ export function AISearchPanelList({ className, style, ...props }: ComponentProps
       {messages.length === 0 ? (
         <div className="text-sm text-fd-muted-foreground/80 size-full flex flex-col items-center justify-center text-center gap-2">
           <MessageCircleIcon fill="currentColor" stroke="none" />
-          <p onClick={(e) => e.stopPropagation()}>Start a new chat below.</p>
+          <p onClick={(e) => e.stopPropagation()}>{t('Start a new chat below.', { note: 'AI chat empty state' })}</p>
         </div>
       ) : (
         <div className="flex flex-col px-3 gap-4">
           {chat.error && (
             <div className="p-2 bg-fd-secondary text-fd-secondary-foreground border rounded-lg">
               <p className="text-xs text-fd-muted-foreground mb-1">
-                Request Failed: {chat.error.name}
+                {t('Request Failed: {name}', { note: 'AI chat error', variables: { name: chat.error.name } })}
               </p>
               <p className="text-sm">{chat.error.message}</p>
             </div>
