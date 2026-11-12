@@ -1,0 +1,476 @@
+{
+  "ja": {
+    "Close Sidebar(aria-label)": {
+      "hash": "8896c14d09e7669a",
+      "text": "サイドバーを閉じる"
+    },
+    "Close Sidebar(sidebar)(aria-label)": {
+      "hash": "8896c14d09e7669a",
+      "text": "サイドバーを閉じる"
+    },
+    "Collapse Sidebar(sidebar)(aria-label)": {
+      "hash": "9da0bf42ad074f09",
+      "text": "サイドバーを折りたたむ"
+    },
+    "Copied Anchor Link(heading anchor)(aria-label)": {
+      "hash": "2576ae8fb3396be5",
+      "text": "アンカーリンクをコピーしました"
+    },
+    "Copied Link(accordion)(aria-label)": {
+      "hash": "b9173920bbf8773b",
+      "text": "リンクをコピーしました"
+    },
+    "Copied Markdown(page actions)": {
+      "hash": "9c3970394e55f5eb",
+      "text": "Markdownをコピーしました"
+    },
+    "Copied Text(code block)(aria-label)": {
+      "hash": "75a5d50a9fe912cc",
+      "text": "テキストをコピーしました"
+    },
+    "Copy Anchor Link(heading anchor)(aria-label)": {
+      "hash": "6999a51263ff3a5b",
+      "text": "アンカーリンクをコピー"
+    },
+    "Copy Link(accordion)(aria-label)": {
+      "hash": "724e78a3254c899d",
+      "text": "リンクをコピー"
+    },
+    "Copy Markdown(page actions)": {
+      "hash": "47ffe39e75566b38",
+      "text": "Markdownをコピー"
+    },
+    "Copy Text(code block)(aria-label)": {
+      "hash": "8195c1caa5035a44",
+      "text": "テキストをコピー"
+    },
+    "Dark(theme switcher)(aria-label)": {
+      "hash": "60acc53f13a5d1bf",
+      "text": "ダーク"
+    },
+    "Default(type table)": {
+      "hash": "21b111cbfe6e8fca",
+      "text": "デフォルト"
+    },
+    "Edit on GitHub(edit page)": {
+      "hash": "8dbf35488c3f2644",
+      "text": "GitHubで編集"
+    },
+    "Hide Sidebar(sidebar)": {
+      "hash": "9709a3b2e51f0ef3",
+      "text": "サイドバーを非表示"
+    },
+    "Last updated on(page footer)": {
+      "hash": "103e2a9f3f94ffe0",
+      "text": "最終更新日"
+    },
+    "Layout Tab(layout tab trigger)": {
+      "hash": "c0d9415c664fc5f0",
+      "text": "レイアウトタブ"
+    },
+    "Light(theme switcher)(aria-label)": {
+      "hash": "dbcd5e7bb7a0f538",
+      "text": "ライト"
+    },
+    "Next Page(pagination)": {
+      "hash": "6ead5dfdc11ef7da",
+      "text": "次のページ"
+    },
+    "No Headings(table of contents)": {
+      "hash": "877e7e5d5975af69",
+      "text": "見出しがありません"
+    },
+    "No results found(search dialog)": {
+      "hash": "7d7e360586090927",
+      "text": "該当する結果がありません"
+    },
+    "On this page(table of contents)": {
+      "hash": "b5658fc8edda24f9",
+      "text": "このページの内容"
+    },
+    "Open Search(search trigger)(aria-label)": {
+      "hash": "9c3451e933c5ac53",
+      "text": "検索を開く"
+    },
+    "Open Sidebar(aria-label)": {
+      "hash": "ef84dd64b90fc485",
+      "text": "サイドバーを開く"
+    },
+    "Open Sidebar(sidebar)(aria-label)": {
+      "hash": "ef84dd64b90fc485",
+      "text": "サイドバーを開く"
+    },
+    "Open in ChatGPT(page actions)": {
+      "hash": "c27a47a5c24fdd0f",
+      "text": "ChatGPTで開く"
+    },
+    "Open in Claude(page actions)": {
+      "hash": "9512e37d4a154733",
+      "text": "Claudeで開く"
+    },
+    "Open in Cursor(page actions)": {
+      "hash": "af29fb46ae908eb1",
+      "text": "Cursorで開く"
+    },
+    "Open in GitHub(page actions)": {
+      "hash": "4fb78818bd18432c",
+      "text": "GitHubで開く"
+    },
+    "Open in Scira AI(page actions)": {
+      "hash": "d488d0e2510b998b",
+      "text": "Scira AIで開く"
+    },
+    "Open(page actions)": {
+      "hash": "ed077f3d8125d60d",
+      "text": "表示"
+    },
+    "Page Not Found(404 not found page)": {
+      "hash": "cb2f00d1e554baf9",
+      "text": "ページが見つかりません"
+    },
+    "Parameters(type table)": {
+      "hash": "e68b36b17cbd9908",
+      "text": "パラメーター"
+    },
+    "Previous Page(pagination)": {
+      "hash": "a163aaa22cf7ce6c",
+      "text": "前のページ"
+    },
+    "Prop(type table)": {
+      "hash": "57d968860fabe100",
+      "text": "プロパティ"
+    },
+    "Read {url}, I want to ask questions about it.(page actions)": {
+      "hash": "619e3673b5ff957f",
+      "text": "内容について質問したいので、{url}を読んでください。"
+    },
+    "Returns(type table)": {
+      "hash": "16dcaa923f16b449",
+      "text": "戻り値"
+    },
+    "Search(search dialog)": {
+      "hash": "49c266baaaa70981",
+      "text": "検索"
+    },
+    "Search(search trigger)": {
+      "hash": "49c266baaaa70981",
+      "text": "検索"
+    },
+    "Show Sidebar(sidebar)": {
+      "hash": "04efae3fc7825d3a",
+      "text": "サイドバーを表示"
+    },
+    "System(theme switcher)(aria-label)": {
+      "hash": "6725e7bbcd28f3a8",
+      "text": "システム"
+    },
+    "Table of Contents(inline table of contents)": {
+      "hash": "a9360e0212a4d173",
+      "text": "目次"
+    },
+    "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.(404 not found page)": {
+      "hash": "bb6a203b3184da97",
+      "text": "お探しのページは、削除されたか、名前が変更されたか、一時的に利用できない可能性があります。"
+    },
+    "Toggle Menu(home layout header)(aria-label)": {
+      "hash": "f2fca5f984057b8d",
+      "text": "メニューを切り替え"
+    },
+    "Toggle Theme(theme switcher)(aria-label)": {
+      "hash": "de148bf172104c67",
+      "text": "テーマを切り替え"
+    },
+    "Type(type table)": {
+      "hash": "baaddf70fb5d432b",
+      "text": "種類"
+    },
+    "View as Markdown(page actions)": {
+      "hash": "17d36a505f972e68",
+      "text": "Markdownで表示"
+    },
+    "meta:account/meta.json#title": {
+      "hash": "4fc94a35be73681e",
+      "text": "アカウントとセキュリティ"
+    },
+    "meta:advanced/meta.json#title": {
+      "hash": "c998e76868f8afb0",
+      "text": "高度な機能"
+    },
+    "meta:billing/meta.json#title": {
+      "hash": "25c6c9a14ccc537e",
+      "text": "請求とサブスクリプション"
+    },
+    "meta:candidates/meta.json#title": {
+      "hash": "fdc9c0f69d6aa8ea",
+      "text": "候補者"
+    },
+    "meta:companies/meta.json#title": {
+      "hash": "1c9c8c7702468921",
+      "text": "企業とコンタクト"
+    },
+    "meta:dashboard/meta.json#title": {
+      "hash": "1508badcea29e6c5",
+      "text": "ダッシュボードと分析"
+    },
+    "meta:documents/meta.json#title": {
+      "hash": "0c9618e9849a62c6",
+      "text": "署名"
+    },
+    "meta:getting-started/meta.json#title": {
+      "hash": "d00eca1bae674280",
+      "text": "はじめに"
+    },
+    "meta:integrations/meta.json#title": {
+      "hash": "090512d93fcc3c0d",
+      "text": "外部連携"
+    },
+    "meta:jobs/meta.json#title": {
+      "hash": "2f17a0f8d518e491",
+      "text": "求人"
+    },
+    "meta:meetings/meta.json#title": {
+      "hash": "bca705b63a3cf585",
+      "text": "ミーティング"
+    },
+    "meta:meta.json#title": {
+      "hash": "a3311ac2a3625ff7",
+      "text": "Connekt ヘルプセンター"
+    },
+    "meta:meta.json#---Getting Started---": {
+      "hash": "d00eca1bae674280",
+      "text": "はじめに"
+    },
+    "meta:meta.json#---Candidates---": {
+      "hash": "fdc9c0f69d6aa8ea",
+      "text": "候補者"
+    },
+    "meta:meta.json#---Companies & Contacts---": {
+      "hash": "970252541995ccc7",
+      "text": "企業・コンタクト"
+    },
+    "meta:meta.json#---Jobs---": {
+      "hash": "2f17a0f8d518e491",
+      "text": "求人"
+    },
+    "meta:meta.json#---Deals & Submissions---": {
+      "hash": "2207fc615cec3636",
+      "text": "商談・推薦"
+    },
+    "meta:meta.json#---Placements & Commission---": {
+      "hash": "a25f0a830cfba549",
+      "text": "成約・コミッション"
+    },
+    "meta:meta.json#---Projects---": {
+      "hash": "04e2a9728af75840",
+      "text": "プロジェクト"
+    },
+    "meta:meta.json#---Tasks---": {
+      "hash": "b3a60e61a5233d05",
+      "text": "タスク"
+    },
+    "meta:meta.json#---Email & Outreach---": {
+      "hash": "e909d5e5dffff6a4",
+      "text": "メール・アウトリーチ"
+    },
+    "meta:meta.json#---Meetings---": {
+      "hash": "bca705b63a3cf585",
+      "text": "ミーティング"
+    },
+    "meta:meta.json#---Sign (Documents & E-Signing)---": {
+      "hash": "ef2a2aaa20ea5eaa",
+      "text": "署名（書類・電子署名）"
+    },
+    "meta:meta.json#---Search & AI---": {
+      "hash": "8e3c69d784ac8e8b",
+      "text": "検索・AI"
+    },
+    "meta:meta.json#---Dashboard & Analytics---": {
+      "hash": "1508badcea29e6c5",
+      "text": "ダッシュボード・分析"
+    },
+    "meta:meta.json#---Time Off---": {
+      "hash": "a1e1223e5478e1d0",
+      "text": "休暇"
+    },
+    "meta:meta.json#---Team Roles & Permissions---": {
+      "hash": "054bb61bc824419e",
+      "text": "チームの役割・権限"
+    },
+    "meta:meta.json#---Integrations---": {
+      "hash": "090512d93fcc3c0d",
+      "text": "外部連携"
+    },
+    "meta:meta.json#---Mobile App---": {
+      "hash": "f63eb8338741cc51",
+      "text": "モバイルアプリ"
+    },
+    "meta:meta.json#---Advanced Features---": {
+      "hash": "7a7b7c823fca2c92",
+      "text": "高度な機能"
+    },
+    "meta:meta.json#---Account & Security---": {
+      "hash": "4fc94a35be73681e",
+      "text": "アカウント・セキュリティ"
+    },
+    "meta:meta.json#---Billing & Subscriptions---": {
+      "hash": "25c6c9a14ccc537e",
+      "text": "請求・サブスクリプション"
+    },
+    "meta:mobile/meta.json#title": {
+      "hash": "f63eb8338741cc51",
+      "text": "モバイルアプリ"
+    },
+    "meta:outreach/meta.json#title": {
+      "hash": "e909d5e5dffff6a4",
+      "text": "メール・アウトリーチ"
+    },
+    "meta:placements/meta.json#title": {
+      "hash": "a25f0a830cfba549",
+      "text": "成約・コミッション"
+    },
+    "meta:projects/meta.json#title": {
+      "hash": "04e2a9728af75840",
+      "text": "プロジェクト"
+    },
+    "meta:search/meta.json#title": {
+      "hash": "6bc715386d517de0",
+      "text": "検索・AI"
+    },
+    "meta:submissions/meta.json#title": {
+      "hash": "2207fc615cec3636",
+      "text": "商談・推薦"
+    },
+    "meta:tasks/meta.json#title": {
+      "hash": "b3a60e61a5233d05",
+      "text": "タスク"
+    },
+    "meta:team/meta.json#title": {
+      "hash": "054bb61bc824419e",
+      "text": "チームの役割・権限"
+    },
+    "meta:time-off/meta.json#title": {
+      "hash": "a1e1223e5478e1d0",
+      "text": "休暇"
+    },
+    "Connekt Help Centre(site name)": {
+      "hash": "a3311ac2a3625ff7",
+      "text": "Connekt ヘルプセンター"
+    },
+    "Step-by-step guides for every part of Connekt — from setting up your workspace to managing pipelines, placements, and your whole team.(site description)": {
+      "hash": "65c44d486cd6d4f6",
+      "text": "ワークスペースの設定から、パイプライン、成約、チーム全体の管理まで、Connekt の各機能の使い方をステップごとに解説します。"
+    },
+    "Help Centre(share image label)": {
+      "hash": "1771af9d4cc49b52",
+      "text": "ヘルプセンター"
+    },
+    "AI Chat(AI chat panel title)": {
+      "hash": "fe98f42cd51a8389",
+      "text": "AIチャット"
+    },
+    "AI can be inaccurate, please verify the answers.(AI chat panel)": {
+      "hash": "6d3e5b6e49b991b9",
+      "text": "AIの回答は正確でない場合があります。内容を確認してください。"
+    },
+    "Close(AI chat panel close button, aria-label)": {
+      "hash": "7d9eb7acb13e2462",
+      "text": "閉じる"
+    },
+    "Retry(AI chat panel)": {
+      "hash": "942087cc2d41e013",
+      "text": "再試行"
+    },
+    "Clear Chat(AI chat panel)": {
+      "hash": "98361af38386db61",
+      "text": "チャットをクリア"
+    },
+    "AI is answering...(AI chat input placeholder)": {
+      "hash": "ded131686f50f528",
+      "text": "AIが回答中…"
+    },
+    "Ask a question(AI chat input placeholder)": {
+      "hash": "3a533d7ef80f45c6",
+      "text": "質問を入力"
+    },
+    "Abort Answer(AI chat panel)": {
+      "hash": "4f37aaffd08b6252",
+      "text": "回答を停止"
+    },
+    "You(AI chat message author)": {
+      "hash": "08b041935798fbf6",
+      "text": "自分"
+    },
+    "Failed to search(AI chat search status)": {
+      "hash": "b48850be6e2fe15f",
+      "text": "検索に失敗しました"
+    },
+    "Searching…(AI chat search status)": {
+      "hash": "c31723ab330289fe",
+      "text": "検索中…"
+    },
+    "{count} search results(AI chat search status)": {
+      "hash": "398897e02b4f888f",
+      "text": "{count}件の検索結果"
+    },
+    "Start a new chat below.(AI chat empty state)": {
+      "hash": "e091db5f88bdfaea",
+      "text": "以下から新しいチャットを開始してください。"
+    },
+    "Request Failed: {name}(AI chat error)": {
+      "hash": "36b29e002bb5c830",
+      "text": "リクエストに失敗しました：{name}"
+    },
+    "Note(callout label)": {
+      "hash": "d8da2c49df39d91d",
+      "text": "メモ"
+    },
+    "Info(callout label)": {
+      "hash": "170322a32f3c35b2",
+      "text": "情報"
+    },
+    "Tip(callout label)": {
+      "hash": "a4245a3c4f566cab",
+      "text": "ヒント"
+    },
+    "Warning(callout label)": {
+      "hash": "e981ddae45d8f4ca",
+      "text": "警告"
+    },
+    "Check(callout label)": {
+      "hash": "9d60841e0a7891df",
+      "text": "確認"
+    },
+    "Step(numbered step label)": {
+      "hash": "8e6a6cca7aae1d1e",
+      "text": "ステップ"
+    },
+    "Step {index}(numbered step label)": {
+      "hash": "2a259f47ddc8da8a",
+      "text": "ステップ{index}"
+    },
+    "Ask AI(AI chat button)": {
+      "hash": "ea9e45ac7083cf49",
+      "text": "Ask AI"
+    },
+    "Back to Home(404 not found page)": {
+      "hash": "eec78426776352f1",
+      "text": "ホームに戻る"
+    },
+    "Choose a language(language switcher)": {
+      "hash": "f8416d793a642faa",
+      "text": "言語を選択"
+    },
+    "Choose a language(language switcher)(aria-label)": {
+      "hash": "f8416d793a642faa",
+      "text": "言語を選択"
+    },
+    "Close Banner(banner)(aria-label)": {
+      "hash": "171f7f76bd02de06",
+      "text": "バナーを閉じる"
+    },
+    "Close Search(search dialog)(aria-label)": {
+      "hash": "713e7816521d6091",
+      "text": "検索を終了"
+    }
+  }
+}

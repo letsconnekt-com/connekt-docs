@@ -1,0 +1,336 @@
+{
+  "ja": {
+    "billing/plans-compared.mdx": {
+      "source": "5f927b7aa4a39e61",
+      "output": "f2df41d3b892e4dd"
+    },
+    "account/profile-and-email-signature.mdx": {
+      "source": "078e247753bdfc74",
+      "output": "ca57e59f0422a48b"
+    },
+    "account/security-faq.mdx": {
+      "source": "c5d147b69b1f67aa",
+      "output": "4953609911701712"
+    },
+    "account/security-and-2fa.mdx": {
+      "source": "1a3d8c525dd6f707",
+      "output": "c98663d91d6eccec"
+    },
+    "advanced/activity-and-usage.mdx": {
+      "source": "18e996ec931b226d",
+      "output": "b11aac215b31afdb"
+    },
+    "advanced/exporting-data.mdx": {
+      "source": "faa63253ae44c43b",
+      "output": "6cc757514cfb3a60"
+    },
+    "advanced/custom-fields.mdx": {
+      "source": "d8669443e876f944",
+      "output": "3b19950ec0168cda"
+    },
+    "advanced/offices-and-currency.mdx": {
+      "source": "9b0d2e490258eef4",
+      "output": "6e477bb58d7758f2"
+    },
+    "advanced/search-vs-ai-matching.mdx": {
+      "source": "f76e4351b6aec736",
+      "output": "90fb40762153abc5"
+    },
+    "billing/adding-removing-seats.mdx": {
+      "source": "9d3934e594c77e3b",
+      "output": "ca7f360e8b7ef05b"
+    },
+    "billing/switching-billing-interval.mdx": {
+      "source": "92aa4b9184f0c6f6",
+      "output": "98137e21f02b3841"
+    },
+    "billing/cancelling-subscription.mdx": {
+      "source": "1bee1cf33aafa47e",
+      "output": "e1b8bfa35561596f"
+    },
+    "billing/payment-failures.mdx": {
+      "source": "a178bcb18fd332d1",
+      "output": "7e6e1af1aa1d85b1"
+    },
+    "billing/usage-and-add-ons.mdx": {
+      "source": "e910d8bca199d2c1",
+      "output": "ec37f278bc1ef1dd"
+    },
+    "candidates/adding-a-candidate.mdx": {
+      "source": "13bdb9d497cfbd31",
+      "output": "d2a17c2b8070197d"
+    },
+    "candidates/attachments-and-notes.mdx": {
+      "source": "ff3e1aa6a0ae647f",
+      "output": "3a75f66d25e1afc3"
+    },
+    "candidates/bulk-import.mdx": {
+      "source": "daa8c8257b8d70dc",
+      "output": "ef5946ef98715e5a"
+    },
+    "candidates/enriching-contact-details.mdx": {
+      "source": "23896cbed37810ea",
+      "output": "d5c0a292ea240612"
+    },
+    "candidates/matching-candidates-to-jobs.mdx": {
+      "source": "86e1150ed1da46b8",
+      "output": "d86d598b6ca29cca"
+    },
+    "candidates/off-limits.mdx": {
+      "source": "10762912172751d2",
+      "output": "d87a608c3a905c6a"
+    },
+    "companies/adding-a-company.mdx": {
+      "source": "aa827ffd0b820205",
+      "output": "45f8284d9fb401f8"
+    },
+    "candidates/merging-duplicates.mdx": {
+      "source": "fb2f933ad15336b4",
+      "output": "f82351e00a076f63"
+    },
+    "companies/managing-contacts.mdx": {
+      "source": "1516b9c91ebd7f78",
+      "output": "fb78aafbac5e43d8"
+    },
+    "documents/adding-fields-to-pdf.mdx": {
+      "source": "68c8671909754122",
+      "output": "f614b1b45d8685ce"
+    },
+    "dashboard/understanding-metrics.mdx": {
+      "source": "04a0d46307bd4fdc",
+      "output": "34a5b112746c32e3"
+    },
+    "dashboard/goal-progress.mdx": {
+      "source": "941097eb0fc74c3a",
+      "output": "864966fd8ded72f9"
+    },
+    "documents/document-statuses.mdx": {
+      "source": "42438fa9b98ca0e0",
+      "output": "66cdc88f471dd087"
+    },
+    "documents/internal-vs-external-signers.mdx": {
+      "source": "7c743d776c8e13e5",
+      "output": "20a1a9b9b254edac"
+    },
+    "documents/review-before-sending.mdx": {
+      "source": "132010b8fb0d50cd",
+      "output": "bb9c12ea66b0fc3e"
+    },
+    "documents/managing-documents.mdx": {
+      "source": "b781ed349e20ac72",
+      "output": "bc20365ad9fcdd4f"
+    },
+    "documents/signing-yourself.mdx": {
+      "source": "cb8b5608183973d4",
+      "output": "43556de98a51ba7d"
+    },
+    "documents/uploading-and-sending.mdx": {
+      "source": "d4aefac976d5d8b3",
+      "output": "55b8c82d8dc0e027"
+    },
+    "getting-started/free-trial.mdx": {
+      "source": "ec233336d0976796",
+      "output": "ddd3a2ed3e53014d"
+    },
+    "getting-started/getting-help.mdx": {
+      "source": "e75b8052bde572e7",
+      "output": "903a1da042d58ad9"
+    },
+    "getting-started/inviting-your-team.mdx": {
+      "source": "c6241cac676aac61",
+      "output": "d7ebd08de4a8b4b0"
+    },
+    "getting-started/quick-start.mdx": {
+      "source": "ef752abc399c0e07",
+      "output": "3691700faf2b99b8"
+    },
+    "getting-started/what-is-connekt.mdx": {
+      "source": "2cf97b01f96edcfe",
+      "output": "97ca1bf8be2aa42a"
+    },
+    "getting-started/workspace-setup.mdx": {
+      "source": "163d9e21b147dc30",
+      "output": "aecda7c72b2ff3e1"
+    },
+    "index.mdx": {
+      "source": "06539ee145b267b6",
+      "output": "98fbd5f95daa539b"
+    },
+    "integrations/connecting-email.mdx": {
+      "source": "f902d2eade87189c",
+      "output": "76c51e5ed1a35307"
+    },
+    "integrations/zapier-and-make.mdx": {
+      "source": "5651f180bbf60ad3",
+      "output": "606141ece3ec9ea9"
+    },
+    "integrations/notification-preferences.mdx": {
+      "source": "458d8343c9a7b438",
+      "output": "e3df157a3abe8f5f"
+    },
+    "jobs/assigning-team-members.mdx": {
+      "source": "c3e4f04aee956c0c",
+      "output": "95784f43a7835b52"
+    },
+    "integrations/chrome-extension.mdx": {
+      "source": "a5b03d760556cdc3",
+      "output": "5b569433fbb4f50e"
+    },
+    "jobs/job-statuses.mdx": {
+      "source": "9ca0a447c9d87a67",
+      "output": "b3010dd4e5c4a325"
+    },
+    "meetings/linking-and-ai-actions.mdx": {
+      "source": "4b57cb2aa330846f",
+      "output": "f02ce934d534d52d"
+    },
+    "meetings/meeting-intelligence.mdx": {
+      "source": "cef80c5c910cb6f1",
+      "output": "12cbf031c2e8d7e1"
+    },
+    "jobs/creating-a-job.mdx": {
+      "source": "54f46b0fbb2b12ac",
+      "output": "03d62e90e7af7348"
+    },
+    "meetings/sharing-and-privacy.mdx": {
+      "source": "f82b6497e1759e94",
+      "output": "5da1d5e16efc9d8f"
+    },
+    "meetings/reviewing-meetings.mdx": {
+      "source": "f41d6df5ee5a08e3",
+      "output": "f7332bf532c503cf"
+    },
+    "meetings/recording-meetings.mdx": {
+      "source": "36ad1083e2c549d7",
+      "output": "e11f0cb736b181da"
+    },
+    "meetings/summary-templates.mdx": {
+      "source": "6e793425aa89a9a5",
+      "output": "cd823a08304288df"
+    },
+    "mobile/ai-search.mdx": {
+      "source": "25ad8b62eb5290f2",
+      "output": "c05489e437caacc7"
+    },
+    "meetings/troubleshooting.mdx": {
+      "source": "e8760193439dc73d",
+      "output": "72a6927828fe1bb8"
+    },
+    "mobile/recording-meetings.mdx": {
+      "source": "1f47a4d4401e1238",
+      "output": "c8a25b6333ae8224"
+    },
+    "mobile/esign.mdx": {
+      "source": "de365bc411aeb58c",
+      "output": "b4bb04fe170b6723"
+    },
+    "mobile/signing-in-and-security.mdx": {
+      "source": "f6f93cd3c702738f",
+      "output": "7758b672335a57e6"
+    },
+    "outreach/templates-and-analytics.mdx": {
+      "source": "92bd60c4a6bcffff",
+      "output": "ce243c34fde2dc71"
+    },
+    "mobile/using-the-mobile-app.mdx": {
+      "source": "88da50d7a4fada1f",
+      "output": "c6cdd8521b40721f"
+    },
+    "outreach/using-the-inbox.mdx": {
+      "source": "1ee0fc46afb1b029",
+      "output": "6556f2e639dd9731"
+    },
+    "placements/creating-a-placement.mdx": {
+      "source": "a8e1b02794ea5793",
+      "output": "3157d3acd3c2c595"
+    },
+    "outreach/email-sequences.mdx": {
+      "source": "3566ab928c9d8069",
+      "output": "a16883deb6c9d648"
+    },
+    "placements/deal-splits.mdx": {
+      "source": "661cac1ed6401b2c",
+      "output": "64a3b02a8a24a98c"
+    },
+    "placements/placement-statuses.mdx": {
+      "source": "61e23d54211622f9",
+      "output": "5612a6190cb81efc"
+    },
+    "search/ask-ai.mdx": {
+      "source": "02357ba6b0f62bb7",
+      "output": "8253ff1b2c347a48"
+    },
+    "projects/creating-a-project.mdx": {
+      "source": "86058c03f813808e",
+      "output": "08e510a41973619b"
+    },
+    "projects/sharing-a-project.mdx": {
+      "source": "b727de4b510c6235",
+      "output": "a1fe530453f08b15"
+    },
+    "search/filters-and-boolean-search.mdx": {
+      "source": "25ceff606889f494",
+      "output": "6e651aa443f131e3"
+    },
+    "search/search-history.mdx": {
+      "source": "3a1bc958d5beca77",
+      "output": "11c38480791134c7"
+    },
+    "submissions/converting-to-placement.mdx": {
+      "source": "a9113da0f5bc2620",
+      "output": "2551025fb4d66bdd"
+    },
+    "submissions/submission-statuses.mdx": {
+      "source": "dc579daceacb90ec",
+      "output": "13b9639836cf28d9"
+    },
+    "submissions/submitting-a-candidate.mdx": {
+      "source": "0c853cc268701f33",
+      "output": "1a71216e975e787d"
+    },
+    "submissions/pipeline-board.mdx": {
+      "source": "38fa7de08565f75c",
+      "output": "fd4cea99aa9aa2ac"
+    },
+    "tasks/managing-tasks.mdx": {
+      "source": "53f0d5944caffc29",
+      "output": "988107919ba0e622"
+    },
+    "team/deactivating-reactivating.mdx": {
+      "source": "e5f4c00570ed0aff",
+      "output": "61220a7fd043a69b"
+    },
+    "team/customising-permissions.mdx": {
+      "source": "9c43b300e63b3499",
+      "output": "a9e3a3811d02d579"
+    },
+    "team/teams-and-hierarchy.mdx": {
+      "source": "1f736f56e0a7097d",
+      "output": "3e6c96c268078de7"
+    },
+    "time-off/approving-leave.mdx": {
+      "source": "d790baedc1abe41a",
+      "output": "3c99b04935cdc35a"
+    },
+    "team/user-roles.mdx": {
+      "source": "5bec90fe8c2d6305",
+      "output": "291d50681d958eaf"
+    },
+    "time-off/delegating-approvals.mdx": {
+      "source": "02c0db96e24d226d",
+      "output": "b5619e73cbaadf25"
+    },
+    "time-off/requesting-time-off.mdx": {
+      "source": "803b79ecbb7a0695",
+      "output": "7a4bf6fb0076b0c2"
+    },
+    "time-off/team-balances.mdx": {
+      "source": "42b99e55ba2fb2cc",
+      "output": "3620e7a02cc5d263"
+    },
+    "time-off/setting-up-leave-policies.mdx": {
+      "source": "f4d4ca20911afd92",
+      "output": "cc392a09f8637ec4"
+    }
+  }
+}

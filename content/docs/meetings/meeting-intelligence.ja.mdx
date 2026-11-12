@@ -1,0 +1,67 @@
+---
+title: "Connekt Notetakerによるミーティングの記録と活用"
+sidebarTitle: "概要"
+description: "Connekt NotetakerのChrome拡張機能を使い、StealthまたはMeeting Botモードで通話を録画・文字起こし・要約し、ミーティングページで確認できます。"
+---
+
+Connekt Notetakerは通話を録画し、文字起こしとAI要約を作成します。録画はすべてConnektの**ミーティング**ページに保存されます。このページで内容を確認し、候補者、求人、企業、コンタクトに紐付けたり、タスクの作成やレコードの更新に活用したりできます。
+
+Connekt NotetakerはChrome拡張機能です。LinkedInのプロフィールを取り込む[Connekt Chrome拡張機能](/ja/integrations/chrome-extension)とは別のものです。
+
+## 2つの録画方法 [#two-ways-to-record]
+
+拡張機能のポップアップから録画を開始するたびに、モードを選択します。
+
+| | **ステルス** | **会議ボット** |
+| --- | --- | --- |
+| 録画方法 | 自分のブラウザーで、ミーティングタブの音声と映像、およびマイクの音声を記録します | ボットを送信し、別の参加者として通話に参加させます |
+| 他の参加者への表示 | 表示されません | 参加者リストに表示されます |
+| リアルタイムの文字起こしとチェックリスト | ライブパネルで利用できます | 利用できません。文字起こしと要約は通話後に作成されます |
+| 入室の許可 | 不要です | 待機室があるミーティングでは必要です |
+
+## 対応プラットフォーム [#supported-platforms]
+
+| プラットフォーム | Stealth | Meeting Bot |
+| --- | --- | --- |
+| Google Meet | 対応しています | 対応しています |
+| Zoom（Chromeのウェブクライアント） | 対応しています | 対応していません |
+| Microsoft Teams（Chromeのウェブ版） | 対応しています | 対応していません |
+| Zoom、Teams、その他のデスクトップアプリ | 対応していません | 対応していません |
+
+<Note>
+  Connekt Notetakerは、Chromeのタブで開いているミーティングでのみ動作します。ZoomやTeamsのデスクトップアプリから参加した場合、Connekt Notetakerでは録画できません。ブラウザーから参加してください。
+</Note>
+
+## 利用前の確認事項 [#what-to-know-before-you-start]
+
+- **録画は毎回、自分で開始します。** Connekt Notetakerが自動で、またはスケジュールに従ってミーティングに参加することはありません。ミーティングのタブでポップアップを開き、クリックして開始してください。
+- **録画はNotetakerの利用時間を消費します。** アップロードした録画も含め、各録画の長さがワークスペースの月間Notetaker利用時間に加算されます。利用時間を使い切ったことを理由に、Connektが録画を停止することはありません。残り時間の確認と追加購入については、[使用量とアドオン](/ja/billing/usage-and-add-ons)をご覧ください。
+- **対面のミーティング。** 通話ではなく、同じ部屋で行うミーティングを録音するには、Connektのモバイルアプリを使用してください。[モバイルでミーティングを録音する](/ja/mobile/recording-meetings)をご覧ください。
+- **録画のアップロードも可能です。** すでに録画がある場合は、**ミーティング**ページからアップロードすると、文字起こしと要約を作成できます。
+
+<Warning>
+  録音・録画に関する法律は国や地域によって異なり、参加者全員の同意が必要な場合もあります。ミーティングを録音・録画することを参加者に伝え、必要に応じて同意を得る責任は利用者にあります。Stealthモードは他の参加者には表示されないため、通話の開始時に録画することを伝えるか、参加者として表示されるMeeting Botを使用してください。
+</Warning>
+
+## 関連ガイド [#learn-more]
+
+<CardGroup cols={2}>
+  <Card title="ミーティングを録画する" icon="video" href="/ja/meetings/recording-meetings">
+    拡張機能をインストールし、StealthまたはMeeting Botモードで録画を開始する方法や、録画をアップロードする方法を説明します。
+  </Card>
+  <Card title="ミーティングを確認する" icon="file-lines" href="/ja/meetings/reviewing-meetings">
+    ミーティングの検索、AI要約と文字起こしの確認、質問、ファイルのダウンロード方法を説明します。
+  </Card>
+  <Card title="紐付けとAIアクション" icon="link" href="/ja/meetings/linking-and-ai-actions">
+    ミーティングをレコードに紐付け、AIの提案を適用し、フォローアップタスクを作成する方法を説明します。
+  </Card>
+  <Card title="要約テンプレート" icon="wand-magic-sparkles" href="/ja/meetings/summary-templates">
+    組み込みのテンプレートを選択する方法や、独自のプロンプトと質問リストを作成する方法を説明します。
+  </Card>
+  <Card title="共有とプライバシー" icon="share-nodes" href="/ja/meetings/sharing-and-privacy">
+    ミーティングの閲覧権限の管理、公開リンクの共有、録画の削除方法を説明します。
+  </Card>
+  <Card title="トラブルシューティング" icon="triangle-exclamation" href="/ja/meetings/troubleshooting">
+    マイク、接続、ボット、処理に関する問題の解決方法を説明します。
+  </Card>
+</CardGroup>

@@ -1,0 +1,12 @@
+{
+  "title": "候補者",
+  "pages": [
+    "adding-a-candidate",
+    "bulk-import",
+    "attachments-and-notes",
+    "matching-candidates-to-jobs",
+    "enriching-contact-details",
+    "off-limits",
+    "merging-duplicates"
+  ]
+}

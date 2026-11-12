@@ -15,6 +15,8 @@ import {
 import type { MDXComponents } from 'mdx/types';
 import { cn } from '@/lib/cn';
 import { faIcon } from '@/components/fa-icons';
+import { DEFAULT_LANGUAGE, type Language } from '@/lib/i18n';
+import { getT } from '@/lib/translations';
 import {
   Accordion as ClientAccordion,
   AccordionGroup as ClientAccordionGroup,
@@ -33,11 +35,6 @@ function createCallout(type: ComponentProps<typeof Callout>['type'], label: stri
   };
 }
 
-const Note = createCallout('info', 'Note');
-const Info = createCallout('info', 'Info');
-const Tip = createCallout('idea', 'Tip');
-const Warning = createCallout('warning', 'Warning');
-const Check = createCallout('success', 'Check');
 
 const colsClass = {
   1: 'grid-cols-1',
@@ -73,7 +70,7 @@ async function cardMarkdown({ title, href, children }: { title: ReactNode; href?
   return `- ${label}\n\n${body.replace(/^(?=.)/gm, '  ')}\n\n`;
 }
 
-type StepProps ={ title?: ReactNode; children?: ReactNode; index?: number };
+type StepProps = { title?: ReactNode; children?: ReactNode; index?: number; label?: (index?: number) => string };
 
 function Steps({ children }: { children?: ReactNode }) {
   if (asMarkdown()) {
@@ -87,9 +84,9 @@ function Steps({ children }: { children?: ReactNode }) {
   return <FdSteps>{children}</FdSteps>;
 }
 
-function Step({ title, children, index }: StepProps) {
+function Step({ title, children, index, label: getLabel = (i) => (i ? `Step ${i}` : 'Step') }: StepProps) {
   if (asMarkdown()) {
-    const label = index ? `Step ${index}` : 'Step';
+    const label = getLabel(index);
     return title ? md`**${label}: ${title}**\n\n${children}\n\n` : md`**${label}**\n\n${children}\n\n`;
   }
 
@@ -136,22 +133,31 @@ function Accordion(props: ComponentProps<typeof ClientAccordion>) {
   return <ClientAccordion {...props} />;
 }
 
-export function getMDXComponents(components?: MDXComponents) {
+/** `lang` translates the labels that only exist in the Markdown form (callout and step labels). */
+export function getMDXComponents(components?: MDXComponents, lang: Language = DEFAULT_LANGUAGE) {
+  const t = getT(lang);
+  const callout = (type: ComponentProps<typeof Callout>['type'], label: string) =>
+    createCallout(type, t(label, { note: 'callout label' }));
+  const stepLabel = (index?: number) =>
+    index
+      ? t('Step {index}', { note: 'numbered step label', variables: { index } })
+      : t('Step', { note: 'numbered step label' });
+
   return {
     ...defaultMdxComponents,
     Card,
     CardGroup,
     Steps,
-    Step,
+    Step: (props: StepProps) => <Step {...props} label={stepLabel} />,
     Tabs,
     Tab,
     Accordion,
     AccordionGroup,
-    Note,
-    Info,
-    Tip,
-    Warning,
-    Check,
+    Note: callout('info', 'Note'),
+    Info: callout('info', 'Info'),
+    Tip: callout('idea', 'Tip'),
+    Warning: callout('warning', 'Warning'),
+    Check: callout('success', 'Check'),
     ...components,
   } satisfies MDXComponents;
 }

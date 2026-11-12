@@ -8,6 +8,7 @@
 - Frontmatter supports `title`, `description`, and `sidebarTitle` (shorter sidebar label)
 - Mintlify-style components (`<Steps>`, `<Step title>`, `<Card icon>`, `<CardGroup cols>`, `<AccordionGroup>`, `<Accordion title>`, `<Tabs>`, `<Tab title>`, `<Note>`, `<Tip>`, `<Info>`, `<Warning>`) are mapped to Fumadocs UI in `src/components/mdx.tsx`
 - Card `icon` values are Font Awesome names, mapped to Lucide icons in `src/components/fa-icons.tsx` — add new names there
+- Translations: `<page>.<lang>.mdx` and `meta.<lang>.json` next to the English files (Japanese, `ja`; `zh`, `zh-hk` and `ko` are set up but disabled), produced by `pnpm translate`. Write and edit English only, then run `pnpm translate` and `pnpm check:i18n`. Don't edit the `.ja.mdx` etc. files when changing content; see README → Languages
 - Fumadocs reference for AI tools: https://www.fumadocs.dev/llms.txt
 - Run `pnpm dev` to preview locally, `pnpm build` to verify
 
@@ -51,3 +52,13 @@ Match the labels in the Connekt app exactly:
 - Pages about recording meetings (web Notetaker and mobile) must include the recording-consent warning.
 - Security claims: only what the marketing site states (2FA, role permissions, audit log, screenshot blocking on mobile, encryption in transit and at rest, daily backups). No SOC 2, GDPR or ISO claims.
 - Don't document staff-only admin tools, internal organisation-only fields, env vars or developer internals.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
